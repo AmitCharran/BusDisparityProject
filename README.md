@@ -9,12 +9,4 @@
 ### These are the things that are currently required:
 - Python version 3 - our database 'pyrebase' is only available in python 3
 - A Python Compiler - Any that you have should be fine.
-- pip version 20.2.3 - You need to have this to install specified packages
-
-```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
+- pip version 20.2.3 - You need to have this to install specified packages, really just pyrebase 
