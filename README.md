@@ -6,3 +6,5 @@
 ---
 ## Current Task
 ### We are getting everyone set up
+### These are the things that are currently required:
+####  1. Node - you need node to install the package Pyrebase in 
