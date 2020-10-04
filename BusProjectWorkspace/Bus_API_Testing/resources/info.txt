@@ -1,4 +1,4 @@
-Add All resources you have here
+Add All resources you have here.
 
 Please make sure to leave helpful comments so everyone else understands your code.
 

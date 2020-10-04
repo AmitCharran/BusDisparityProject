@@ -1,4 +1,4 @@
-Add resources and things you learn here
+Add resources and things you learn here.
 
 Please make sure to leave helpful comments so everyone else understands your code
 
