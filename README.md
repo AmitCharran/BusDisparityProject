@@ -5,8 +5,15 @@
 ##### [Markdown Language Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 ---
 ## Current Task
-### We are getting everyone set up before Monday (10/5)
-### These are the things that are currently required:
-- Python version 3 - our database 'pyrebase' is only available in python 3
-- A Python Compiler - Any that you have should be fine.
-- pip version 20.2.3 - You need to have this to install specified packages, really just pyrebase 
+### I'm splitting everything up into two parts. 
+- Database testing
+- API testing
+
+#### The goal with these two parts is to create and use the database properly.
+#### The goal of API testing is essentially the same and then we reconvene and create a working project that will do exactly what we want.
+
+### Roles so far:
+- Database testing
+  - Alvin
+- API testing
+  - Amit
