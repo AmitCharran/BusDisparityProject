@@ -14,6 +14,7 @@
 ### Roles so far:
 - Database testing
   - Alvin
+  - Carina
 - API testing
   - Amit
   
