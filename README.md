@@ -18,6 +18,7 @@
   - Ariel 
 - API testing
   - Amit
+  - Alan
   - Joshua
   
   
