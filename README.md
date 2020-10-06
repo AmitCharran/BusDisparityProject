@@ -15,9 +15,11 @@
 - Database testing
   - Alvin
   - Carina
+  - Ariel 
 - API testing
   - Amit
   - Alan
+  - Joshua
   
   
 ---
