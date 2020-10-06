@@ -5,4 +5,7 @@ Please make sure to leave helpful comments so everyone else understands your cod
 Feel free to create your own files to do your own work separate from anyone else.
 Make sure to keep it in the same directory.
 
-Added Alan
+DO NOT DO MANY REQUESTS WITH THE API KEY AT ONCE. Wait about 30 seconds or else you will risk invalidating the API Key.
+
+Use this website for more info
+http://bustime.mta.info/wiki/Developers/SIRIVehicleMonitoring
