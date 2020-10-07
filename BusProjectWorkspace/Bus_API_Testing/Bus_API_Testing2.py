@@ -8,4 +8,5 @@ with open('saved_json_data.txt') as json_file:
 
 print(data)
 # Accessing specific value in the data object
-print(data['currentTime'])
+print(data['data']['stops'][0]['name'])
+
