@@ -15,4 +15,7 @@ data = response.json()
 with open('saved_json_data.txt', 'w') as outfile:
     json.dump(data, outfile)
 
+with open('vehicle_monitoring.json', 'w') as outfile:
+    json.dump(data, outfile)
+
 
