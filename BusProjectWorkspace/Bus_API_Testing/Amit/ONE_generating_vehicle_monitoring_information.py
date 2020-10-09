@@ -12,10 +12,10 @@ response = requests.get(get_all_info_from_vehicle_monitoring)
 
 
 data = response.json()
-with open('saved_json_data.txt', 'w') as outfile:
+with open('TextFileFolder/saved_json_data.txt', 'w') as outfile:
     json.dump(data, outfile)
 
-with open('vehicle_monitoring.json', 'w') as outfile:
+with open('TextFileFolder/vehicle_monitoring.json', 'w') as outfile:
     json.dump(data, outfile)
 
 

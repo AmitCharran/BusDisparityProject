@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5988729f-fcad-44bf-b5da-e9bd37fad2b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/reducing_json_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TWO_reducing_json_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/saved_json_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/vehicle_monitoring.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/saved_json_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/saved_json_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/trying_to_find_line_ref.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/trying_to_find_line_ref.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/THREE_using_the_reduced_json_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/reducing_json_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/empty.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/saved_json_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/trying_to_find_line_ref.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/ONE_generating_vehicle_monitoring_information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/vehicle_monitoring.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -45,32 +51,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.trying_to_find_line_ref">
-    <configuration name="Bus_API_Testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BusProjectWorkspace" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bus_API_Testing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Bus_API_Testing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.THREE_using_the_reduced_json_file">
     <configuration name="Bus_API_Testing2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BusProjectWorkspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,6 +70,72 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Bus_API_Testing2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ONE_generating_vehicle_monitoring_information" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BusProjectWorkspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Amit/ONE_generating_vehicle_monitoring_information.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="THREE_using_the_reduced_json_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BusProjectWorkspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Amit/THREE_using_the_reduced_json_file.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TWO_reducing_json_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BusProjectWorkspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Amit/TWO_reducing_json_file.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,34 +188,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="trying_to_find_line_ref" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BusProjectWorkspace" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Bus_API_Testing/Amit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bus_API_Testing/Amit/trying_to_find_line_ref.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.trying_to_find_line_ref" />
+        <item itemvalue="Python.THREE_using_the_reduced_json_file" />
+        <item itemvalue="Python.ONE_generating_vehicle_monitoring_information" />
+        <item itemvalue="Python.TWO_reducing_json_file" />
         <item itemvalue="Python.storageedemo" />
         <item itemvalue="Python.Bus_API_Testing2" />
-        <item itemvalue="Python.Bus_API_Testing" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +214,7 @@
       <workItem from="1602028642902" duration="3108000" />
       <workItem from="1602092398691" duration="9878000" />
       <workItem from="1602206008615" duration="3356000" />
+      <workItem from="1602275361858" duration="2092000" />
     </task>
     <servers />
   </component>
@@ -191,29 +222,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1363" height="283" key="GridCell.Tab.0.bottom" timestamp="1602212190248">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state width="1238" height="207" key="GridCell.Tab.0.bottom" timestamp="1602286691955">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state width="1878" height="521" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602201400347" />
-    <state width="998" height="174" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1601959350081" />
+    <state width="1238" height="207" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691955" />
     <state width="1363" height="283" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602212190248" />
-    <state width="1363" height="283" key="GridCell.Tab.0.center" timestamp="1602212190248">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state width="1238" height="207" key="GridCell.Tab.0.center" timestamp="1602286691954">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state width="1878" height="521" key="GridCell.Tab.0.center/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602201400341" />
-    <state width="998" height="174" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1601959350080" />
+    <state width="1238" height="207" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691954" />
     <state width="1363" height="283" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602212190248" />
-    <state width="1363" height="283" key="GridCell.Tab.0.left" timestamp="1602212190247">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state width="1238" height="207" key="GridCell.Tab.0.left" timestamp="1602286691953">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state width="1878" height="521" key="GridCell.Tab.0.left/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602201400340" />
-    <state width="998" height="174" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1601959350079" />
+    <state width="1238" height="207" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691953" />
     <state width="1363" height="283" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602212190247" />
-    <state width="1363" height="283" key="GridCell.Tab.0.right" timestamp="1602212190248">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state width="1238" height="207" key="GridCell.Tab.0.right" timestamp="1602286691955">
+      <screen x="0" y="23" width="1280" height="708" />
     </state>
     <state width="1878" height="521" key="GridCell.Tab.0.right/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602201400342" />
-    <state width="998" height="174" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1601959350081" />
+    <state width="1238" height="207" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691955" />
     <state width="1363" height="283" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602212190248" />
     <state x="1558" y="72" width="900" height="722" key="SettingsEditor" timestamp="1602123729502">
       <screen x="1280" y="23" width="1920" height="1057" />
@@ -222,9 +253,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Bus_API_Testing.coverage" NAME="Bus_API_Testing Coverage Results" MODIFIED="1601959056055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$reducing_json_file.coverage" NAME="reducing_json_file Coverage Results" MODIFIED="1602276786742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$storageedemo.coverage" NAME="storageedemo Coverage Results" MODIFIED="1602207469819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$main.coverage" NAME="main Coverage Results" MODIFIED="1602201085814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Bus_API_Testing2.coverage" NAME="Bus_API_Testing2 Coverage Results" MODIFIED="1602092817454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
-    <SUITE FILE_PATH="coverage/BusProjectWorkspace$trying_to_find_line_ref.coverage" NAME="trying_to_find_line_ref Coverage Results" MODIFIED="1602207767184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$trying_to_find_line_ref.coverage" NAME="generating_vehicle_monitoring_information Coverage Results" MODIFIED="1602276866159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$THREE_using_the_reduced_json_file.coverage" NAME="THREE_using_the_reduced_json_file Coverage Results" MODIFIED="1602286691936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
   </component>
 </project>
