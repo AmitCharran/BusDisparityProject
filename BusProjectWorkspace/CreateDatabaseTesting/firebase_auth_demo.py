@@ -10,7 +10,7 @@ databaseURL = "https://busgoon-f496c.firebaseio.com"
 # So far this is just copied from Firebase website after creation of a database on there
 # the information is in Settings -> Project Settings. You will just need to copy paste from there
 # We will need to decypher information later
-firebaseConfig={'apiKey': apiKey,
+firebaseConfig = {'apiKey': apiKey,
     'authDomain': "busgoon-f496c.firebaseapp.com",
     'databaseURL': databaseURL,
     'projectId': "busgoon-f496c",

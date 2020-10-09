@@ -33,6 +33,9 @@ storage = firebase.storage()
 
 # This prompts the user for file name -- which is 'test_upload.txt'
 file = input("Enter the name of the file you want to upload to storage: ")
+
+
+# This is how to define the file path and name in the firebase storage
 cloud_file_name = input("Enter the name for the file in storage: ")
 
 # This is line of code is how you actually upload the file
@@ -51,8 +54,8 @@ print(storage.child(cloud_file_name).get_url(None))
 # Testing grabbing information from database
 
 # Prompts the user for information
-download_link=input("Enter download url: ")
-storage.child(download_link).download("downloaded.txt")
+download_link = input("Enter download url: ")
+storage.child(download_link).download("downloadedHowdy.txt")
 
 # read from a file
 # prompts the user for file path
