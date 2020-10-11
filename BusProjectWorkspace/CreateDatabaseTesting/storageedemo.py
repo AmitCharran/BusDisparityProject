@@ -53,11 +53,14 @@ print(storage.child(cloud_file_name).get_url(None))
 
 ########################################################################################
 # Testing grabbing information from database
-
+# setting up storage
+storage = firebase.storage()
 # Prompts the user for information
-download_link = input("Enter download url: ")
-storage.child(download_link).download("downloadedHowdy.txt")
+download_link = input("Enter download file: ")
+storage.child(download_link).download("downloadedHowdy2.txt")
 
+# setting up storage
+storage = firebase.storage()
 # read from a file
 # prompts the user for file path
 path = input("Enter the path in storage of the file you want to read: ")
@@ -70,4 +73,7 @@ print(storage.child(path).get_url(None))
 # request to grab information
 url = storage.child(path).get_url(None)
 f = urllib.request.urlopen(url).read()
+
+# with open("test_download.txt" , "w") as file:
+#     data = file.load(f)
 print(f)
