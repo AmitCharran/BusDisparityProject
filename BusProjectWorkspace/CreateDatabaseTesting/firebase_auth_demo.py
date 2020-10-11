@@ -19,7 +19,7 @@ def signup():
     try:
         user = auth.create_user_with_email_and_password(email,password)
         print("Successfully created account")
-        ask=input("Don you want to login now?[y/n]")
+        ask = input("Don you want to login now?[y/n]")
         if ask=='y':
             login()
     except:
