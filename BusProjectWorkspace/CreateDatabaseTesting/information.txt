@@ -1,6 +1,0 @@
-Add resources and things you learn here.
-
-Please make sure to leave helpful comments so everyone else understands your code
-
-Feel free to create your own files to do your own work separate from anyone else.
-Make sure to keep it in the same directory.
