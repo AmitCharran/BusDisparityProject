@@ -3,6 +3,7 @@
 
 # for handling URLs
 import urllib
+import urllib.request
 # This is our database
 import pyrebase
 
@@ -28,8 +29,8 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 
 
 ########################################################################################
-# Testing upload
-# setting up storage
+# # Testing upload
+# # setting up storage
 storage = firebase.storage()
 
 # This prompts the user for file name -- which is 'test_upload.txt'
@@ -74,6 +75,5 @@ print(storage.child(path).get_url(None))
 url = storage.child(path).get_url(None)
 f = urllib.request.urlopen(url).read()
 
-# with open("test_download.txt" , "w") as file:
-#     data = file.load(f)
+
 print(f)
