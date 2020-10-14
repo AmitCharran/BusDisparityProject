@@ -22,15 +22,9 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 
 storage = firebase.storage()
 
-<<<<<<< HEAD
-path = "book/info.txt"
-url = storage.child(path).get_url(None)
-storage.child(url).download("downloadedHowdy3.txt")
-print(storage.child(path).get_url(None))
-f = urllib.request.urlopen(url).read()
-=======
+
 path = "Oct11.txt"
->>>>>>> 99f1a80ad432130ca28dbbcccac17586d44f6996
+
 
 storage.child(path).download("downloadedHowdy3.txt")
 
