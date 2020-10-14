@@ -20,32 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5988729f-fcad-44bf-b5da-e9bd37fad2b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/ONE_generating_vehicle_monitoring_information.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/THREE_using_the_reduced_json_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TWO_reducing_json_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/all_line_ref.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/empty.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/reduced_vehicle_monitoring_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/saved_json_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/TextFileFolder/vehicle_monitoring.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bus_API_Testing/Josh/empty.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/downloadedHowdy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/downloadedHowdy1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/downloadedHowdy2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_download.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_download.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_upload.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../saved_json_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BusProjectWorkspace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BusProjectWorkspace.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/saved_json_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/saved_json_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/Database_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/Database_Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/downloaded.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/downloaded.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/firebase_auth_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/firebase_auth_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/storageedemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/storageedemo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/test_upload.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +226,8 @@
       <workItem from="1602206008615" duration="3356000" />
       <workItem from="1602275361858" duration="7520000" />
       <workItem from="1602396482027" duration="3380000" />
-      <workItem from="1602456270025" duration="6078000" />
+      <workItem from="1602456270025" duration="6990000" />
+      <workItem from="1602475979929" duration="6000" />
     </task>
     <servers />
   </component>
@@ -268,47 +244,48 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="369" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602472654501">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="369" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1602472654501" />
-    <state width="913" height="204" key="GridCell.Tab.0.bottom" timestamp="1602474808293">
+    <state width="913" height="204" key="GridCell.Tab.0.bottom" timestamp="1602475973385">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1878" height="444" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602443506106" />
     <state width="1238" height="207" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691955" />
     <state width="1238" height="376" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602443156173" />
     <state width="923" height="182" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1602457887844" />
-    <state width="913" height="204" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1602474808293" />
+    <state width="913" height="204" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1602475973385" />
     <state width="923" height="182" key="GridCell.Tab.0.bottom/0.23.1440.808@0.23.1440.808" timestamp="1602457276837" />
-    <state width="913" height="204" key="GridCell.Tab.0.center" timestamp="1602474808292">
+    <state width="913" height="204" key="GridCell.Tab.0.center" timestamp="1602475973384">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1878" height="444" key="GridCell.Tab.0.center/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602443506091" />
     <state width="1238" height="207" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691954" />
     <state width="1238" height="376" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602443156172" />
     <state width="923" height="182" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1602457887843" />
-    <state width="913" height="204" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1602474808292" />
+    <state width="913" height="204" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1602475973384" />
     <state width="923" height="182" key="GridCell.Tab.0.center/0.23.1440.808@0.23.1440.808" timestamp="1602457276836" />
-    <state width="913" height="204" key="GridCell.Tab.0.left" timestamp="1602474808291">
+    <state width="913" height="204" key="GridCell.Tab.0.left" timestamp="1602475973383">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1878" height="444" key="GridCell.Tab.0.left/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602443506081" />
     <state width="1238" height="207" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691953" />
     <state width="1238" height="376" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602443156171" />
     <state width="923" height="182" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1602457887843" />
-    <state width="913" height="204" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1602474808291" />
+    <state width="913" height="204" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1602475973383" />
     <state width="923" height="182" key="GridCell.Tab.0.left/0.23.1440.808@0.23.1440.808" timestamp="1602457276834" />
-    <state width="913" height="204" key="GridCell.Tab.0.right" timestamp="1602474808292">
+    <state width="913" height="204" key="GridCell.Tab.0.right" timestamp="1602475973384">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state width="1878" height="444" key="GridCell.Tab.0.right/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602443506104" />
     <state width="1238" height="207" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@0.23.1280.708" timestamp="1602286691955" />
     <state width="1238" height="376" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1602443156173" />
     <state width="923" height="182" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1602457887844" />
-    <state width="913" height="204" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1602474808292" />
+    <state width="913" height="204" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1602475973384" />
     <state width="923" height="182" key="GridCell.Tab.0.right/0.23.1440.808@0.23.1440.808" timestamp="1602457276836" />
     <state width="1878" height="611" key="GridCell.Tab.1.bottom" timestamp="1602443477099">
       <screen x="1280" y="0" width="1920" height="1080" />
@@ -352,7 +329,7 @@
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Bus_API_Testing.coverage" NAME="Bus_API_Testing Coverage Results" MODIFIED="1601959056055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Bus_API_Testing2.coverage" NAME="Bus_API_Testing2 Coverage Results" MODIFIED="1602469264402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Function_Testing.coverage" NAME="Function_Testing Coverage Results" MODIFIED="1602469280271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
-    <SUITE FILE_PATH="coverage/BusProjectWorkspace$firebase_auth_demo.coverage" NAME="firebase_auth_demo Coverage Results" MODIFIED="1602474808271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting/Ariel" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$firebase_auth_demo.coverage" NAME="firebase_auth_demo Coverage Results" MODIFIED="1602474908478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting/Ariel" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$storageedemo.coverage" NAME="storageedemo Coverage Results" MODIFIED="1602442704389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$main.coverage" NAME="main Coverage Results" MODIFIED="1602456569031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
