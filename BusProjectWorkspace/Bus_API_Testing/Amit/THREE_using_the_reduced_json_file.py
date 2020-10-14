@@ -25,8 +25,6 @@ def get_passenger_count(json_data):
 
 
 
-
-
 # Need function to get all distinct LineRef and map to bus name
 def find_all_distinct_line_ref(json_data):
     distinct_line_ref = []
@@ -55,7 +53,9 @@ def find_all_distinct_operator_ref(json_data):
             distinct_operator_ref.append(operator_ref)
     return distinct_operator_ref
 
-# print(find_all_distinct_operator_ref(data))
+print(find_all_distinct_operator_ref(data))
+
+get_passenger_count(data)
 
 
 
