@@ -23,7 +23,8 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 storage = firebase.storage()
 
 
-path = "Oct11.txt"
+path = input("Enter the path in storage of the file you want to read")
+print(storage.child(path).get_url())
+url = storage.child(path).get_url()
 
 storage.child(path).download("downloadedHowdy3.txt")
-
