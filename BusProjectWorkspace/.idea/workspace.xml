@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5988729f-fcad-44bf-b5da-e9bd37fad2b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/downloadedHowdy3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_Delete.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_Read.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_edit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_download.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Alvin/test_download.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +210,7 @@
       <workItem from="1602206008615" duration="3356000" />
       <workItem from="1602275361858" duration="7520000" />
       <workItem from="1602396482027" duration="5985000" />
-      <workItem from="1602535951462" duration="2859000" />
+      <workItem from="1602535951462" duration="3557000" />
     </task>
     <servers />
   </component>
