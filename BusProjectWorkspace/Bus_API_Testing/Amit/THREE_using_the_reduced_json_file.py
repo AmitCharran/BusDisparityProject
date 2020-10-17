@@ -11,13 +11,14 @@ print(test_data.keys())
 def get_passenger_count(json_data):
     for x in json_data:
         test_data_2 = x['MonitoredVehicleJourney']
+        vehicle_ref = test_data_2['VehicleRef']
         line_ref = test_data_2['LineRef']
         if 'MonitoredCall' in test_data_2:
             test_data_3 = test_data_2['MonitoredCall']
             if 'Extensions' in test_data_3:
                 test_data_4 = test_data_3['Extensions']
                 if 'Capacities' in test_data_4:
-                    print(line_ref + "\t" + str(test_data_4['Capacities']['EstimatedPassengerCount']))
+                    print(line_ref + "\t" + vehicle_ref + "\t" + str(test_data_4['Capacities']['EstimatedPassengerCount']))
 
 
 
@@ -56,6 +57,8 @@ def find_all_distinct_operator_ref(json_data):
 print(find_all_distinct_operator_ref(data))
 
 get_passenger_count(data)
+
+
 
 
 

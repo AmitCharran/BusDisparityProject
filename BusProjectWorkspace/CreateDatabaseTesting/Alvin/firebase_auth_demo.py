@@ -11,13 +11,13 @@ databaseURL = "https://busgoon-f496c.firebaseio.com"
 # the information is in Settings -> Project Settings. You will just need to copy paste from there
 # We will need to decypher information later
 firebaseConfig = {'apiKey': apiKey,
-    'authDomain': "busgoon-f496c.firebaseapp.com",
-    'databaseURL': databaseURL,
-    'projectId': "busgoon-f496c",
-    'storageBucket': "busgoon-f496c.appspot.com",
-    'messagingSenderId': "534678584016",
-    'appId': "1:534678584016:web:c4ffd395e1c2c21d15bcd5",
-    'measurementId': "G-T0QETWNEXL"}
+                  'authDomain': "busgoon-f496c.firebaseapp.com",
+                  'databaseURL': databaseURL,
+                  'projectId': "busgoon-f496c",
+                  'storageBucket': "busgoon-f496c.appspot.com",
+                  'messagingSenderId': "534678584016",
+                  'appId': "1:534678584016:web:c4ffd395e1c2c21d15bcd5",
+                  'measurementId': "G-T0QETWNEXL"}
 
 # From pyrebase library
 # initializes our database
@@ -39,12 +39,11 @@ def signup():
         print("Successfully created account")
         ask = input("Don you want to login now?[y/n]")
 
-
         if ask == 'y':
-
             login()
     except:
         print("Email already exists!")
+
 
 # this function is to log in with the future
 def login():
@@ -52,14 +51,15 @@ def login():
     email = input("Enter email:")
     password = input("Enter password:")
     try:
-        login=auth.sign_in_with_email_and_password(email,password)
+        login = auth.sign_in_with_email_and_password(email, password)
         print("Successfully logged in!")
         print(auth.get_account_info(login['idToken']))
     except:
         print("Email already exists!")
 
-ans=input("Are you a new user?[y/n]")
-if ans=='y':
+
+ans = input("Are you a new user?[y/n]")
+if ans == 'y':
     signup()
-elif ans=='n':
+elif ans == 'n':
     login()

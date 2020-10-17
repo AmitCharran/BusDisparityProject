@@ -17,7 +17,7 @@ data = response.json()
 with open('TextFileFolder/saved_json_data.txt', 'w') as outfile:
     json.dump(data, outfile)
 
-with open('MTA.json', 'w') as outfile:
+with open('TextFileFolder/vehicle_monitoring.json', 'w') as outfile:
     json.dump(data, outfile)
 
 
