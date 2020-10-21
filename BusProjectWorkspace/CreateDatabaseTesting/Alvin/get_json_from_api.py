@@ -1,6 +1,5 @@
-import json
 import requests
-
+import json
 
 
 API_access = "http://bustime.mta.info/api/siri/vehicle-monitoring.json?key=f3cd89cf-147d-40bf-8557-5431e990e24f&VehicleRef=MTABC_6242"
@@ -14,16 +13,10 @@ data = response.json()
 with open('saved_json_data.txt', 'w') as outfile:
     json.dump(data, outfile)
 
-    
-# All Line References and Published Line Names
 
-# List of all vehicle references
 
-# Getting and Saving Crowding data
+# This file will get all the bus data from Vehicle Monitoring and reduce it into something we can use
 
-# Getting Location Data
-
-#Getting Accessing Vehicle Monitoring
 with open('saved_json_data.txt') as json_file:
     data = json.load(json_file)
 
@@ -41,3 +34,6 @@ def accessing_vechicle_monitoring(bus_data):
         json.dump(time,outfile)
 
 accessing_vechicle_monitoring(bus_data)
+
+
+

@@ -24,7 +24,7 @@ storage = firebase.storage()
 
 
 path = input("Enter the path in storage of the file you want to read")
-print(storage.child(path).get_url())
-url = storage.child(path).get_url()
-
-storage.child(path).download("downloadedHowdy3.txt")
+print(storage.child(path).get_url(None))
+url = storage.child(path).get_url(None)
+f = urllib.request.urlopen(url).read()
+print(f)

@@ -23,26 +23,5 @@ firebaseConfig = {'apiKey': apiKey,
 # initializes our database
 firebase = pyrebase.initialize_app(firebaseConfig)
 
+
 db = firebase.database()
-
-# #Delete item with known key
-# db.child("todolistA").child("wednesday").child("volunteer").child("deadline").remove()
-#
-# #Delete entire node and its children
-# db.child("todolistA").child("tuesday").remove()
-#
-# #Delete item with unkown generated key
-# monday_tasks=db.child("todolistB").child("monday").get()
-#
-# for task in monday_tasks.each():
-#     if task.val()['name']=="paper":
-#         key=task.key()
-#
-# db.child("todolistB").child("monday").child(key).child("deadline").remove()
-
-tasks = db.child("MTA").get()
-
-
-print(tasks)
-# db.child("MTA").remove()
-

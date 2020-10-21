@@ -23,8 +23,8 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 storage = firebase.storage()
 
 
-path = "Oct11.txt"
+path = "MTA.json"
 
 
-storage.child(path).download("downloadedHowdy3.txt")
+storage.child(path).download("downloadjson1.json")
 
