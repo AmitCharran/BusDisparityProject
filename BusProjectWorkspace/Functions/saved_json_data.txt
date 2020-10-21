@@ -1,0 +1,1 @@
+{"Siri": {"ServiceDelivery": {"ResponseTimestamp": "2020-10-20T22:00:12.676-04:00", "VehicleMonitoringDelivery": [{"VehicleActivity": [], "ResponseTimestamp": "2020-10-20T22:00:12.676-04:00", "ValidUntil": "2020-10-20T22:01:12.676-04:00"}], "SituationExchangeDelivery": []}}}

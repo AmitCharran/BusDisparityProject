@@ -14,7 +14,7 @@ data = response.json()
 with open('saved_json_data.txt', 'w') as outfile:
     json.dump(data, outfile)
 
-    
+
 # All Line References and Published Line Names
 
 # List of all vehicle references
