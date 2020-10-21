@@ -6,7 +6,7 @@ vehicle_monitoring_url = "http://bustime.mta.info/api/siri/vehicle-monitoring.js
 
 API_key = 'f3cd89cf-147d-40bf-8557-5431e990e24f'
 
-API_access = "http://bustime.mta.info/api/siri/vehicle-monitoring.json?key=f3cd89cf-147d-40bf-8557-5431e990e24f&VehicleRef=MTABC_6242"
+# API_access = "http://bustime.mta.info/api/siri/vehicle-monitoring.json?key=f3cd89cf-147d-40bf-8557-5431e990e24f&VehicleRef=MTABC_6242"
 
 get_all_info_from_vehicle_monitoring = vehicle_monitoring_url + "?key=" + API_key
 

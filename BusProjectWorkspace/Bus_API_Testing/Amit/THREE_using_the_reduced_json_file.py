@@ -5,10 +5,11 @@ with open('TextFileFolder/reduced_vehicle_monitoring_file.txt') as json_file:
 
 test_data = data[0]['MonitoredVehicleJourney']
 
-print(test_data.keys())
 
 
 def get_passenger_count(json_data):
+    counter = 0
+
     for x in json_data:
         test_data_2 = x['MonitoredVehicleJourney']
         vehicle_ref = test_data_2['VehicleRef']
@@ -18,7 +19,10 @@ def get_passenger_count(json_data):
             if 'Extensions' in test_data_3:
                 test_data_4 = test_data_3['Extensions']
                 if 'Capacities' in test_data_4:
+                    counter = counter + 1
                     print(line_ref + "\t" + vehicle_ref + "\t" + str(test_data_4['Capacities']['EstimatedPassengerCount']))
+    print(counter)
+
 
 
 
@@ -56,7 +60,9 @@ def find_all_distinct_operator_ref(json_data):
 
 print(find_all_distinct_operator_ref(data))
 
+
 get_passenger_count(data)
+print(len(data))
 
 
 
