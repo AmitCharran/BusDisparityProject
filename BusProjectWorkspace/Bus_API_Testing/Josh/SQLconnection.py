@@ -22,20 +22,31 @@ cur = conn.cursor()
 # Setter Example (Adding one row)
 def add_testingTable_Row(testingTable_PK, name):
    
-   cur.execute("INSERT INTO TestingTable(TestingTable_PK, Name) VALUES (?, ?, ?)",
+   cur.execute("INSERT INTO TestingTable(TestingTable_PK, Name) VALUES (?, ?)",
       (testingTable_PK, name))
 
 # Getter Example
 def testingTable_rows():
-    selectedRows = cur.execute(
+    cur.execute(
         "SELECT TestingTable_PK,Name FROM TestingTable"
         )
-    return selectedRows
+    return cur
 
 # Using the Setter Function
 add_testingTable_Row(100, "josh")
+
+
+
 
 # Using the Getter Function
 retrieve = testingTable_rows()
 for(TestingTable_PK, Name) in retrieve:
     print(f"TestingTable_PK: {TestingTable_PK}, Name: {Name}")
+
+
+# use commit() to commit to the database
+#conn.commit()
+
+
+# Closing connection after used
+conn.close()
