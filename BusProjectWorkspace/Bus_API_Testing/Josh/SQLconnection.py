@@ -5,7 +5,7 @@ import sys
 try:
     conn = mariadb.connect(
         user="admin",
-        password="",
+        password="admin.Fall2020.Fall2020",
         host="localhost",
         port=3306,
         database="Bus_Project"
@@ -17,3 +17,13 @@ except mariadb.Error as e:
 
 # Get Cursor
 cur = conn.cursor()
+
+
+
+
+
+# Getter Example
+def testingTable_rows(testingTable_PK, name):
+    cur.execute(
+        "SELECT TestingTable_PK,Name FROM TestingTable",
+        (testingTable_PK, name))
