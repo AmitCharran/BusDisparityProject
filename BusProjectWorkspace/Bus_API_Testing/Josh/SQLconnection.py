@@ -45,7 +45,7 @@ for(TestingTable_PK, Name) in retrieve:
 
 
 # use commit() to commit to the database
-#conn.commit()
+conn.commit()
 
 
 # Closing connection after used
