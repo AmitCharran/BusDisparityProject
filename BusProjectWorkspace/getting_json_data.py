@@ -18,7 +18,7 @@ while True:
     data = response.json()
 
     counter_calls = counter_calls + 1
-    print("Request Call Number: " + str(counter_calls))
+
     string_date = data['Siri']['ServiceDelivery']['ResponseTimestamp']
 
     temp = string_date[0:string_date.rfind('-')]
@@ -30,9 +30,13 @@ while True:
     if not os.path.isdir(directory):
         os.mkdir(directory)
 
+    # Output
+    print("Request Call Number: " + str(counter_calls))
+    print(str(starttime) + " " + file_name)
+
     if not os.path.isfile(directory + "/" + file_name):
         with open(directory + '/' + file_name,
-              'w') as outfile:
+                  'w') as outfile:
             json.dump(data, outfile)
 
     currenttime = int(round(time.time() * 1000))
@@ -41,5 +45,4 @@ while True:
     calculatedTime = pauseTimeInSecond - ((currenttime - starttime)/1000)  # currenttime = 105300  starttime = 105200  c - s = 100ms
     time.sleep(calculatedTime)
     starttime = currenttime + (calculatedTime * 1000)
-    print(starttime)
-    print(calculatedTime)
+
