@@ -10,12 +10,13 @@ API_key = 'f3cd89cf-147d-40bf-8557-5431e990e24f'
 
 get_all_info_from_vehicle_monitoring = vehicle_monitoring_url + "?key=" + API_key
 
-response = requests.get(get_all_info_from_vehicle_monitoring)
-data = response.json()
 starttime = int(round(time.time() * 1000))
 
 counter_calls = 0
 while True:
+    response = requests.get(get_all_info_from_vehicle_monitoring)
+    data = response.json()
+
     counter_calls = counter_calls + 1
     print("Request Call Number: " + str(counter_calls))
     string_date = data['Siri']['ServiceDelivery']['ResponseTimestamp']
@@ -35,5 +36,10 @@ while True:
             json.dump(data, outfile)
 
     currenttime = int(round(time.time() * 1000))
-    time.sleep(10 - ((currenttime - starttime)/1000))
-    starttime = currenttime
+    # pauseTimeInSecond contains the pause time in seconds
+    pauseTimeInSecond = 180
+    calculatedTime = pauseTimeInSecond - ((currenttime - starttime)/1000)  # currenttime = 105300  starttime = 105200  c - s = 100ms
+    time.sleep(calculatedTime)
+    starttime = currenttime + (calculatedTime * 1000)
+    print(starttime)
+    print(calculatedTime)
