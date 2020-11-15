@@ -42,6 +42,7 @@ def create_list_of_all_paths():
 # Then put the bus informaion into an array
 def access_json_info(file_name):
     with open(file_name) as json_file:
+        print(file_name)
         data = json.load(json_file)
 
     bus_data = data['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
@@ -67,25 +68,25 @@ def get_passenger_count(data):
             data3 = data2['Extensions']
             if 'Capacities' in data3:
                 return data3['Capacities']['EstimatedPassengerCount']
-    return "NoPassengerCountRecorded"
+    return "null"
 
 
 def get_stop_point_name(data):
     data = data['MonitoredVehicleJourney']
     if 'MonitoredCall' in data:
         return data['MonitoredCall']['StopPointName']
-    return "NoStopPointName"
+    return "null"
 
 def get_stop_point_ref(data):
     data = data['MonitoredVehicleJourney']
     if 'MonitoredCall' in data:
         return data['MonitoredCall']['StopPointRef']
-    return "NoStopPointRef"
+    return "null"
 
 def get_destination_name(data):
     if 'DestinationName' in data['MonitoredVehicleJourney']:
         return data['MonitoredVehicleJourney']['DestinationName']
-    return "NoDestinationName"
+    return "null"
 
 def get_journey_pattern_ref(data):
     if 'JourneyPatternRef'in data['MonitoredVehicleJourney']:
@@ -116,7 +117,7 @@ def get_data_for_SQL_table():
         temp = string_date[0:string_date.rfind('-')]
         date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
 
-        primary_key = str(date.date()) + str(date.hour) + str(date.minute) + str(vehicle_ref) + str(line_ref)
+        primary_key = str(date.date()) + str(date.hour) + str(date.minute) + " " + str(vehicle_ref) + " " + str(line_ref)
 
         array = [primary_key, response_time_stamp, vehicle_ref, line_ref, published_line_name, passenger_count, longitue, latitude, destination_name, journey_pattern_ref, stop_point_name, stop_point_ref]
         array_of_info_for_SQL_table.append(array)
@@ -124,7 +125,9 @@ def get_data_for_SQL_table():
     return array_of_info_for_SQL_table
 
 
-print(get_data_for_SQL_table())
+array = get_data_for_SQL_table()
+print(array[0])
+
 
 # Now information is ready to go into SQLTables
 
