@@ -21,7 +21,7 @@ def get_passenger_count(json_data):
                 if 'Capacities' in test_data_4:
                     counter = counter + 1
                     print(line_ref + "\t" + vehicle_ref + "\t" + str(test_data_4['Capacities']['EstimatedPassengerCount']))
-    print(counter)
+
 
 
 
