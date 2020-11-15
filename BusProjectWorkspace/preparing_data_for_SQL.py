@@ -42,9 +42,16 @@ def create_list_of_all_paths():
 # Then put the bus informaion into an array
 def access_json_info(file_name):
     with open(file_name) as json_file:
-        data = json.load(json_file)
+        try:
+            data = json.load(json_file)
+        except json.decoder.JSONDecodeError as e:
+            print(str(e) + " " + file_name)
 
-    bus_data = data['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
+    bus_data = []
+    try:
+         bus_data = data['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
+    except UnboundLocalError as e:
+        pass
     return bus_data
 
 def add_json_info_into_array():
@@ -124,8 +131,8 @@ def get_data_for_SQL_table():
     return array_of_info_for_SQL_table
 
 
-print(get_data_for_SQL_table())
-
+array = get_data_for_SQL_table()
+print(len(array))
 # Now information is ready to go into SQLTables
 
 
