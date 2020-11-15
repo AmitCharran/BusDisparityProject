@@ -1,5 +1,6 @@
 from os import walk  # use walk to go through directories
 import json
+from datetime import datetime
 
 directory = "Sample_JSON_Data/"  # this will be changed later and is used multiple time
 
@@ -82,15 +83,13 @@ def get_stop_point_ref(data):
     return "NoStopPointRef"
 
 def get_destination_name(data):
-    if 'VehicleLocation' in data['MonitoredVehicleJourney']:
-        if 'DestinationName' in data['MonitoredVehicleJourney']['VehicleLocation']:
-            return data['MonitoredVehicleJourney']['VehicleLocation']['DestinationName']
+    if 'DestinationName' in data['MonitoredVehicleJourney']:
+        return data['MonitoredVehicleJourney']['DestinationName']
     return "NoDestinationName"
 
 def get_journey_pattern_ref(data):
-    if 'VehicleLocation' in data['MonitoredVehicleJourney']:
-        if 'JourneyPatternRef'in data['MonitoredVehicleJourney']['VehicleLocation']:
-            return data['MonitoredVehicleJourney']['VehicleLocation']['JourneyPatternRef']
+    if 'JourneyPatternRef'in data['MonitoredVehicleJourney']:
+        return data['MonitoredVehicleJourney']['JourneyPatternRef']
     return "NoJourneyPatternRef"
 
 
@@ -98,22 +97,36 @@ def get_data_for_SQL_table():
     all_bus_info = add_json_info_into_array()
     array_of_info_for_SQL_table = []
     for data in all_bus_info:
-        responseTimeStamp = data['RecordedAtTime']
-        vehicleRef = data['MonitoredVehicleJourney']['VehicleRef']
-        lineRef = data['MonitoredVehicleJourney']['LineRef']
-        publishedLineName =  data['MonitoredVehicleJourney']['PublishedLineName']
+        response_time_stamp = data['RecordedAtTime']
+        vehicle_ref = data['MonitoredVehicleJourney']['VehicleRef']
+        line_ref = data['MonitoredVehicleJourney']['LineRef']
+        published_line_name =  data['MonitoredVehicleJourney']['PublishedLineName']
 
         passenger_count = get_passenger_count(data)
 
         longitue = data['MonitoredVehicleJourney']['VehicleLocation']['Longitude']
         latitude = data['MonitoredVehicleJourney']['VehicleLocation']['Latitude']
-        destinationName = get_destination_name(data)
-        journeyPatternRef = get_journey_pattern_ref(data)
+        destination_name = get_destination_name(data)
+        journey_pattern_ref = get_journey_pattern_ref(data)
 
-        stopPointName = get_stop_point_name(data)
-        stopPointRef = get_stop_point_ref(data)
+        stop_point_name = get_stop_point_name(data)
+        stop_point_ref = get_stop_point_ref(data)
 
-get_data_for_SQL_table()
+        string_date = response_time_stamp
+        temp = string_date[0:string_date.rfind('-')]
+        date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+
+        primary_key = str(date.date()) + str(date.hour) + str(date.minute) + str(vehicle_ref) + str(line_ref)
+
+        array = [primary_key, response_time_stamp, vehicle_ref, line_ref, published_line_name, passenger_count, longitue, latitude, destination_name, journey_pattern_ref, stop_point_name, stop_point_ref]
+        array_of_info_for_SQL_table.append(array)
+
+    return array_of_info_for_SQL_table
+
+
+print(get_data_for_SQL_table())
+
+# Now information is ready to go into SQLTables
 
 
 
