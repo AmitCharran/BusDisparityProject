@@ -55,22 +55,6 @@ def access_json_info(file_name):
 
     return bus_data
 
-def add_json_info_into_array():
-    array = []
-    path_directories = create_list_of_all_paths()
-    counter = 0
-    for paths in path_directories:
-        if not paths.__contains__("/.DS_Store"):
-            bus_data = access_json_info(paths)
-            for info in bus_data:
-                counter += len(info)
-                # array.append(info)
-        # counter = counter + 1
-        # if counter >= 30:
-        #     break
-    print(counter)
-    return array
-
 # Get data for SQL table
 def get_passenger_count(data):
     data = data['MonitoredVehicleJourney']
@@ -105,6 +89,46 @@ def get_journey_pattern_ref(data):
         return data['MonitoredVehicleJourney']['JourneyPatternRef']
     return "NoJourneyPatternRef"
 
+def get_response_time_stamp(data):
+    return data['RecordedAtTime']
+
+def get_vehicle_ref(data):
+    return data['MonitoredVehicleJourney']['VehicleRef']
+
+def get_line_ref(data):
+    return data['MonitoredVehicleJourney']['LineRef']
+
+def get_published_line_name(data):
+    return data['MonitoredVehicleJourney']['PublishedLineName']
+
+def get_longitude(data):
+    return data['MonitoredVehicleJourney']['VehicleLocation']['Longitude']
+
+def get_latitude(data):
+    return data['MonitoredVehicleJourney']['VehicleLocation']['Latitude']
+
+def get_private_key(data):
+    string_date = get_response_time_stamp(data)
+    vehicle_ref = get_vehicle_ref(data)
+    line_ref = get_line_ref()
+
+    temp = string_date[0:string_date.rfind('-')]
+    date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+    primary_key = str(date.date()) + str(date.hour) + str(date.minute) + " " + str(vehicle_ref) + " " + str(line_ref)
+    return primary_key
+
+def add_json_info_into_array():
+    array = []
+    path_directories = create_list_of_all_paths()
+    counter = 0
+    for paths in path_directories:
+        if not paths.__contains__("/.DS_Store"):
+            bus_data = access_json_info(paths)
+            for info in bus_data:
+                for data in info:
+                    # Put function to enter code into SQL here
+                    pass
+    return array
 
 def get_data_for_SQL_table():
     all_bus_info = add_json_info_into_array()
