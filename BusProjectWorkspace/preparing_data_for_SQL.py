@@ -66,7 +66,6 @@ def get_passenger_count(data):
                 return data3['Capacities']['EstimatedPassengerCount']
     return "null"
 
-
 def get_stop_point_name(data):
     data = data['MonitoredVehicleJourney']
     if 'MonitoredCall' in data:
@@ -107,10 +106,10 @@ def get_longitude(data):
 def get_latitude(data):
     return data['MonitoredVehicleJourney']['VehicleLocation']['Latitude']
 
-def get_private_key(data):
+def get_primary_key(data):
     string_date = get_response_time_stamp(data)
     vehicle_ref = get_vehicle_ref(data)
-    line_ref = get_line_ref()
+    line_ref = get_line_ref(data)
 
     temp = string_date[0:string_date.rfind('-')]
     date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
@@ -120,24 +119,38 @@ def get_private_key(data):
 def add_json_info_into_SQL():
     array = []
     path_directories = create_list_of_all_paths()
-    counter = 0
     for paths in path_directories:
         if not paths.__contains__("/.DS_Store"):
             bus_data = access_json_info(paths)
-            for info in bus_data:
-                for data in info:
-                    # Put function to enter code into SQL here
+            for data in bus_data:
+                    # code to enter things into DB
+                    information_for_files(data)
                     pass
     return array
 
 
+def information_for_files(data):
+    dictionary = {"Primary Key": get_primary_key(data),
+             "Response Time": get_response_time_stamp(data),
+             "Vehicle Ref": get_vehicle_ref(data),
+             "Line Ref": get_line_ref(data),
+             "Published Line Ref": get_published_line_name(data),
+             "Passenger Count": get_passenger_count(data),
+             "Latitude": get_latitude(data),
+             "Longitude": get_longitude(data),
+             "Stop Point Name": get_stop_point_name(data),
+             "Stop Point Ref": get_stop_point_ref(data),
+             "Destination Name": get_destination_name(data),
+             "Journey Pattern Ref": get_journey_pattern_ref(data)}
+
+    file = open("info.txt", "a")
+    file.writelines(str(dictionary))
+    file.writelines("\n")
+    file.close()
 
 
 
-
-# Now information is ready to go into SQLTables
-
-
+add_json_info_into_SQL()
 
 # for each folder
 #   for each file
