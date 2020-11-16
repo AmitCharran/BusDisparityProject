@@ -2,7 +2,7 @@ from os import walk  # use walk to go through directories
 import json
 from datetime import datetime
 
-directory = "Sample_JSON_Data/"  # this will be changed later and is used multiple time
+directory = "/home/pi/PycharmProjects/BusDisparityProject/JSON_Data/"  # this will be changed later and is used multiple time
 
 # Get the path of all the files dynamically
 def get_list_of_directories():
@@ -18,7 +18,7 @@ def get_file_names_into_array():
 
     for x in f:
         file_names = []
-        for (dirpath, dirnames, filenames) in walk(directory + x):  # getting directyory
+        for (dirpath, dirnames, filenames) in walk(directory + x):  # getting directory
             file_names.extend(filenames)
             break
         files.append(file_names)
@@ -58,12 +58,17 @@ def access_json_info(file_name):
 def add_json_info_into_array():
     array = []
     path_directories = create_list_of_all_paths()
+    counter = 0
     for paths in path_directories:
         if not paths.__contains__("/.DS_Store"):
             bus_data = access_json_info(paths)
             for info in bus_data:
-                array.append(info)
-
+                counter += len(info)
+                # array.append(info)
+        # counter = counter + 1
+        # if counter >= 30:
+        #     break
+    print(counter)
     return array
 
 # Get data for SQL table
@@ -104,11 +109,13 @@ def get_journey_pattern_ref(data):
 def get_data_for_SQL_table():
     all_bus_info = add_json_info_into_array()
     array_of_info_for_SQL_table = []
+    counter = 0
     for data in all_bus_info:
+        counter = counter + 1
         response_time_stamp = data['RecordedAtTime']
         vehicle_ref = data['MonitoredVehicleJourney']['VehicleRef']
         line_ref = data['MonitoredVehicleJourney']['LineRef']
-        published_line_name =  data['MonitoredVehicleJourney']['PublishedLineName']
+        published_line_name = data['MonitoredVehicleJourney']['PublishedLineName']
 
         passenger_count = get_passenger_count(data)
 
@@ -126,19 +133,25 @@ def get_data_for_SQL_table():
 
         primary_key = str(date.date()) + str(date.hour) + str(date.minute) + " " + str(vehicle_ref) + " " + str(line_ref)
 
-        array = [primary_key, response_time_stamp, vehicle_ref, line_ref, published_line_name, passenger_count, longitue, latitude, destination_name, journey_pattern_ref, stop_point_name, stop_point_ref]
-        array_of_info_for_SQL_table.append(array)
-
+        # array = [primary_key, response_time_stamp, vehicle_ref, line_ref, published_line_name, passenger_count, longitue, latitude, destination_name, journey_pattern_ref, stop_point_name, stop_point_ref]
+        # array_of_info_for_SQL_table.append(array)
+    print(counter)
     return array_of_info_for_SQL_table
 
 
 array = get_data_for_SQL_table()
-
+print(len(array))
 
 
 
 # Now information is ready to go into SQLTables
 
+
+
+# for each folder
+#   for each file
+#       for each data
+#           insert into sql
 
 
 
