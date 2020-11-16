@@ -2,7 +2,7 @@ from os import walk  # use walk to go through directories
 import json
 from datetime import datetime
 
-directory = "/home/pi/PycharmProjects/BusDisparityProject/JSON_Data/"  # this will be changed later and is used multiple time
+directory = "Sample_JSON_Data/"  # this will be changed later and is used multiple time
 
 # Get the path of all the files dynamically
 def get_list_of_directories():
@@ -117,7 +117,7 @@ def get_private_key(data):
     primary_key = str(date.date()) + str(date.hour) + str(date.minute) + " " + str(vehicle_ref) + " " + str(line_ref)
     return primary_key
 
-def add_json_info_into_array():
+def add_json_info_into_SQL():
     array = []
     path_directories = create_list_of_all_paths()
     counter = 0
@@ -130,41 +130,8 @@ def add_json_info_into_array():
                     pass
     return array
 
-def get_data_for_SQL_table():
-    all_bus_info = add_json_info_into_array()
-    array_of_info_for_SQL_table = []
-    counter = 0
-    for data in all_bus_info:
-        counter = counter + 1
-        response_time_stamp = data['RecordedAtTime']
-        vehicle_ref = data['MonitoredVehicleJourney']['VehicleRef']
-        line_ref = data['MonitoredVehicleJourney']['LineRef']
-        published_line_name = data['MonitoredVehicleJourney']['PublishedLineName']
-
-        passenger_count = get_passenger_count(data)
-
-        longitue = data['MonitoredVehicleJourney']['VehicleLocation']['Longitude']
-        latitude = data['MonitoredVehicleJourney']['VehicleLocation']['Latitude']
-        destination_name = get_destination_name(data)
-        journey_pattern_ref = get_journey_pattern_ref(data)
-
-        stop_point_name = get_stop_point_name(data)
-        stop_point_ref = get_stop_point_ref(data)
-
-        string_date = response_time_stamp
-        temp = string_date[0:string_date.rfind('-')]
-        date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
-
-        primary_key = str(date.date()) + str(date.hour) + str(date.minute) + " " + str(vehicle_ref) + " " + str(line_ref)
-
-        # array = [primary_key, response_time_stamp, vehicle_ref, line_ref, published_line_name, passenger_count, longitue, latitude, destination_name, journey_pattern_ref, stop_point_name, stop_point_ref]
-        # array_of_info_for_SQL_table.append(array)
-    print(counter)
-    return array_of_info_for_SQL_table
 
 
-array = get_data_for_SQL_table()
-print(len(array))
 
 
 
