@@ -1,5 +1,6 @@
 import json
 
+
 with open('TextFileFolder/reduced_vehicle_monitoring_file.txt') as json_file:
     data = json.load(json_file)
 

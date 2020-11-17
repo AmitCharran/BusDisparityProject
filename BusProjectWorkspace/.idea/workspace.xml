@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ebde561-e180-460e-a9fb-7a9d503219c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/getting_the_info.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/testing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preparing_data_for_SQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/preparing_data_for_SQL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bus_API_Testing/Amit/THREE_using_the_reduced_json_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bus_API_Testing/Amit/THREE_using_the_reduced_json_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
       <recent name="$PROJECT_DIR$/Functions/FilesFromAPI " />
     </key>
   </component>
-  <component name="RunManager" selected="Python.preparing_data_for_SQL">
+  <component name="RunManager" selected="Python.getting_the_info">
     <configuration name="ONE_generating_vehicle_monitoring_information" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BusProjectWorkspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +114,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="getting_the_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BusProjectWorkspace" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getting_the_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="preparing_data_for_SQL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BusProjectWorkspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getting_the_info" />
         <item itemvalue="Python.preparing_data_for_SQL" />
         <item itemvalue="Python.THREE_using_the_reduced_json_file" />
         <item itemvalue="Python.TWO_reducing_json_file" />
@@ -163,63 +187,84 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605564310350">
+    <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605568230001">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564310350" />
-    <state width="1238" height="136" key="GridCell.Tab.0.bottom" timestamp="1605564370552">
+    <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568230001" />
+    <state width="1238" height="117" key="GridCell.Tab.0.bottom" timestamp="1605638209901">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1238" height="278" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1603142661453" />
-    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564370552" />
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605565216181" />
     <state width="1238" height="227" key="GridCell.Tab.0.bottom/0.23.1280.708@0.23.1280.708" timestamp="1605477331514" />
-    <state width="1238" height="136" key="GridCell.Tab.0.center" timestamp="1605564370550">
+    <state width="1238" height="117" key="GridCell.Tab.0.bottom/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605626024212" />
+    <state width="1238" height="117" key="GridCell.Tab.0.bottom/0.23.1280.713/1280.23.1920.1057@0.23.1280.713" timestamp="1605634959436" />
+    <state width="1238" height="117" key="GridCell.Tab.0.bottom/0.23.1280.713/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605638209901" />
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233176" />
+    <state width="1238" height="117" key="GridCell.Tab.0.center" timestamp="1605638209900">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1238" height="278" key="GridCell.Tab.0.center/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1603142661448" />
-    <state width="1238" height="136" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564370550" />
+    <state width="1238" height="136" key="GridCell.Tab.0.center/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605565216180" />
     <state width="1238" height="227" key="GridCell.Tab.0.center/0.23.1280.708@0.23.1280.708" timestamp="1605477331513" />
-    <state width="1238" height="136" key="GridCell.Tab.0.left" timestamp="1605564370550">
+    <state width="1238" height="117" key="GridCell.Tab.0.center/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605626024210" />
+    <state width="1238" height="117" key="GridCell.Tab.0.center/0.23.1280.713/1280.23.1920.1057@0.23.1280.713" timestamp="1605634959435" />
+    <state width="1238" height="117" key="GridCell.Tab.0.center/0.23.1280.713/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605638209900" />
+    <state width="1238" height="136" key="GridCell.Tab.0.center/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233175" />
+    <state width="1238" height="117" key="GridCell.Tab.0.left" timestamp="1605638209898">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1238" height="278" key="GridCell.Tab.0.left/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1603142661446" />
-    <state width="1238" height="136" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564370550" />
+    <state width="1238" height="136" key="GridCell.Tab.0.left/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605565216179" />
     <state width="1238" height="227" key="GridCell.Tab.0.left/0.23.1280.708@0.23.1280.708" timestamp="1605477331513" />
-    <state width="1238" height="136" key="GridCell.Tab.0.right" timestamp="1605564370551">
+    <state width="1238" height="117" key="GridCell.Tab.0.left/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605626024209" />
+    <state width="1238" height="117" key="GridCell.Tab.0.left/0.23.1280.713/1280.23.1920.1057@0.23.1280.713" timestamp="1605634959434" />
+    <state width="1238" height="117" key="GridCell.Tab.0.left/0.23.1280.713/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605638209898" />
+    <state width="1238" height="136" key="GridCell.Tab.0.left/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233174" />
+    <state width="1238" height="117" key="GridCell.Tab.0.right" timestamp="1605638209900">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1238" height="278" key="GridCell.Tab.0.right/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1603142661451" />
-    <state width="1238" height="136" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564370551" />
+    <state width="1238" height="136" key="GridCell.Tab.0.right/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605565216180" />
     <state width="1238" height="227" key="GridCell.Tab.0.right/0.23.1280.708@0.23.1280.708" timestamp="1605477331513" />
-    <state width="1238" height="125" key="GridCell.Tab.1.bottom" timestamp="1605564135646">
+    <state width="1238" height="117" key="GridCell.Tab.0.right/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605626024211" />
+    <state width="1238" height="117" key="GridCell.Tab.0.right/0.23.1280.713/1280.23.1920.1057@0.23.1280.713" timestamp="1605634959435" />
+    <state width="1238" height="117" key="GridCell.Tab.0.right/0.23.1280.713/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605638209900" />
+    <state width="1238" height="136" key="GridCell.Tab.0.right/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233175" />
+    <state width="1238" height="258" key="GridCell.Tab.1.bottom" timestamp="1605625085419">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="376" key="GridCell.Tab.1.bottom/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602984571282" />
     <state width="1238" height="125" key="GridCell.Tab.1.bottom/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564135646" />
     <state width="1238" height="120" key="GridCell.Tab.1.bottom/0.23.1280.708@0.23.1280.708" timestamp="1605471743933" />
-    <state width="1238" height="125" key="GridCell.Tab.1.center" timestamp="1605564135644">
+    <state width="1238" height="258" key="GridCell.Tab.1.bottom/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605625085419" />
+    <state width="1238" height="258" key="GridCell.Tab.1.center" timestamp="1605625085418">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="376" key="GridCell.Tab.1.center/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602984571280" />
     <state width="1238" height="125" key="GridCell.Tab.1.center/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564135644" />
     <state width="1238" height="120" key="GridCell.Tab.1.center/0.23.1280.708@0.23.1280.708" timestamp="1605471743932" />
-    <state width="1238" height="125" key="GridCell.Tab.1.left" timestamp="1605564135643">
+    <state width="1238" height="258" key="GridCell.Tab.1.center/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605625085418" />
+    <state width="1238" height="258" key="GridCell.Tab.1.left" timestamp="1605625085417">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="376" key="GridCell.Tab.1.left/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602984571269" />
     <state width="1238" height="125" key="GridCell.Tab.1.left/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564135643" />
     <state width="1238" height="120" key="GridCell.Tab.1.left/0.23.1280.708@0.23.1280.708" timestamp="1605471743932" />
-    <state width="1238" height="125" key="GridCell.Tab.1.right" timestamp="1605564135644">
+    <state width="1238" height="258" key="GridCell.Tab.1.left/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605625085417" />
+    <state width="1238" height="258" key="GridCell.Tab.1.right" timestamp="1605625085418">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="376" key="GridCell.Tab.1.right/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602984571281" />
     <state width="1238" height="125" key="GridCell.Tab.1.right/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564135644" />
     <state width="1238" height="120" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1605471743933" />
-    <state x="1749" y="198" key="SettingsEditor" timestamp="1605540044472">
+    <state width="1238" height="258" key="GridCell.Tab.1.right/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605625085418" />
+    <state x="1749" y="198" key="SettingsEditor" timestamp="1605565486705">
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state x="1749" y="179" key="SettingsEditor/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602985155475" />
-    <state x="1749" y="198" key="SettingsEditor/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605540044472" />
+    <state x="1749" y="198" key="SettingsEditor/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605565486705" />
     <state x="305" y="55" width="670" height="676" key="search.everywhere.popup" timestamp="1605467910061">
       <screen x="0" y="23" width="1280" height="708" />
     </state>
@@ -241,9 +286,10 @@
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$reducing_json_file.coverage" NAME="reducing_json_file Coverage Results" MODIFIED="1602276786742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$TWO_reducing_json_file.coverage" NAME="TWO_reducing_json_file Coverage Results" MODIFIED="1603239193497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$storageedemo.coverage" NAME="storageedemo Coverage Results" MODIFIED="1602442704389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting" />
-    <SUITE FILE_PATH="coverage/BusProjectWorkspace$preparing_data_for_SQL.coverage" NAME="preparing_data_for_SQL Coverage Results" MODIFIED="1605564312862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$preparing_data_for_SQL.coverage" NAME="preparing_data_for_SQL Coverage Results" MODIFIED="1605624511740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$main.coverage" NAME="main Coverage Results" MODIFIED="1602201085814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$ONE_generating_vehicle_monitoring_information.coverage" NAME="ONE_generating_vehicle_monitoring_information Coverage Results" MODIFIED="1604778761958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$getting_the_info.coverage" NAME="getting_the_info Coverage Results" MODIFIED="1605638209774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$Bus_API_Testing2.coverage" NAME="Bus_API_Testing2 Coverage Results" MODIFIED="1602092817454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$trying_to_find_line_ref.coverage" NAME="generating_vehicle_monitoring_information Coverage Results" MODIFIED="1602276866159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$test_download.coverage" NAME="test_download Coverage Results" MODIFIED="1602457271882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting" />
