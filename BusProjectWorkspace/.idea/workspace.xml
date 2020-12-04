@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ebde561-e180-460e-a9fb-7a9d503219c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Ariel/calculating_distance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BusProjectWorkspace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BusProjectWorkspace.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/Ariel/calculating_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Ariel/calculating_speed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateDatabaseTesting/Ariel/calculating_distance.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateDatabaseTesting/Ariel/calculating_distance.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <recent name="$PROJECT_DIR$/Functions/FilesFromAPI " />
     </key>
   </component>
-  <component name="RunManager" selected="Python.calculating_speed">
+  <component name="RunManager" selected="Python.calculating_distance">
     <configuration name="THREE_using_the_reduced_json_file" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BusProjectWorkspace" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calculating_speed" />
         <item itemvalue="Python.calculating_distance" />
+        <item itemvalue="Python.calculating_speed" />
         <item itemvalue="Python.THREE_using_the_reduced_json_file" />
         <item itemvalue="Python.saving_SBS_vehicle_reference" />
         <item itemvalue="Python.getting_the_info" />
@@ -227,7 +224,7 @@
       <workItem from="1605813377228" duration="2914000" />
       <workItem from="1605838259579" duration="943000" />
       <workItem from="1605846001224" duration="3227000" />
-      <workItem from="1605904396617" duration="7601000" />
+      <workItem from="1605904396617" duration="10563000" />
     </task>
     <servers />
   </component>
@@ -239,7 +236,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -251,7 +254,7 @@
     </state>
     <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605564310350" />
     <state x="1658" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568230001" />
-    <state width="1053" height="2" key="GridCell.Tab.0.bottom" timestamp="1606866729586">
+    <state width="1095" height="208" key="GridCell.Tab.0.bottom" timestamp="1607116305873">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state width="1878" height="242" key="GridCell.Tab.0.bottom/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903539843" />
@@ -263,9 +266,9 @@
     <state width="1238" height="146" key="GridCell.Tab.0.bottom/0.23.1280.715/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605756054881" />
     <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233176" />
     <state width="1878" height="242" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903715412" />
-    <state width="1053" height="2" key="GridCell.Tab.0.bottom/0.25.1440.790@0.25.1440.790" timestamp="1606866729586" />
+    <state width="1095" height="208" key="GridCell.Tab.0.bottom/0.25.1440.790@0.25.1440.790" timestamp="1607116305873" />
     <state width="1053" height="200" key="GridCell.Tab.0.bottom/0.25.1440.791@0.25.1440.791" timestamp="1606865801388" />
-    <state width="1053" height="2" key="GridCell.Tab.0.center" timestamp="1606866729584">
+    <state width="1095" height="208" key="GridCell.Tab.0.center" timestamp="1607116305872">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state width="1878" height="242" key="GridCell.Tab.0.center/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903539833" />
@@ -277,9 +280,9 @@
     <state width="1238" height="146" key="GridCell.Tab.0.center/0.23.1280.715/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605756054880" />
     <state width="1238" height="136" key="GridCell.Tab.0.center/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233175" />
     <state width="1878" height="242" key="GridCell.Tab.0.center/0.23.1280.777/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903715359" />
-    <state width="1053" height="2" key="GridCell.Tab.0.center/0.25.1440.790@0.25.1440.790" timestamp="1606866729584" />
+    <state width="1095" height="208" key="GridCell.Tab.0.center/0.25.1440.790@0.25.1440.790" timestamp="1607116305872" />
     <state width="1053" height="200" key="GridCell.Tab.0.center/0.25.1440.791@0.25.1440.791" timestamp="1606865801387" />
-    <state width="1053" height="2" key="GridCell.Tab.0.left" timestamp="1606866729583">
+    <state width="1095" height="208" key="GridCell.Tab.0.left" timestamp="1607116305871">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state width="1878" height="242" key="GridCell.Tab.0.left/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903539827" />
@@ -291,9 +294,9 @@
     <state width="1238" height="146" key="GridCell.Tab.0.left/0.23.1280.715/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605756054879" />
     <state width="1238" height="136" key="GridCell.Tab.0.left/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233174" />
     <state width="1878" height="242" key="GridCell.Tab.0.left/0.23.1280.777/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903715351" />
-    <state width="1053" height="2" key="GridCell.Tab.0.left/0.25.1440.790@0.25.1440.790" timestamp="1606866729583" />
+    <state width="1095" height="208" key="GridCell.Tab.0.left/0.25.1440.790@0.25.1440.790" timestamp="1607116305871" />
     <state width="1053" height="200" key="GridCell.Tab.0.left/0.25.1440.791@0.25.1440.791" timestamp="1606865801387" />
-    <state width="1053" height="2" key="GridCell.Tab.0.right" timestamp="1606866729585">
+    <state width="1095" height="208" key="GridCell.Tab.0.right" timestamp="1607116305872">
       <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state width="1878" height="242" key="GridCell.Tab.0.right/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903539836" />
@@ -305,7 +308,7 @@
     <state width="1238" height="146" key="GridCell.Tab.0.right/0.23.1280.715/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605756054880" />
     <state width="1238" height="136" key="GridCell.Tab.0.right/0.23.1280.716/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605568233175" />
     <state width="1878" height="242" key="GridCell.Tab.0.right/0.23.1280.777/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605903715411" />
-    <state width="1053" height="2" key="GridCell.Tab.0.right/0.25.1440.790@0.25.1440.790" timestamp="1606866729585" />
+    <state width="1095" height="208" key="GridCell.Tab.0.right/0.25.1440.790@0.25.1440.790" timestamp="1607116305872" />
     <state width="1053" height="200" key="GridCell.Tab.0.right/0.25.1440.791@0.25.1440.791" timestamp="1606865801388" />
     <state width="1878" height="440" key="GridCell.Tab.1.bottom" timestamp="1605903347810">
       <screen x="1280" y="0" width="1920" height="1080" />
@@ -339,16 +342,18 @@
     <state width="1238" height="120" key="GridCell.Tab.1.right/0.23.1280.708@0.23.1280.708" timestamp="1605471743933" />
     <state width="1238" height="258" key="GridCell.Tab.1.right/0.23.1280.710/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605625085418" />
     <state width="1878" height="440" key="GridCell.Tab.1.right/0.23.1280.777/1280.0.1920.1080@1280.0.1920.1080" timestamp="1605847801282" />
-    <state x="1749" y="198" key="SettingsEditor" timestamp="1605656421459">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state x="352" y="87" key="SettingsEditor" timestamp="1607115369876">
+      <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state x="1749" y="179" key="SettingsEditor/0.0.1280.800/1280.0.1920.1080@1280.0.1920.1080" timestamp="1602985155475" />
     <state x="1749" y="198" key="SettingsEditor/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605656421459" />
-    <state x="1738" y="71" width="1005" height="1010" key="search.everywhere.popup" timestamp="1605816784792">
-      <screen x="1280" y="23" width="1920" height="1057" />
+    <state x="352" y="87" key="SettingsEditor/0.25.1440.790@0.25.1440.790" timestamp="1607115369876" />
+    <state x="344" y="61" width="754" height="755" key="search.everywhere.popup" timestamp="1607115138531">
+      <screen x="0" y="25" width="1440" height="790" />
     </state>
     <state x="1738" y="71" width="1005" height="1010" key="search.everywhere.popup/0.23.1280.708/1280.23.1920.1057@1280.23.1920.1057" timestamp="1605816784792" />
     <state x="305" y="55" width="670" height="676" key="search.everywhere.popup/0.23.1280.708@0.23.1280.708" timestamp="1605467910061" />
+    <state x="344" y="61" width="754" height="755" key="search.everywhere.popup/0.25.1440.790@0.25.1440.790" timestamp="1607115138531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +381,6 @@
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$getting_the_info.coverage" NAME="getting_the_info Coverage Results" MODIFIED="1605847577665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$TWO_reducing_json_file.coverage" NAME="TWO_reducing_json_file Coverage Results" MODIFIED="1603239193497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Bus_API_Testing/Amit" />
     <SUITE FILE_PATH="coverage/BusProjectWorkspace$storageedemo.coverage" NAME="storageedemo Coverage Results" MODIFIED="1602442704389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting" />
-    <SUITE FILE_PATH="coverage/BusProjectWorkspace$calculating_distance.coverage" NAME="calculating_distance Coverage Results" MODIFIED="1606865774039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting/Ariel" />
+    <SUITE FILE_PATH="coverage/BusProjectWorkspace$calculating_distance.coverage" NAME="calculating_distance Coverage Results" MODIFIED="1607116305857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CreateDatabaseTesting/Ariel" />
   </component>
 </project>
