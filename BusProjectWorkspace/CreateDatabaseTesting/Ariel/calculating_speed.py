@@ -8,10 +8,8 @@ from datetime import datetime
 
 # m/s -> mph
 
-
 file = open('info.txt', 'r')
 lines = file.readlines()
-
 
 array = []
 

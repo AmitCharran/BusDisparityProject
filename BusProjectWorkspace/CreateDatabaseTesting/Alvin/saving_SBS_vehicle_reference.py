@@ -12,7 +12,7 @@ for line in lines:
     dictionary = ast.literal_eval(line)
     a = dictionary['Published Line Ref'][-3:]
     b = dictionary['Vehicle Ref']
-    if(a=="SBS"):
+    if(a == "SBS"):
         if b in Vehicles:
             continue
         else:
@@ -21,3 +21,6 @@ for line in lines:
 
 print(Vehicles)
     # print(dictionary['Published Line Ref'])
+
+    # 
+    # https://en.wikipedia.org/wiki/MTA_Regional_Bus_Operations_bus_fleet

@@ -144,6 +144,42 @@ class generate_my_info:
 
         self.write_to_file_disparity_by_hour(dictionary, output_path)
 
+    def generate_all_bus_disparity_info_separated_by_hour_highest_ridership_in_hour(self, output_path_weekday,
+                                                                                    output_path_weekend):
+        dictionary = {}
+        dictionary_weekend = {}
+        lines = self.get_info_from_file()
+        hour_hashmap = self.generate_hour_hashmap()
+        for line in lines:
+            info_from_lines = ast.literal_eval(line)
+            published_line_ref = info_from_lines['Published Line Ref']
+
+            current_time_string = info_from_lines['Response Time']
+            temp = current_time_string[0:current_time_string.rfind('-')]
+            current_time = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+            hour = current_time.hour
+            # here is where I will want to exclude thanksgiving
+            if self.is_weekday(current_time):
+                self.add_bus_line_to_dictionary(dictionary, published_line_ref)
+            else:
+                self.add_bus_line_to_dictionary(dictionary_weekend, published_line_ref)
+
+            if self.is_weekday(current_time):
+                self.update_highest_value(dictionary, hour_hashmap, hour, info_from_lines, published_line_ref)
+            else:
+                self.update_highest_value(dictionary_weekend, hour_hashmap, hour, info_from_lines, published_line_ref)
+
+        self.write_to_file_disparity_by_hour(dictionary, output_path_weekday)
+        self.write_to_file_disparity_by_hour(dictionary_weekend, output_path_weekend)
+
+        df = pd.read_table(output_path_weekday, sep=',')
+        excel_path = output_path_weekday.replace('txt', 'xlsx')
+        df.to_excel(excel_path, 'Weekday', index=False)
+
+        df = pd.read_table(output_path_weekend, sep=',')
+        excel_path_2 = output_path_weekend.replace('txt', 'xlsx')
+        df.to_excel(excel_path_2, 'Weekend', index=False)
+
     def generate_all_bus_disparity_info_separated_by_hour(self, output_path_weekday, output_path_weekend):
         dictionary = {}
         dictionary_counter = {}
@@ -159,7 +195,7 @@ class generate_my_info:
             temp = current_time_string[0:current_time_string.rfind('-')]
             current_time = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
             hour = current_time.hour
-
+            # here is where I will want to exclude thanksgiving
             if self.is_weekday(current_time):
                 self.add_bus_line_to_dictionary(dictionary, dictionary_counter, published_line_ref)
             else:
@@ -183,8 +219,6 @@ class generate_my_info:
         excel_path_2 = output_path_weekend.replace('txt', 'xlsx')
         df.to_excel(excel_path_2, 'Weekend', index=False)
 
-
-
     def update_average(self, dictionary, dictionary_counter, hour_hashmap, hour, info_from_lines, published_line_ref):
         if 'null' != info_from_lines['Passenger Count']:
             if dictionary[published_line_ref][hour_hashmap[hour]] == -1:
@@ -201,10 +235,19 @@ class generate_my_info:
                                                                                  hour_hashmap[hour]] + 1)
                 dictionary[published_line_ref][hour_hashmap[hour]] += 1
 
+    def update_highest_value(self, dictionary, hour_hashmap, hour, info_from_lines, published_line_ref):
+        if 'null' != info_from_lines['Passenger Count']:
+            if dictionary[published_line_ref][hour_hashmap[hour]] < info_from_lines['Passenger Count']:
+                dictionary[published_line_ref][hour_hashmap[hour]] = info_from_lines['Passenger Count']
+
     def add_bus_line_to_dictionary(self, dictionary, dictionary_counter, published_line_ref):
         if not dictionary.__contains__(published_line_ref):
             self.add_published_line_ref_to_dictionary(dictionary, published_line_ref)
             self.add_published_line_ref_to_dictionary(dictionary_counter, published_line_ref)
+
+    def add_bus_line_to_dictionary(self, dictionary, published_line_ref):
+        if not dictionary.__contains__(published_line_ref):
+            self.add_published_line_ref_to_dictionary(dictionary, published_line_ref)
 
     def add_published_line_ref_to_dictionary(self, dictionary, published_line_ref):
         dictionary[published_line_ref] = {"0-1": -1, "1-2": -1, "2-3": -1, "3-4": -1,
@@ -241,11 +284,11 @@ class generate_my_info:
             return False
 
 
-big_test = generate_my_info("/Users/amitcharran/Desktop/all_info.txt", "output.txt")
+big_test = generate_my_info("/Users/amitcharran/Desktop/all_info2.txt", "output.txt")
 # small_test = generate_my_info("info.txt", "output.txt")
 
-big_test.generate_all_bus_disparity_info_separated_by_hour("/Users/amitcharran/Desktop/weekday.txt",
-                                                           "/Users/amitcharran/Desktop/weekend.txt")
+big_test.generate_all_bus_disparity_info_separated_by_hour_highest_ridership_in_hour("/Users/amitcharran/Desktop/weekday_highest_per_hour.txt",
+                                                           "/Users/amitcharran/Desktop/weekend_highest_per_hour.txt")
 # small_test.generate_all_bus_disparity_info_separated_by_hour("output.txt")
 # df = pd.read_table("/Users/amitcharran/Desktop/output2.txt", sep=',')
 # df.to_excel('/Users/amitcharran/Desktop/output2.xlsx', 'Sheet1', index=False)
