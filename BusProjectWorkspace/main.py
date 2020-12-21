@@ -1,16 +1,5 @@
-# This is a sample Python script.
+from BusDisparityFunctionsAndClasses.getting_json_data import retriving_from_API
+from HiddenVariables.hidden_variables import MTA_API_KEY
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# test = retriving_from_API(MTA_API_KEY, 'BusDisparityFunctionsAndClasses/output/')
+# test.start_calls()
