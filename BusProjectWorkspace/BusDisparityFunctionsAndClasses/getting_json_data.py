@@ -4,7 +4,6 @@ import requests
 import json
 import time
 
-
 class retriving_from_API:
     def __init__(self, key, output_path):
         self.key = key
