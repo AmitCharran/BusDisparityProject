@@ -16,6 +16,13 @@ class mta_bus_project_sql_tables:
         self.mycursor.close()
         self.mydb.close()
 
+    def execute_command(self, str):
+        self.mycursor.execute(str)
+
+    def execute_command_and_commit(self, str):
+        self.mycursor.execute(str)
+        self.mydb.commit()
+
     def show_tables(self):
         self.mycursor.execute('SHOW TABLES;')
         for x in self.mycursor:
@@ -44,6 +51,15 @@ class mta_bus_project_sql_tables:
     def insert_into_tables(self, primary_key, response_time, vehicle_ref, line_ref, published_line_ref,
                            passenger_count, latitude, longitude, stop_point_name,
                            destination_name, journey_pattern_ref):
+        # if passenger_count == 'null':
+        #     passenger_count = 'NULL'
+        # if stop_point_name == 'null':
+        #     stop_point_name = 'NULL'
+        # if destination_name == 'null':
+        #     destination_name = 'NULL'
+        # if journey_pattern_ref == 'null':
+        #     journey_pattern_ref = 'NULL'
+
         # Make errors if primary_key already exists
         # This is a check for duplicates
         try:
@@ -68,12 +84,12 @@ class mta_bus_project_sql_tables:
 
 
 
-test = mta_bus_project_sql_tables(
-    hidden_variables.sql_host,
-    hidden_variables.sql_user,
-    hidden_variables.sql_password)
-
-test.show_all_in_current_table('main_table')
+# test = mta_bus_project_sql_tables(
+#     hidden_variables.sql_host,
+#     hidden_variables.sql_user,
+#     hidden_variables.sql_password)
+#
+# test.show_all_in_current_table('main_table')
 
 
 

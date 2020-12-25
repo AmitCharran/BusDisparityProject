@@ -15,9 +15,9 @@ end_date = datetime(year=2020, month=11, day=9)
 end_date = end_date.replace(hour=0, minute=15)
 input_path = '/Users/amitcharran/Desktop/Unneeded_Files_for_project/Sample_JSON_Data'
 output_path = '/Users/amitcharran/Desktop/Unneeded_Files_for_project/output.txt'
-# test_format = format_data(input_path, output_path, start_date, end_date)
-# test_format.write_to_sql()
-
+test_format = format_data(input_path, output_path, start_date, end_date)
+test_format.write_to_sql_from_file_skip_lines('/Users/amitcharran/Desktop/all_info2.txt', 2402335)
+# Max 10039122
 
 # test_a = generate_to_excel("", "")
 # array = test_a.create_list_of_articulated_buses()

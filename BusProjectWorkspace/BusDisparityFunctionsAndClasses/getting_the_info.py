@@ -4,6 +4,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np
 import itertools
+from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
 
 
 class generate_to_excel:
@@ -81,6 +82,7 @@ class generate_to_excel:
         return avg
 
     def get_average_ridership_by_time(self, line_ref, time_start, time_end):
+        ## pretty sure this is useless
         lines = self.get_info_from_file()
         first = True
         avg = 0

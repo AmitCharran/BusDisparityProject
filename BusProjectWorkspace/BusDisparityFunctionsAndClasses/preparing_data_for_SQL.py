@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
 from HiddenVariables import hidden_variables
+import ast
 import numpy as np
 
 class format_data:
@@ -174,6 +175,58 @@ class format_data:
             for data in bus_data:
                 dictionary = self.information_for_files(data)
                 self.append_to_file(dictionary)
+
+    def dictionary_to_sql(self, dictionary):
+        sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
+                                             hidden_variables.sql_user,
+                                             hidden_variables.sql_password)
+        primary_key = dictionary['Primary Key']
+        response_time = dictionary['Response Time']
+        vehicle_ref = dictionary['Vehicle Ref']
+        line_ref = dictionary['Line Ref']
+        published_line_ref = dictionary['Published Line Ref']
+        passenger_count = dictionary['Passenger Count']
+        if not (passenger_count == "NULL" or passenger_count == 'null'):
+            passenger_count = int(passenger_count)
+        latitude = float(dictionary['Latitude'])
+        longitude = float(dictionary["Longitude"])
+        stop_point_name = dictionary['Stop Point Name']
+        destination_name = dictionary["Destination Name"]
+        journey_pattern_ref = dictionary['Journey Pattern Ref']
+
+        sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
+                                   published_line_ref, passenger_count, latitude,
+                                   longitude, stop_point_name, destination_name, journey_pattern_ref)
+
+    def write_to_sql_from_file(self, file_input_path):
+        lines = self.get_info_from_file(file_input_path)
+        for line in lines:
+            dictionary = ast.literal_eval(line)
+            self.dictionary_to_sql(dictionary)
+
+    def write_to_sql_from_file_skip_lines(self, file_input_path, skip_lines):
+        lines = self.get_info_from_file(file_input_path)
+        counter = 0
+        print(type(lines))
+        print(len(lines))
+        start = False
+        for line in lines:
+            if counter >= skip_lines:
+                if not start:
+                    print('Starting')
+                    start = True
+                dictionary = ast.literal_eval(line)
+                self.dictionary_to_sql(dictionary)
+                counter = counter + 1
+            else:
+                counter = counter + 1
+        print(counter)
+
+    def get_info_from_file(self, file_input_path):
+        file = open(file_input_path, 'r')
+        lines = file.readlines()
+        file.close()
+        return lines
 
     def write_to_sql(self):
         path_directories = self.create_list_of_all_paths()
