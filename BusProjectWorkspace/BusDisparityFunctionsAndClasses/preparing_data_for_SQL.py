@@ -1,6 +1,9 @@
 from os import walk  # use walk to go through directories
 import json
 from datetime import datetime
+from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
+from HiddenVariables import hidden_variables
+import numpy as np
 
 class format_data:
     def __init__(self, input_data_folder_path, output_data_file):
@@ -14,7 +17,6 @@ class format_data:
         self.output_file = output_data_file
         self.start_time = start_time
         self.end_time = end_time
-
 
     def get_list_of_directories(self):
         f = []
@@ -84,29 +86,29 @@ class format_data:
                 data3 = data2['Extensions']
                 if 'Capacities' in data3:
                     return data3['Capacities']['EstimatedPassengerCount']
-        return "null"
+        return "NULL"
 
     def get_stop_point_name(self, data):
         data = data['MonitoredVehicleJourney']
         if 'MonitoredCall' in data:
             return data['MonitoredCall']['StopPointName']
-        return "null"
+        return "NULL"
 
     def get_stop_point_ref(self, data):
         data = data['MonitoredVehicleJourney']
         if 'MonitoredCall' in data:
             return data['MonitoredCall']['StopPointRef']
-        return "null"
+        return "NULL"
 
     def get_destination_name(self, data):
         if 'DestinationName' in data['MonitoredVehicleJourney']:
             return data['MonitoredVehicleJourney']['DestinationName']
-        return "null"
+        return "NULL"
 
     def get_journey_pattern_ref(self, data):
         if 'JourneyPatternRef' in data['MonitoredVehicleJourney']:
             return data['MonitoredVehicleJourney']['JourneyPatternRef']
-        return "NoJourneyPatternRef"
+        return "NULL"
 
     def get_response_time_stamp(self, data):
         return data['RecordedAtTime']
@@ -172,6 +174,33 @@ class format_data:
             for data in bus_data:
                 dictionary = self.information_for_files(data)
                 self.append_to_file(dictionary)
+
+    def write_to_sql(self):
+        path_directories = self.create_list_of_all_paths()
+        sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
+                                             hidden_variables.sql_user,
+                                             hidden_variables.sql_password)
+        for paths in path_directories:
+            bus_data = self.get_json_info(paths)
+            for data in bus_data:
+                dictionary = self.information_for_files(data)
+                primary_key = dictionary['Primary Key']
+                response_time = dictionary['Response Time']
+                vehicle_ref = dictionary['Vehicle Ref']
+                line_ref = dictionary['Line Ref']
+                published_line_ref = dictionary['Published Line Ref']
+                passenger_count = dictionary['Passenger Count']
+                if passenger_count != "NULL":
+                    passenger_count = int(passenger_count)
+                latitude = float(dictionary['Latitude'])
+                longitude = float(dictionary["Longitude"])
+                stop_point_name = dictionary['Stop Point Name']
+                destination_name = dictionary["Destination Name"]
+                journey_pattern_ref = dictionary['Journey Pattern Ref']
+
+                sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
+                                           published_line_ref, passenger_count, latitude,
+                                           longitude, stop_point_name, destination_name, journey_pattern_ref)
 
 # for each folder
 #   for each file

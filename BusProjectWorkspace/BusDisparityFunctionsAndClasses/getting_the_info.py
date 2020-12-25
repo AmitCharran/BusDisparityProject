@@ -2,12 +2,15 @@ import json
 import ast  # convert string into dictionary
 import pandas as pd
 from datetime import datetime
+import numpy as np
+import itertools
 
 
-class generate_my_info:
+class generate_to_excel:
     def __init__(self, file_input_path, file_output_path):
         self.input_file = file_input_path
         self.output_file = file_output_path
+        self.list_of_articulated_buses = self.create_list_of_articulated_buses()
 
     def generate_line_ref(self):
         array = []
@@ -18,6 +21,42 @@ class generate_my_info:
                 array.append(dictionary['Line Ref'])
             if len(array) >= 334:
                 break
+        return array
+
+    def create_list_of_articulated_buses(self):
+        # Nove Bus -- Operator: NYCT #              Numbers: 1200-1289  *MTA NYCT
+        # Nova Bus -- Operator: NYCT #              Numbers: 5252-5298 & 5300-5363 & 5770-5986 *MTA NYCT
+        # New Flyer -- Operator: NYCT #             Numbers: 4710-4799  *MTA NYCT  **is B38 Articulated
+        # New Flyer -- Operator: MTA Bus #          Numbers: 5364-5438  *MTABC
+        # New Flyer -- Operator: MTA Bus & NYCT #   Numbers: 5987-6125  *MTA NYCT
+        # Nova Bus -- Operator: NYCT #              Numbers: 5439-5602  *MTA NYCT
+        # New Flyer -- Operator: NYCT #             Numbers: 1000-1109  *MTA NYCT
+        # New Flyer -- Operator: MTA Bus & NYCT #   Numbers: 6126-6286  *MTA NYCT
+        # New Flyer -- Operator: NYCT #             Numbers: 4950-4964
+        array = itertools.chain(self.add_MTA_NYCT_to_array(1200, 1289),
+                          self.add_MTA_NYCT_to_array(5252, 5298),
+                          self.add_MTA_NYCT_to_array(5300, 5363),
+                          self.add_MTA_NYCT_to_array(5770, 5986),
+                          self.add_MTA_NYCT_to_array(4710, 4799),
+                          self.add_MTA_NYCT_to_array(5987, 6125),
+                          self.add_MTA_NYCT_to_array(5439, 5602),
+                          self.add_MTA_NYCT_to_array(1000, 1109),
+                          self.add_MTA_NYCT_to_array(6126, 6286),
+                          self.add_MTABC_to_array(5364, 5438),
+                          self.add_MTA_NYCT_to_array(4950, 4964),
+                          self.add_MTABC_to_array(4950, 4964))
+        return array
+
+    def add_MTABC_to_array(self, start_num, end_num):
+        array = []
+        for x in range(start_num, end_num + 1):
+            array.append('MTABC_' + str(x))
+        return array
+
+    def add_MTA_NYCT_to_array(self,start_num, end_num):
+        array = []
+        for x in range(start_num, end_num + 1):
+            array.append('MTA NYCT_' + str(x))
         return array
 
     def get_info_from_file(self):
@@ -284,11 +323,11 @@ class generate_my_info:
             return False
 
 
-big_test = generate_my_info("/Users/amitcharran/Desktop/all_info2.txt", "output.txt")
-# small_test = generate_my_info("info.txt", "output.txt")
-
-big_test.generate_all_bus_disparity_info_separated_by_hour_highest_ridership_in_hour("/Users/amitcharran/Desktop/weekday_highest_per_hour.txt",
-                                                           "/Users/amitcharran/Desktop/weekend_highest_per_hour.txt")
+# big_test = generate_to_excel("/Users/amitcharran/Desktop/all_info2.txt", "output.txt")
+# # small_test = generate_my_info("info.txt", "output.txt")
+#
+# big_test.generate_all_bus_disparity_info_separated_by_hour_highest_ridership_in_hour("/Users/amitcharran/Desktop/weekday_highest_per_hour.txt",
+#                                                            "/Users/amitcharran/Desktop/weekend_highest_per_hour.txt")
 # small_test.generate_all_bus_disparity_info_separated_by_hour("output.txt")
 # df = pd.read_table("/Users/amitcharran/Desktop/output2.txt", sep=',')
 # df.to_excel('/Users/amitcharran/Desktop/output2.xlsx', 'Sheet1', index=False)
