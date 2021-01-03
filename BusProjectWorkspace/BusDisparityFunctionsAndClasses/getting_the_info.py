@@ -4,7 +4,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np
 import itertools
-from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
+
 
 
 class generate_to_excel:
@@ -324,8 +324,24 @@ class generate_to_excel:
         else:
             return False
 
+    def testing_bus(self, published_line_ref):
+        lines = self.get_info_from_file()
+        count = 0
+        total_count = 0
+        for line in lines:
+            dictionary = ast.literal_eval(line)
+            if dictionary['Published Line Ref'] == published_line_ref and dictionary['Passenger Count'] != 'null':
+                count = count + 1
+                total_count = total_count + dictionary['Passenger Count']
+
+        print(total_count)
+        print(count)
+        print(total_count/count)
+
+
 
 # big_test = generate_to_excel("/Users/amitcharran/Desktop/all_info2.txt", "output.txt")
+# big_test.testing_bus("Q6")
 # # small_test = generate_my_info("info.txt", "output.txt")
 #
 # big_test.generate_all_bus_disparity_info_separated_by_hour_highest_ridership_in_hour("/Users/amitcharran/Desktop/weekday_highest_per_hour.txt",

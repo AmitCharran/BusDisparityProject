@@ -1,23 +1,31 @@
 from os import walk  # use walk to go through directories
 import json
 from datetime import datetime
+import time
+import sys
 from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
 from HiddenVariables import hidden_variables
 import ast
 import numpy as np
 
 class format_data:
-    def __init__(self, input_data_folder_path, output_data_file):
-        self.input_folder = input_data_folder_path
-        self.output_file = output_data_file
-        self.start_time = ""
-        self.end_time = ""
+    # def __init__(self, input_data_folder_path, output_data_file):
+    #     self.input_folder = input_data_folder_path
+    #     self.output_file = output_data_file
+    #     self.start_time = ""
+    #     self.end_time = ""
 
-    def __init__(self, input_data_folder_path, output_data_file, start_time, end_time):
+    def __init__(self, input_data_folder_path, output_data_file, start_time = "", end_time = ""):
+        self.sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
+                                             hidden_variables.sql_user,
+                                             hidden_variables.sql_password)
         self.input_folder = input_data_folder_path
         self.output_file = output_data_file
         self.start_time = start_time
         self.end_time = end_time
+        self.sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
+                                             hidden_variables.sql_user,
+                                             hidden_variables.sql_password)
 
     def get_list_of_directories(self):
         f = []
@@ -25,6 +33,17 @@ class format_data:
             f.extend(dirnames)
             break
         return f
+
+    def count_from_file(self, path):
+        file = open(path, 'r')
+        lines = file.readlines()
+        counter = 0
+        for line in lines:
+            counter = counter + 1
+        print(counter)
+
+        file.close()
+
 
     def get_file_names_into_array(self):
         files = []
@@ -74,6 +93,14 @@ class format_data:
         bus_data = []
         try:
             bus_data = data['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
+        except UnboundLocalError as e:
+            pass
+        return bus_data
+
+    def reduce_json(self, json_object):
+        bus_data = []
+        try:
+            bus_data = json_object['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['VehicleActivity']
         except UnboundLocalError as e:
             pass
         return bus_data
@@ -177,9 +204,6 @@ class format_data:
                 self.append_to_file(dictionary)
 
     def dictionary_to_sql(self, dictionary):
-        sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
-                                             hidden_variables.sql_user,
-                                             hidden_variables.sql_password)
         primary_key = dictionary['Primary Key']
         response_time = dictionary['Response Time']
         vehicle_ref = dictionary['Vehicle Ref']
@@ -190,19 +214,21 @@ class format_data:
             passenger_count = int(passenger_count)
         latitude = float(dictionary['Latitude'])
         longitude = float(dictionary["Longitude"])
-        stop_point_name = dictionary['Stop Point Name']
-        destination_name = dictionary["Destination Name"]
-        journey_pattern_ref = dictionary['Journey Pattern Ref']
+        stop_point_name = dictionary['Stop Point Name'].replace("\"", "")
+        destination_name = dictionary["Destination Name"].replace("\"", "")
+        journey_pattern_ref = dictionary['Journey Pattern Ref'].replace("\"", "")
 
-        sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
+        self.sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
                                    published_line_ref, passenger_count, latitude,
                                    longitude, stop_point_name, destination_name, journey_pattern_ref)
 
     def write_to_sql_from_file(self, file_input_path):
         lines = self.get_info_from_file(file_input_path)
+        print(len(lines))
         for line in lines:
             dictionary = ast.literal_eval(line)
             self.dictionary_to_sql(dictionary)
+
 
     def write_to_sql_from_file_skip_lines(self, file_input_path, skip_lines):
         lines = self.get_info_from_file(file_input_path)
@@ -218,6 +244,26 @@ class format_data:
                 dictionary = ast.literal_eval(line)
                 self.dictionary_to_sql(dictionary)
                 counter = counter + 1
+            else:
+                counter = counter + 1
+        print(counter)
+
+    def write_to_sql_from_file_skip_lines2(self, file_input_path, skip_lines):
+        lines = self.get_info_from_file(file_input_path)
+        counter = 0
+        print(type(lines))
+        print(len(lines))
+        start = False
+        for line in lines:
+            if counter >= skip_lines:
+                if not start:
+                    print('Starting')
+                    start = True
+                dictionary = ast.literal_eval(line)
+                self.dictionary_to_sql(dictionary)
+                counter = counter + 1
+                if counter >= (skip_lines + 500000):
+                    break
             else:
                 counter = counter + 1
         print(counter)
@@ -254,6 +300,29 @@ class format_data:
                 sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
                                            published_line_ref, passenger_count, latitude,
                                            longitude, stop_point_name, destination_name, journey_pattern_ref)
+
+    def write_to_sql_with_json_info(self, data):
+
+        dictionary = self.information_for_files(data)
+        ## here is where I add to SQL
+        primary_key = dictionary['Primary Key']
+        response_time = dictionary['Response Time']
+        vehicle_ref = dictionary['Vehicle Ref']
+        line_ref = dictionary['Line Ref']
+        published_line_ref = dictionary['Published Line Ref']
+        passenger_count = dictionary['Passenger Count']
+        if passenger_count != "NULL":
+            passenger_count = int(passenger_count)
+        latitude = float(dictionary['Latitude'])
+        longitude = float(dictionary["Longitude"])
+        stop_point_name = dictionary['Stop Point Name']
+        destination_name = dictionary["Destination Name"]
+        journey_pattern_ref = dictionary['Journey Pattern Ref']
+
+
+        self.sql_con.insert_into_tables(primary_key, response_time, vehicle_ref, line_ref,
+                                   published_line_ref, passenger_count, latitude,
+                                   longitude, stop_point_name, destination_name, journey_pattern_ref)
 
 # for each folder
 #   for each file
