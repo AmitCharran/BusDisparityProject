@@ -504,11 +504,6 @@ class mta_bus_project_sql_tables:
         self.mydb.commit()
 
     def create_bus_counter_table(self):
-        # table name = bus_average_table table_columns:
-            # id (NOT NULL) auto increment
-            # line_ref
-            # 0-23 (so 24 other columns)
-            # highest_val column
         string = "CREATE TABLE bus_counter_table (" \
                  "id int NOT NULL AUTO_INCREMENT," \
                  "published_line_ref varchar(255) NOT NULL," \
@@ -610,8 +605,6 @@ class mta_bus_project_sql_tables:
         self.enter_weekend_values_into_table(published_line_ref, array_weekend, array_counter_weekend, array_highest_val_weekend, array_check_art_bus_weekend)
 
         print("finished {}".format(published_line_ref))
-
-
 
     def enter_total_values_into_table(self, x, array, array_counter, array_highest, array_articulated):
         array_avg = [0] * 24
@@ -859,6 +852,11 @@ class mta_bus_project_sql_tables:
 
     def execute_command(self, str):
         self.mycursor.execute(str)
+        x = self.mycursor.fetchall()
+        return x
+
+    def get_column_names(self):
+        return self.mycursor.column_names
 
     def execute_command_and_commit(self, str):
         self.mycursor.execute(str)
@@ -885,13 +883,11 @@ class mta_bus_project_sql_tables:
         for x in self.mycursor:
             print(x)
 
-
     def get_info_from_file(self, file_input_path):
         file = open(file_input_path, 'r')
         lines = file.readlines()
         file.close()
         return lines
-
 
     def reset_tables(self):
         print("are you sure you want to reset")
@@ -930,14 +926,6 @@ class mta_bus_project_sql_tables:
             self.add_to_sql_from_dictionary(dictionary)
 
     def add_to_sql_from_dictionary(self, dictionary):
-        ## Tables that need to be added
-        # bus_counter_table
-        # bus_table
-        # bus_weekday_counter_table
-        # bus_weekday_table
-        # bus_weekend_counter_table
-        # bus_weekend_table
-
         if dictionary['Passenger Count'] == 'null':
             return
 
@@ -954,8 +942,6 @@ class mta_bus_project_sql_tables:
         else:
             self.update_value_to_table('bus_weekend_table', dictionary)
             self.update_counter_value_to_table('bus_weekend_counter_table', dictionary)
-
-
 
     def update_value_to_table(self, table_name, dictionary):
         string_date = dictionary['Response Time']
@@ -1018,11 +1004,6 @@ class mta_bus_project_sql_tables:
         self.mycursor.execute(string_update_total_table)
         self.mydb.commit()
 
-
-
-
-        pass
-
     def testing(self):
         get_num = 'select {} from bus_table where published_line_ref = "{}"'.format("1_hour", "B1")
         self.mycursor.execute(get_num)
@@ -1030,10 +1011,8 @@ class mta_bus_project_sql_tables:
         print(num)
         print(num[0][0])
 
-
     def convert_hour_to_column_name(self, hour):
         return str(hour) + "_hour"
-
 
     def insert_row_of_blanks_to_table(self, pub_line_ref, table_name):
         array_avg = [0] * 24
@@ -1111,13 +1090,30 @@ class mta_bus_project_sql_tables:
             if x[0][0] and x[0][0] != passenger_count:
                 print("Something went wrong: " + primary_key + " " + str(passenger_count) + " " + str(x[0][0]))
 
+    def generate_output(self, published_line_ref):
+        get_value_string = 'SELECT * From bus_table WHERE published_line_ref = "{}"'.format(published_line_ref)
+        get_count_string = 'SELECT * From bus_counter_table WHERE published_line_ref = "{}"'.format(published_line_ref)
 
+        self.mycursor.execute(get_value_string)
+        values = self.mycursor.fetchall()
 
+        self.mycursor.execute(get_count_string)
+        counter = self.mycursor.fetchall()
 
+        print(values)
+        print(counter)
 
-test = mta_bus_project_sql_tables(
-    hidden_variables.sql_host,
-    hidden_variables.sql_user,
-    hidden_variables.sql_password)
+        array = []
+        for x in range(2, len(values[0])):
+            if counter[0][x] != 0:
+                array.append(values[0][x] / counter[0][x])
+            else:
+                array.append(0)
 
+        print(array)
+
+# test = mta_bus_project_sql_tables(
+#     hidden_variables.sql_host,
+#     hidden_variables.sql_user,
+#     hidden_variables.sql_password)
 
