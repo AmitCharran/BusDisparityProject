@@ -2,17 +2,32 @@ from datetime import datetime
 import ast
 import math
 import mysql.connector
+import mariadb
+import sys
 from mysql.connector import Error
 from HiddenVariables import hidden_variables
 from BusDisparityFunctionsAndClasses.getting_the_info import generate_to_excel
 
 class mta_bus_project_sql_tables:
-    def __init__(self, sql_host, sql_user, sql_password, starting_database='mta_bus_project'):
-        self.mydb = mysql.connector.connect(
-            host=sql_host,
-            user=sql_user,
-            password=sql_password
-        )
+    def __init__(self, sql_host='localhost', sql_user='root', sql_password='', connection='mysql', sql_port=3306, starting_database='mta_bus_project'):
+        if connection == 'mysql':
+            self.mydb = mysql.connector.connect(
+                host=sql_host,
+                user=sql_user,
+                password=sql_password
+            )
+        elif connection == 'mariadb':
+            self.mydb = mariadb.connect(
+                user=sql_user,
+                password=sql_password,
+                host=sql_host,
+                port=sql_port,
+                database=starting_database
+            )
+        else:
+            print('For connection choose either "mysql" or "mariadb"')
+            quit()
+
         self.current_database = starting_database
         self.mycursor = self.mydb.cursor()
         self.mycursor.execute('USE {};'.format(starting_database))
@@ -20,6 +35,24 @@ class mta_bus_project_sql_tables:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.mycursor.close()
         self.mydb.close()
+
+
+    def create_main_table(self):
+        string = "CREATE TABLE main_table (" \
+                 "id varchar(255) NOT NULL," \
+                 "response_time varchar(255)," \
+                 "vehicle_ref varchar(255)," \
+                 "line_ref varchar(255)," \
+                 "published_line_ref varchar(255)," \
+                 "passenger_count int," \
+                 "latitude float," \
+                 "longitude float," \
+                 "stop_point_name varchar(255)," \
+                 "destination_name varchar(255)," \
+                 "journey_pattern_ref varchar(255)," \
+                 "PRIMARY KEY (id));"
+        self.mycursor.execute(string)
+        self.mydb.commit()
 
     def count_current_table(self, table_name='main_table'):
         print("If no argument, table defaults to 'main_table'")
@@ -1076,7 +1109,6 @@ class mta_bus_project_sql_tables:
                                           published_line_ref,passenger_count, latitude, longitude,
                                           stop_point_name, destination_name, journey_pattern_ref))
             self.mydb.commit()
-            print(stop_point_name + " " + published_line_ref)
         except:
             # Shows which had a problem with
             self.mycursor = self.mydb.cursor(buffered=True)
@@ -1116,4 +1148,6 @@ class mta_bus_project_sql_tables:
 #     hidden_variables.sql_host,
 #     hidden_variables.sql_user,
 #     hidden_variables.sql_password)
+
+
 

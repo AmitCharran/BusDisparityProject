@@ -16,16 +16,14 @@ class format_data:
     #     self.end_time = ""
 
     def __init__(self, input_data_folder_path, output_data_file, start_time = "", end_time = ""):
-        self.sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
-                                             hidden_variables.sql_user,
-                                             hidden_variables.sql_password)
+        self.sql_con = mta_bus_project_sql_tables(connection='mariadb')
         self.input_folder = input_data_folder_path
         self.output_file = output_data_file
         self.start_time = start_time
         self.end_time = end_time
-        self.sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
-                                             hidden_variables.sql_user,
-                                             hidden_variables.sql_password)
+        # self.sql_con = mta_bus_project_sql_tables(hidden_variables.sql_host,
+        #                                      hidden_variables.sql_user,
+        #                                      hidden_variables.sql_password)
 
     def get_list_of_directories(self):
         f = []
@@ -249,23 +247,23 @@ class format_data:
         print(counter)
 
     def write_to_sql_from_file_skip_lines2(self, file_input_path, skip_lines):
-        lines = self.get_info_from_file(file_input_path)
         counter = 0
-        print(type(lines))
-        print(len(lines))
         start = False
-        for line in lines:
-            if counter >= skip_lines:
-                if not start:
-                    print('Starting')
-                    start = True
-                dictionary = ast.literal_eval(line)
-                self.dictionary_to_sql(dictionary)
-                counter = counter + 1
-                if counter >= (skip_lines + 500000):
-                    break
-            else:
-                counter = counter + 1
+        with open(file_input_path) as fp:
+            line = fp.readline()
+            while line:
+                if counter >= skip_lines:
+                    if not start:
+                        print('Starting')
+                        start = True
+                    dictionary = ast.literal_eval(line)
+                    self.dictionary_to_sql(dictionary)
+                    # counter = counter + 1
+                    line = fp.readline()
+                    # if counter >= (skip_lines + 10):
+                    #     break
+                else:
+                    counter = counter + 1
         print(counter)
 
     def get_info_from_file(self, file_input_path):
