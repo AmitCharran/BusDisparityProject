@@ -855,7 +855,7 @@ class mta_bus_project_sql_tables:
 
     def generate_list_of_all_published_line_ref(self):
         array = []
-        self.mycursor.execute('SELECT DISTINCT published_line_ref, line_ref FROM all_published_line_ref;')
+        self.mycursor.execute('SELECT DISTINCT published_line_ref, line_ref FROM main_table;')
         for x in self.mycursor:
             array.append(x)
         return array
@@ -957,6 +957,23 @@ class mta_bus_project_sql_tables:
                 print(counter)
             dictionary = ast.literal_eval(line)
             self.add_to_sql_from_dictionary(dictionary)
+
+    def update_values_from_file_2(self):
+        with open('/home/pi/Desktop/all_info2.txt') as fp:
+            line = fp.readline()
+            counter = 0
+            while line:
+                counter = counter + 1
+                if (counter % 100000) == 0:
+                    print(counter)
+                dictionary = ast.literal_eval(line)
+                self.add_to_sql_from_dictionary(dictionary)
+                line = fp.readline()
+
+        pass
+
+    def update_values_from_main_table(self):
+        pass
 
     def add_to_sql_from_dictionary(self, dictionary):
         if dictionary['Passenger Count'] == 'null':
@@ -1144,10 +1161,9 @@ class mta_bus_project_sql_tables:
 
         print(array)
 
-# test = mta_bus_project_sql_tables(
-#     hidden_variables.sql_host,
-#     hidden_variables.sql_user,
-#     hidden_variables.sql_password)
-
+test = mta_bus_project_sql_tables(connection='mariadb')
+print('starting')
+test.update_values_from_file_2()
+print('finished')
 
 

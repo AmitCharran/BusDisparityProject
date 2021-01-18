@@ -10,4 +10,4 @@ from datetime import datetime
 
 
 put_data_into_sql = format_data("", "")
-put_data_into_sql.write_to_sql_from_file_skip_lines2('/home/pi/Desktop/all_info2.txt', 10)
+
