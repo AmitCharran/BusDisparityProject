@@ -6,6 +6,7 @@ import sys
 from BusDisparityFunctionsAndClasses.setting_up_sql_connection import mta_bus_project_sql_tables
 from HiddenVariables import hidden_variables
 import ast
+import pandas as pd
 import numpy as np
 
 class format_data:
@@ -15,8 +16,8 @@ class format_data:
     #     self.start_time = ""
     #     self.end_time = ""
 
-    def __init__(self, input_data_folder_path, output_data_file, start_time = "", end_time = ""):
-        self.sql_con = mta_bus_project_sql_tables(connection='mariadb')
+    def __init__(self, input_data_folder_path ="", output_data_file ="", start_time = "", end_time = ""):
+        self.sql_con = mta_bus_project_sql_tables(connection='mariadb', sql_password=hidden_variables.sql_password, sql_user=hidden_variables.sql_user)
         self.input_folder = input_data_folder_path
         self.output_file = output_data_file
         self.start_time = start_time
@@ -322,10 +323,36 @@ class format_data:
                                    published_line_ref, passenger_count, latitude,
                                    longitude, stop_point_name, destination_name, journey_pattern_ref)
 
+    def obtain_values_from_table_as_df(self, table_name):
+        value_string = 'SELECT * FROM {};'.format(table_name)
+        sql_table = self.sql_con.execute_command(value_string)
+        df = pd.DataFrame(sql_table)
+        df.columns = self.sql_con.get_column_names_tablename(table_name)
+        return df
+
+    def save_table_as_csv_file(self, table_name, file_name, path='Data/'):
+        frame = self.obtain_values_from_table_as_df(table_name)
+        frame.to_csv((path + file_name), index=False)
+
+    def list_of_tables(self):
+        string = 'SHOW tables;'
+        list = self.sql_con.execute_command(string)
+        ans = []
+        for x in list:
+            if x[0] != 'main_table':
+                ans.append(x[0])
+        return ans
+
 # for each folder
 #   for each file
 #       for each data
 #           insert into sql
+
+test = format_data()
+list = test.list_of_tables()
+
+for x in list:
+    test.save_table_as_csv_file(x, (x + '1-21-21.csv'))
 
 
 

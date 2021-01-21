@@ -9,7 +9,7 @@ from HiddenVariables import hidden_variables
 from BusDisparityFunctionsAndClasses.getting_the_info import generate_to_excel
 
 class mta_bus_project_sql_tables:
-    def __init__(self, sql_host='localhost', sql_user='root', sql_password='', connection='mysql', sql_port=3306, starting_database='mta_bus_project'):
+    def __init__(self, sql_host='localhost', sql_user='root', sql_password='', connection='mariadb', sql_port=3306, starting_database='mta_bus_project'):
         if connection == 'mysql':
             self.mydb = mysql.connector.connect(
                 host=sql_host,
@@ -855,7 +855,7 @@ class mta_bus_project_sql_tables:
 
     def generate_list_of_all_published_line_ref(self):
         array = []
-        self.mycursor.execute('SELECT DISTINCT published_line_ref, line_ref FROM main_table;')
+        self.mycursor.execute('SELECT DISTINCT published_line_ref FROM bus_table;')
         for x in self.mycursor:
             array.append(x)
         return array
@@ -889,7 +889,18 @@ class mta_bus_project_sql_tables:
         return x
 
     def get_column_names(self):
-        return self.mycursor.column_names
+        self.mycursor.column_names
+        x = self.mycursor.fetchall()
+        return x
+
+    def get_column_names_tablename(self, table_name):
+        string = 'SHOW COLUMNS FROM {};'.format(table_name)
+        list = self.execute_command(string)
+        ans = []
+        for x in list:
+            ans.append(x[0])
+        return ans
+
 
     def execute_command_and_commit(self, str):
         self.mycursor.execute(str)
@@ -1064,6 +1075,16 @@ class mta_bus_project_sql_tables:
     def convert_hour_to_column_name(self, hour):
         return str(hour) + "_hour"
 
+    def switching_from_int_to_big_int(self, table_name):
+        for x in range(25):
+            if x != 24:
+                column_name = self.convert_hour_to_column_name(x)
+            else:
+                column_name = 'total'
+            string = 'ALTER TABLE ' + table_name + ' ALTER COLUMN ' + column_name + ' bigint;'
+            self.mycursor.execute(string)
+            self.mydb.commit()
+
     def insert_row_of_blanks_to_table(self, pub_line_ref, table_name):
         array_avg = [0] * 24
         string = "INSERT INTO {} (published_line_ref, 0_hour, " \
@@ -1161,9 +1182,215 @@ class mta_bus_project_sql_tables:
 
         print(array)
 
-test = mta_bus_project_sql_tables(connection='mariadb')
-print('starting')
-test.update_values_from_file_2()
-print('finished')
+    def add_to_bus_average_tables_from_table(self):
+        list = self.generate_list_of_all_published_line_ref()
+        array = []
+        for x in list:
+            array.append(x[0])
+
+        for x in array:
+            self.update_average_tables_from_table(x, 'bus_average_table', 'bus_table', 'bus_counter_table')
+            self.update_average_tables_from_table(x, 'bus_weekend_average_table', 'bus_weekend_table', 'bus_weekend_counter_table')
+            self.update_average_tables_from_table(x, 'bus_weekday_average_table', 'bus_weekday_table', 'bus_weekday_counter_table')
+
+    def update_average_tables_from_table(self, published_line_ref, average_table_name, table_name, table_counter_name):
+        string_table = 'SELECT * FROM {} where published_line_ref = "{}"'.format(table_name, published_line_ref)
+        string_table_counter = 'SELECT * FROM {} where published_line_ref = "{}"'.format(table_counter_name, published_line_ref)
+
+        self.mycursor.execute(string_table)
+        table_call = self.mycursor.fetchall()
+
+        self.mycursor.execute(string_table_counter)
+        table_counter_call = self.mycursor.fetchall()
+
+        array_for_average_table = []
+
+        for x in range(2, 27):
+            if table_counter_call[0][x] != 0:
+                array_for_average_table.append((table_call[0][x] / table_counter_call[0][x]))
+            else:
+                array_for_average_table.append(0)
+
+        average_table_execute_string = self.create_insert_average_string(average_table_name, published_line_ref, array_for_average_table)
+        self.mycursor.execute(average_table_execute_string)
+        self.mydb.commit()
 
 
+    def create_insert_average_string(self, table_name, published_line_ref, array):
+        string = "INSERT INTO {} (published_line_ref, 0_hour, " \
+                 "1_hour, 2_hour, 3_hour, 4_hour, 5_hour, 6_hour, 7_hour, 8_hour, 9_hour," \
+                 "10_hour, 11_hour, 12_hour, 13_hour, 14_hour, 15_hour, 16_hour," \
+                 "17_hour, 18_hour, 19_hour, 20_hour, 21_hour, 22_hour, 23_hour, total_avg)" \
+                 "VALUES ('{}', {}," \
+                 "{}, {}, {}, {}, {}, {}, {}, {}, {}," \
+                 "{}, {}, {}, {}, {}, {}, {}," \
+                 "{}, {}, {}, {}, {}, {}, {}, {});"\
+            .format(table_name, published_line_ref,
+                    array[0], array[1], array[2], array[3],
+                    array[4], array[5], array[6], array[7], array[8], array[9], array[10],
+                    array[11], array[12], array[13], array[14], array[15], array[16], array[17],
+                    array[18], array[19], array[20], array[21], array[22], array[23], array[24])
+        return string
+
+    def initialize_dictionary_with_published_line_ref(self, dictionary):
+        array = self.get_array_of_line_ref()
+        for x in array:
+            dictionary[x] = [0] * 24
+
+    def highest_val_dictionary(self, dictionary_highest, dictionary):
+        string_date = dictionary['Response Time']
+        temp = string_date[0:string_date.rfind('-')]
+        date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+
+        line_ref = dictionary['Published Line Ref']
+
+        if dictionary_highest[line_ref][date.hour] < dictionary['Passenger Count']:
+            dictionary_highest[line_ref][date.hour] = dictionary['Passenger Count']
+
+    def set_articulated_dictionary(self, dictionary_articulated, dictionary, art_list):
+        string_date = dictionary['Response Time']
+        temp = string_date[0:string_date.rfind('-')]
+        date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+
+        line_ref = dictionary['Published Line Ref']
+        if dictionary_articulated[line_ref][date.hour] == 1:
+            return
+
+        if dictionary['Vehicle Ref'] in art_list:
+            dictionary_articulated[line_ref][date.hour] = 1
+
+    def update_highest_and_articulated_form_file(self):
+        articulated_weekday = {}
+        articulated_weekend = {}
+        articulated_total = {}
+        highest_weekday = {}
+        highest_weekend = {}
+        highest_total = {}
+
+        func = generate_to_excel("", "")
+        list_of_articulated_bus = list(func.create_list_of_articulated_buses())
+
+        self.initialize_dictionary_with_published_line_ref(articulated_weekday)
+        self.initialize_dictionary_with_published_line_ref(articulated_weekend)
+        self.initialize_dictionary_with_published_line_ref(highest_weekend)
+        self.initialize_dictionary_with_published_line_ref(highest_weekday)
+        self.initialize_dictionary_with_published_line_ref(highest_total)
+        self.initialize_dictionary_with_published_line_ref(articulated_total)
+
+        with open('/home/pi/Desktop/all_info2.txt') as fp:
+            line = fp.readline()
+            counter = 0
+            while line:
+                counter = counter + 1
+                if (counter % 1000000) == 0:
+                    print(counter)
+                dictionary = ast.literal_eval(line)
+                if dictionary['Passenger Count'] != 'null':
+                    self.highest_val_dictionary(highest_total, dictionary)
+                    self.set_articulated_dictionary(articulated_total, dictionary, list_of_articulated_bus)
+                    if self.weekday(dictionary['Response Time']):
+                        self.highest_val_dictionary(highest_weekday, dictionary)
+                        self.set_articulated_dictionary(articulated_weekday, dictionary, list_of_articulated_bus)
+                    else:
+                        self.highest_val_dictionary(highest_weekend, dictionary)
+                        self.set_articulated_dictionary(articulated_weekend, dictionary, list_of_articulated_bus)
+                line = fp.readline()
+        # here
+        for x in highest_total:
+            total_art_last_col = max(articulated_total[x])
+            total_art_string = self.create_insert_string_art(x, 'bus_articulated_table', articulated_total[x], total_art_last_col)
+
+            total_highest_last_col = max(highest_total[x])
+            total_highest_string = self.create_insert_string_highest(x, 'bus_highest_table', highest_total[x], total_highest_last_col)
+
+            weekend_art_last_col = max(articulated_weekend[x])
+            weekend_art_string = self.create_insert_string_art(x,'bus_weekend_articulated_table', articulated_weekend[x], weekend_art_last_col)
+
+            weekend_highest_last_col = max(highest_weekend[x])
+            weekend_highest_string = self.create_insert_string_highest(x, 'bus_weekend_highest_table', highest_weekend[x], weekend_highest_last_col)
+
+
+            weekday_art_last_col = max(articulated_weekday[x])
+            weekday_art_string = self.create_insert_string_art(x,'bus_weekday_articulated_table', articulated_weekday[x], weekday_art_last_col)
+
+            weekday_highest_last_col = max(highest_weekday[x])
+            weekday_highest_string = self.create_insert_string_highest(x,'bus_weekday_highest_table', highest_weekday[x], weekday_highest_last_col)
+
+            self.mycursor.execute(total_art_string)
+            self.mydb.commit()
+            self.mycursor.execute(weekend_art_string)
+            self.mydb.commit()
+            self.mycursor.execute(weekday_art_string)
+            self.mydb.commit()
+
+            self.mycursor.execute(total_highest_string)
+            self.mydb.commit()
+            self.mycursor.execute(weekend_highest_string)
+            self.mydb.commit()
+            self.mycursor.execute(weekday_highest_string)
+            self.mydb.commit()
+
+
+
+
+
+
+
+    def update_articulated_bus_table(self):
+        published_list = self.generate_list_of_all_published_line_ref()
+
+        for published_line_ref in published_list:
+
+            array_highest_val_weekday = [0] * 24
+            array_check_art_bus_weekday = [0] * 24
+
+            array_highest_val_weekend = [0] * 24
+            array_check_art_bus_weekend = [0] * 24
+
+            func = generate_to_excel("", "")
+            list_of_articulated_bus = list(func.create_list_of_articulated_buses())
+
+            self.mycursor.execute('SELECT * FROM main_table WHERE published_line_ref="{}"'.format(published_line_ref))
+            for x in self.mycursor:
+                if x[5]:
+                    if self.weekday(x[1]):
+                        self.highest_val(x, array_highest_val_weekday)
+                        self.set_articulated(x, array_check_art_bus_weekday, list_of_articulated_bus)
+                        ## bus_lowest_val_counter
+                    else:
+                        self.highest_val(x, array_highest_val_weekend)
+                        self.set_articulated(x, array_check_art_bus_weekend, list_of_articulated_bus)
+
+            array_articulated_total = [0] * 24
+            array_highest_val_total = [0] * 24
+
+            for i in range(24):
+                if array_articulated_total[i] != 1 and (
+                        array_check_art_bus_weekday[i] == 1 or array_check_art_bus_weekend[i] == 1):
+                    array_articulated_total[i] = 1
+
+                if array_highest_val_weekend[i] > array_highest_val_weekday[i]:
+                    array_highest_val_total[i] = array_highest_val_weekend[i]
+                else:
+                    array_highest_val_total[i] = array_highest_val_weekday[i]
+
+
+            articulate_string = self.create_insert_string_art(x, 'bus_articulated_table', array_articulated_total, max(array_articulated_total))
+            highest_string = self.create_insert_string_highest(x, 'bus_highest_table', array_highest_val_total, max(array_highest_val_total))
+
+            print(array_highest_val_total)
+            print(array_articulated_total)
+
+            print(array_highest_val_weekend)
+            print(array_highest_val_weekday)
+
+            print('done')
+
+
+
+
+
+
+# test = mta_bus_project_sql_tables(connection='mariadb',sql_password='anil6218', sql_user='amit' )
+#
+# test.update_highest_and_articulated_form_file()
