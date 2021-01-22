@@ -9,5 +9,5 @@ from datetime import datetime
 
 
 
-put_data_into_sql = format_data("", "")
+print("hello")
 
