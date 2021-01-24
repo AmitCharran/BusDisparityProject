@@ -17,7 +17,7 @@ class format_data:
     #     self.end_time = ""
 
     def __init__(self, input_data_folder_path ="", output_data_file ="", start_time = "", end_time = ""):
-        self.sql_con = mta_bus_project_sql_tables(connection='mariadb', sql_password=hidden_variables.sql_password, sql_user=hidden_variables.sql_user)
+        # self.sql_con = mta_bus_project_sql_tables(connection='mariadb', sql_password=hidden_variables.sql_password, sql_user=hidden_variables.sql_user)
         self.input_folder = input_data_folder_path
         self.output_file = output_data_file
         self.start_time = start_time
@@ -343,19 +343,99 @@ class format_data:
                 ans.append(x[0])
         return ans
 
+    def sort_data_for_pie_charts(self, path, output_path = "name.txt"):
+        dictionary = {}
+        with open(path) as fp:
+            line = fp.readline()
+            while line:
+                from_file = ast.literal_eval(line)
+                time = from_file['Response Time']
+                time = self.response_time_to_datetime(time)
+                pub_line_ref = from_file['Published Line Ref']
+
+                hour_min = str(time.hour) + ":" + str(time.minute)
+
+                if hour_min not in dictionary:
+                    self.add_borough_to_dicitonary(hour_min, dictionary)
+
+                vehicle_ref = []
+                while line:
+                    from_file = ast.literal_eval(line)
+                    pub_line_ref = from_file['Published Line Ref']
+                    if from_file['Passenger Count'] != 'NULL':
+                        count = from_file['Passenger Count']
+                        borough = self.line_ref_to_borough_for_pie_chart(pub_line_ref)
+                        if borough == 'Nothing_found':
+                            print('problem with: {}'.format(str(from_file)))
+                        else:
+                            dictionary[hour_min]['Total'] = dictionary[hour_min]['Total'] + count
+                            dictionary[hour_min][borough] = dictionary[hour_min][borough] + count
+
+                    if from_file['Vehicle Ref'] in vehicle_ref:
+                        break
+                    vehicle_ref.append(from_file['Vehicle Ref'])
+                    line = fp.readline()
+                line = fp.readline()
+
+        file = open(output_path, 'w')
+        file.write(str(dictionary))
+        file.close()
+
+    def add_borough_to_dicitonary(self, response_time, dictionary):
+        dictionary[response_time] = {'Total': 0,
+                                     'Brooklyn': 0,
+                                     'Bronx': 0,
+                                     'Queens': 0,
+                                     'Manhattan': 0,
+                                     'Staten Island': 0,
+                                     'Other': 0}
+
+    def line_ref_to_borough_for_pie_chart(self, published_line_ref):
+        if 'QM' in published_line_ref or \
+                'BM' in published_line_ref or \
+                'SIM' in published_line_ref or \
+                'X' in published_line_ref:
+            return 'Other'
+        elif 'Bx' in published_line_ref:
+            return 'Bronx'
+        elif 'B' in published_line_ref:
+            return 'Brooklyn'
+        elif 'M' in published_line_ref:
+            return 'Manhattan'
+        elif 'Q' in published_line_ref:
+            return 'Queens'
+        elif 'S' in published_line_ref:
+            return 'Staten Island'
+        else:
+            return 'Nothing_found'
+
+    def response_time_to_datetime(self, string_date):
+        temp = string_date[0:string_date.rfind('-')]
+        date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+        return date
 # for each folder
 #   for each file
 #       for each data
 #           insert into sql
 
 test = format_data()
-list = test.list_of_tables()
 
-for x in list:
-    test.save_table_as_csv_file(x, (x + '1-21-21.csv'))
-
+test.sort_data_for_pie_charts('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt',
+                              '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
 
 
+lines = test.get_info_from_file('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
+
+
+for line in lines:
+    d = ast.literal_eval(line)
+    counter = 0
+    for key in d.items():
+        counter = counter + 1
+        print(key)
+    print(counter)
+
+print('two')
 
 
 
