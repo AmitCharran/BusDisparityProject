@@ -9,5 +9,6 @@ from datetime import datetime
 
 
 
-print("hello")
+getting_info = retriving_from_API(hidden_variables.MTA_API_KEY, '/home/pi/PycharmProjects/BusDisparityProject/BusProjectWorkspace/Data_files/')
+getting_info.start_calls_and_write_into_file()
 

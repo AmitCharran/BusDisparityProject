@@ -113,5 +113,83 @@ class retriving_from_API:
                 time.sleep(pauseTimeInSecond)
                 self.starttime = int(round(time.time() * 1000))
 
+    def start_calls_and_write_into_file(self):
+        format_json = format_data("", "")
+        while True:
+            try:
+                response = requests.get(self.get_all_info_from_vehicle_monitoring)
+            except requests.ConnectionError as e:
+                self.write_to_file_exception(e)
+            except requests.exceptions.RequestException as e:
+                self.write_to_file_exception(e)
+            try:
+                data = response.json()
+            except json.decoder.JSONDecodeError as e:
+                self.write_to_file_exception(e)
 
+            self.counter_calls = self.counter_calls + 1
 
+            string_date = data['Siri']['ServiceDelivery']['ResponseTimestamp']
+
+            temp = string_date[0:string_date.rfind('-')]
+            date = datetime.strptime(temp, '%Y-%m-%dT%H:%M:%S.%f')
+
+            file_name = str(date.month) + '_' + str(date.day) + ".txt"
+            directory = self.output_path + self.month_number_to_word(date.month) + '-' + str(date.year)
+            if not os.path.isdir(directory):
+                os.mkdir(directory)
+
+            # Output
+            print("Request Call Number: " + str(self.counter_calls))
+            print(str(self.starttime) + " " + directory + '/' + file_name)
+
+            # get dictionary
+            json_data = json.loads(response.text)
+            reduced_json = format_json.reduce_json(json_data)
+            file = open(directory + '/' + file_name, 'a')
+            for x in reduced_json:
+                dictionary = format_json.information_for_files(x)
+                file.write(str(dictionary))
+                file.write('\n')
+
+            file.close()
+
+            currenttime = int(round(time.time() * 1000))
+            # pauseTimeInSecond contains the pause time in seconds
+            pauseTimeInSecond = 300 # 5 mins
+            calculatedTime = pauseTimeInSecond - (
+                    (currenttime - self.starttime) / 1000)  # currenttime = 105300  starttime = 105200  c - s = 100ms
+            if calculatedTime > 0:
+                time.sleep(calculatedTime)
+                self.starttime = currenttime + (calculatedTime * 1000)
+            else:
+                time.sleep(pauseTimeInSecond)
+                self.starttime = int(round(time.time() * 1000))
+
+    def month_number_to_word(self, int):
+        if int == 1:
+            return 'January'
+        elif int == 2:
+            return 'February'
+        elif int == 3:
+            return 'March'
+        elif int == 4:
+            return 'April'
+        elif int == 5:
+            return 'May'
+        elif int == 6:
+            return 'June'
+        elif int == 7:
+            return 'July'
+        elif int == 8:
+            return 'August'
+        elif int == 9:
+            return 'September'
+        elif int == 10:
+            return 'October'
+        elif int == 11:
+            return 'November'
+        elif int == 12:
+            return 'December'
+        else:
+            return 'Month_not_found'

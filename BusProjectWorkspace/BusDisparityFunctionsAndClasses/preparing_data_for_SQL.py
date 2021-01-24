@@ -348,11 +348,11 @@ class format_data:
 #       for each data
 #           insert into sql
 
-test = format_data()
-list = test.list_of_tables()
-
-for x in list:
-    test.save_table_as_csv_file(x, (x + '1-21-21.csv'))
+# test = format_data()
+# list = test.list_of_tables()
+#
+# for x in list:
+#     test.save_table_as_csv_file(x, (x + '1-21-21.csv'))
 
 
 
