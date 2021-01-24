@@ -418,21 +418,15 @@ class format_data:
 #       for each data
 #           insert into sql
 
-<<<<<<< HEAD
+
 test = format_data()
 
-test.sort_data_for_pie_charts('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt',
-                              '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
+# test.sort_data_for_pie_charts('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt',
+#                               '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
 
 
 lines = test.get_info_from_file('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
-=======
-# test = format_data()
-# list = test.list_of_tables()
-#
-# for x in list:
-#     test.save_table_as_csv_file(x, (x + '1-21-21.csv'))
->>>>>>> ef1b62833f61897bda16cb8ad4ae3b7c0f1ed411
+
 
 
 for line in lines:
