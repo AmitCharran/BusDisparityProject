@@ -17,6 +17,8 @@
 
 ### Work Created so far:
 1. ![Average Bus Ridership](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Average_Value_Scatter_plot.html)
+2. ![Highest Recorded Ridership per bus](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Highest_Value_Scatter_plot.html)
+3. ![Passenger Count on Bus by Borough Every 5 minutes](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/bar_chart.html)
 
 
 
