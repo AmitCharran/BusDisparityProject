@@ -15,5 +15,8 @@
 ### Project Goals
 ###### Show data to help the Straphangers Campaign advocate for better and more equitable public transit service in NYC
 
+### Work Created so far:
+1. ![Average Bus Ridership](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Average_Value_Scatter_plot.html)
+
 
 
