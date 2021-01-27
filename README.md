@@ -15,13 +15,17 @@
 ### Project Goals
 ###### Show data to help the Straphangers Campaign advocate for better and more equitable public transit service in NYC
 
-### Work Created so far:
-1. [Average Bus Ridership](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Average_Value_Scatter_plot.html)
-2. [Highest Recorded Ridership per bus](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Highest_Value_Scatter_plot.html)
-3. [Passenger Count on Bus by Borough Every 5 minutes](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/bar_chart.html)
-
-### Website to interact with those graphs
+### Website to interact with our graphs
 [Our Website](https://competent-shirley-f88574.netlify.app/)
+
+### Some of Graphs Created so far:
+#### To interact with them click the link, download the file, and drag it into any browser
+1. [Average Bus Ridership Every Hour](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Average_Value_Scatter_plot.html)
+![Average Bus Ridership Image](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Chart_Image/Average_Ridership.png)
+2. [Passenger Count on Bus by Borough Every 5 minutes](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/bar_chart.html)
+![Passenger Count by Borough](https://github.com/AmitCharran/BusDisparityProject/blob/main/Website/HTML_file_links/Chart_Image/count_by_borough.png)
+
+
 
 
 
