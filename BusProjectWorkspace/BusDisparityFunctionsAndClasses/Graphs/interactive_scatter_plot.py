@@ -203,7 +203,9 @@ class scatter_plot:
             updatemenus=[dict(
                 type="buttons",
                 pad={"t": 120}
-            )]
+            )],
+            title_font_family="Fantasy",
+
         )
         graph.write_html('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/Average_Value_Scatter_plot.html')
 
@@ -244,9 +246,12 @@ class scatter_plot:
             sliders=sliders,
             updatemenus=[dict(
                 type="buttons",
-                pad={"t": 120}
-            )]
+                pad={"t": 120},
+                active=100
+            )],
+            title_font_family="Fantasy",
         )
+
 
         graph.write_html(
             '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/Highest_Value_Scatter_plot.html')

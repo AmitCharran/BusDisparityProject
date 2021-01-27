@@ -50,7 +50,10 @@ class pie_chart:
         graph.update_xaxes(showgrid=False)
         graph.update_yaxes(showgrid=False)
 
-        # graph.write_html('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/bar_chart.html')
+        graph.update_layout(
+            title_font_family="Fantasy",)
+
+        graph.write_html('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/bar_chart.html')
         # graph.write_json('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/bar_chart.json')
 
 
