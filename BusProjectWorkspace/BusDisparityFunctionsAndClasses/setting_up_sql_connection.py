@@ -2,7 +2,7 @@ from datetime import datetime
 import ast
 import math
 import mysql.connector
-import mariadb
+# import mariadb
 import sys
 from mysql.connector import Error
 from HiddenVariables import hidden_variables
@@ -16,14 +16,14 @@ class mta_bus_project_sql_tables:
                 user=sql_user,
                 password=sql_password
             )
-        elif connection == 'mariadb':
-            self.mydb = mariadb.connect(
-                user=sql_user,
-                password=sql_password,
-                host=sql_host,
-                port=sql_port,
-                database=starting_database
-            )
+        # elif connection == 'mariadb':
+        #     self.mydb = mariadb.connect(
+        #         user=sql_user,
+        #         password=sql_password,
+        #         host=sql_host,
+        #         port=sql_port,
+        #         database=starting_database
+        #     )
         else:
             print('For connection choose either "mysql" or "mariadb"')
             quit()
