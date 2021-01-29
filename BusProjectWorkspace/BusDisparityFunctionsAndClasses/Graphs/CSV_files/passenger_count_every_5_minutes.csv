@@ -1,0 +1,2017 @@
+,Time,Borough,Passenger Count
+0,23:59,Total,1106
+1,23:59,Brooklyn,532
+2,23:59,Bronx,129
+3,23:59,Queens,253
+4,23:59,Manhattan,34
+5,23:59,Staten Island,68
+6,23:59,Other,90
+7,0:5,Total,1034
+8,0:5,Brooklyn,435
+9,0:5,Bronx,138
+10,0:5,Queens,226
+11,0:5,Manhattan,36
+12,0:5,Staten Island,109
+13,0:5,Other,90
+14,0:10,Total,952
+15,0:10,Brooklyn,439
+16,0:10,Bronx,135
+17,0:10,Queens,204
+18,0:10,Manhattan,33
+19,0:10,Staten Island,81
+20,0:10,Other,60
+21,0:15,Total,928
+22,0:15,Brooklyn,408
+23,0:15,Bronx,134
+24,0:15,Queens,192
+25,0:15,Manhattan,34
+26,0:15,Staten Island,71
+27,0:15,Other,89
+28,0:20,Total,878
+29,0:20,Brooklyn,373
+30,0:20,Bronx,133
+31,0:20,Queens,174
+32,0:20,Manhattan,38
+33,0:20,Staten Island,68
+34,0:20,Other,92
+35,0:24,Total,920
+36,0:24,Brooklyn,422
+37,0:24,Bronx,131
+38,0:24,Queens,187
+39,0:24,Manhattan,43
+40,0:24,Staten Island,60
+41,0:24,Other,77
+42,0:30,Total,817
+43,0:30,Brooklyn,354
+44,0:30,Bronx,122
+45,0:30,Queens,164
+46,0:30,Manhattan,39
+47,0:30,Staten Island,58
+48,0:30,Other,80
+49,0:35,Total,721
+50,0:35,Brooklyn,297
+51,0:35,Bronx,104
+52,0:35,Queens,168
+53,0:35,Manhattan,23
+54,0:35,Staten Island,45
+55,0:35,Other,84
+56,0:40,Total,643
+57,0:40,Brooklyn,285
+58,0:40,Bronx,80
+59,0:40,Queens,124
+60,0:40,Manhattan,36
+61,0:40,Staten Island,46
+62,0:40,Other,72
+63,0:44,Total,606
+64,0:44,Brooklyn,250
+65,0:44,Bronx,72
+66,0:44,Queens,162
+67,0:44,Manhattan,27
+68,0:44,Staten Island,36
+69,0:44,Other,59
+70,0:49,Total,620
+71,0:49,Brooklyn,298
+72,0:49,Bronx,59
+73,0:49,Queens,154
+74,0:49,Manhattan,25
+75,0:49,Staten Island,32
+76,0:49,Other,52
+77,0:54,Total,562
+78,0:54,Brooklyn,275
+79,0:54,Bronx,72
+80,0:54,Queens,131
+81,0:54,Manhattan,24
+82,0:54,Staten Island,25
+83,0:54,Other,35
+84,1:0,Total,497
+85,1:0,Brooklyn,224
+86,1:0,Bronx,60
+87,1:0,Queens,134
+88,1:0,Manhattan,22
+89,1:0,Staten Island,24
+90,1:0,Other,33
+91,1:4,Total,586
+92,1:4,Brooklyn,218
+93,1:4,Bronx,86
+94,1:4,Queens,123
+95,1:4,Manhattan,17
+96,1:4,Staten Island,116
+97,1:4,Other,26
+98,1:9,Total,572
+99,1:9,Brooklyn,204
+100,1:9,Bronx,86
+101,1:9,Queens,129
+102,1:9,Manhattan,11
+103,1:9,Staten Island,123
+104,1:9,Other,19
+105,1:14,Total,526
+106,1:14,Brooklyn,203
+107,1:14,Bronx,81
+108,1:14,Queens,113
+109,1:14,Manhattan,18
+110,1:14,Staten Island,100
+111,1:14,Other,11
+112,1:20,Total,479
+113,1:20,Brooklyn,187
+114,1:20,Bronx,83
+115,1:20,Queens,124
+116,1:20,Manhattan,20
+117,1:20,Staten Island,63
+118,1:20,Other,2
+119,1:24,Total,511
+120,1:24,Brooklyn,194
+121,1:24,Bronx,87
+122,1:24,Queens,135
+123,1:24,Manhattan,24
+124,1:24,Staten Island,69
+125,1:24,Other,2
+126,1:30,Total,476
+127,1:30,Brooklyn,189
+128,1:30,Bronx,81
+129,1:30,Queens,127
+130,1:30,Manhattan,18
+131,1:30,Staten Island,59
+132,1:30,Other,2
+133,1:35,Total,454
+134,1:35,Brooklyn,168
+135,1:35,Bronx,88
+136,1:35,Queens,124
+137,1:35,Manhattan,15
+138,1:35,Staten Island,58
+139,1:35,Other,1
+140,1:40,Total,402
+141,1:40,Brooklyn,139
+142,1:40,Bronx,79
+143,1:40,Queens,104
+144,1:40,Manhattan,17
+145,1:40,Staten Island,62
+146,1:40,Other,1
+147,1:44,Total,400
+148,1:44,Brooklyn,142
+149,1:44,Bronx,83
+150,1:44,Queens,96
+151,1:44,Manhattan,22
+152,1:44,Staten Island,55
+153,1:44,Other,2
+154,1:49,Total,351
+155,1:49,Brooklyn,123
+156,1:49,Bronx,78
+157,1:49,Queens,89
+158,1:49,Manhattan,16
+159,1:49,Staten Island,42
+160,1:49,Other,3
+161,1:55,Total,369
+162,1:55,Brooklyn,116
+163,1:55,Bronx,93
+164,1:55,Queens,128
+165,1:55,Manhattan,19
+166,1:55,Staten Island,11
+167,1:55,Other,2
+168,2:0,Total,385
+169,2:0,Brooklyn,136
+170,2:0,Bronx,82
+171,2:0,Queens,120
+172,2:0,Manhattan,31
+173,2:0,Staten Island,13
+174,2:0,Other,3
+175,2:4,Total,448
+176,2:4,Brooklyn,145
+177,2:4,Bronx,90
+178,2:4,Queens,114
+179,2:4,Manhattan,35
+180,2:4,Staten Island,62
+181,2:4,Other,2
+182,2:10,Total,415
+183,2:10,Brooklyn,135
+184,2:10,Bronx,104
+185,2:10,Queens,100
+186,2:10,Manhattan,34
+187,2:10,Staten Island,41
+188,2:10,Other,1
+189,2:15,Total,405
+190,2:15,Brooklyn,131
+191,2:15,Bronx,94
+192,2:15,Queens,101
+193,2:15,Manhattan,47
+194,2:15,Staten Island,30
+195,2:15,Other,2
+196,2:20,Total,389
+197,2:20,Brooklyn,135
+198,2:20,Bronx,92
+199,2:20,Queens,91
+200,2:20,Manhattan,48
+201,2:20,Staten Island,21
+202,2:20,Other,2
+203,2:25,Total,432
+204,2:25,Brooklyn,166
+205,2:25,Bronx,77
+206,2:25,Queens,107
+207,2:25,Manhattan,51
+208,2:25,Staten Island,29
+209,2:25,Other,2
+210,2:29,Total,453
+211,2:29,Brooklyn,175
+212,2:29,Bronx,84
+213,2:29,Queens,104
+214,2:29,Manhattan,58
+215,2:29,Staten Island,32
+216,2:29,Other,0
+217,2:34,Total,488
+218,2:34,Brooklyn,160
+219,2:34,Bronx,103
+220,2:34,Queens,122
+221,2:34,Manhattan,61
+222,2:34,Staten Island,39
+223,2:34,Other,3
+224,2:40,Total,491
+225,2:40,Brooklyn,164
+226,2:40,Bronx,94
+227,2:40,Queens,127
+228,2:40,Manhattan,62
+229,2:40,Staten Island,41
+230,2:40,Other,3
+231,2:44,Total,515
+232,2:44,Brooklyn,188
+233,2:44,Bronx,113
+234,2:44,Queens,108
+235,2:44,Manhattan,66
+236,2:44,Staten Island,37
+237,2:44,Other,3
+238,2:50,Total,516
+239,2:50,Brooklyn,186
+240,2:50,Bronx,140
+241,2:50,Queens,94
+242,2:50,Manhattan,71
+243,2:50,Staten Island,24
+244,2:50,Other,1
+245,2:55,Total,514
+246,2:55,Brooklyn,165
+247,2:55,Bronx,157
+248,2:55,Queens,111
+249,2:55,Manhattan,55
+250,2:55,Staten Island,25
+251,2:55,Other,1
+252,2:59,Total,534
+253,2:59,Brooklyn,172
+254,2:59,Bronx,160
+255,2:59,Queens,113
+256,2:59,Manhattan,62
+257,2:59,Staten Island,27
+258,2:59,Other,0
+259,3:5,Total,566
+260,3:5,Brooklyn,198
+261,3:5,Bronx,144
+262,3:5,Queens,113
+263,3:5,Manhattan,65
+264,3:5,Staten Island,45
+265,3:5,Other,1
+266,3:10,Total,562
+267,3:10,Brooklyn,193
+268,3:10,Bronx,143
+269,3:10,Queens,123
+270,3:10,Manhattan,65
+271,3:10,Staten Island,38
+272,3:10,Other,0
+273,3:15,Total,538
+274,3:15,Brooklyn,189
+275,3:15,Bronx,119
+276,3:15,Queens,135
+277,3:15,Manhattan,65
+278,3:15,Staten Island,27
+279,3:15,Other,3
+280,3:20,Total,498
+281,3:20,Brooklyn,157
+282,3:20,Bronx,106
+283,3:20,Queens,137
+284,3:20,Manhattan,68
+285,3:20,Staten Island,26
+286,3:20,Other,4
+287,3:24,Total,524
+288,3:24,Brooklyn,187
+289,3:24,Bronx,99
+290,3:24,Queens,143
+291,3:24,Manhattan,69
+292,3:24,Staten Island,22
+293,3:24,Other,4
+294,3:30,Total,504
+295,3:30,Brooklyn,166
+296,3:30,Bronx,99
+297,3:30,Queens,140
+298,3:30,Manhattan,67
+299,3:30,Staten Island,27
+300,3:30,Other,5
+301,3:35,Total,508
+302,3:35,Brooklyn,177
+303,3:35,Bronx,89
+304,3:35,Queens,131
+305,3:35,Manhattan,66
+306,3:35,Staten Island,38
+307,3:35,Other,7
+308,3:39,Total,528
+309,3:39,Brooklyn,196
+310,3:39,Bronx,98
+311,3:39,Queens,125
+312,3:39,Manhattan,57
+313,3:39,Staten Island,42
+314,3:39,Other,10
+315,3:45,Total,492
+316,3:45,Brooklyn,189
+317,3:45,Bronx,93
+318,3:45,Queens,104
+319,3:45,Manhattan,60
+320,3:45,Staten Island,31
+321,3:45,Other,15
+322,3:50,Total,488
+323,3:50,Brooklyn,141
+324,3:50,Bronx,100
+325,3:50,Queens,169
+326,3:50,Manhattan,55
+327,3:50,Staten Island,14
+328,3:50,Other,9
+329,3:55,Total,555
+330,3:55,Brooklyn,159
+331,3:55,Bronx,115
+332,3:55,Queens,147
+333,3:55,Manhattan,68
+334,3:55,Staten Island,46
+335,3:55,Other,20
+336,3:59,Total,594
+337,3:59,Brooklyn,166
+338,3:59,Bronx,121
+339,3:59,Queens,168
+340,3:59,Manhattan,79
+341,3:59,Staten Island,40
+342,3:59,Other,20
+343,4:5,Total,678
+344,4:5,Brooklyn,213
+345,4:5,Bronx,146
+346,4:5,Queens,202
+347,4:5,Manhattan,76
+348,4:5,Staten Island,20
+349,4:5,Other,21
+350,4:10,Total,739
+351,4:10,Brooklyn,228
+352,4:10,Bronx,163
+353,4:10,Queens,222
+354,4:10,Manhattan,68
+355,4:10,Staten Island,35
+356,4:10,Other,23
+357,4:14,Total,778
+358,4:14,Brooklyn,240
+359,4:14,Bronx,162
+360,4:14,Queens,248
+361,4:14,Manhattan,59
+362,4:14,Staten Island,42
+363,4:14,Other,27
+364,4:20,Total,741
+365,4:20,Brooklyn,242
+366,4:20,Bronx,137
+367,4:20,Queens,241
+368,4:20,Manhattan,54
+369,4:20,Staten Island,35
+370,4:20,Other,32
+371,4:25,Total,792
+372,4:25,Brooklyn,252
+373,4:25,Bronx,137
+374,4:25,Queens,265
+375,4:25,Manhattan,59
+376,4:25,Staten Island,42
+377,4:25,Other,37
+378,4:29,Total,871
+379,4:29,Brooklyn,296
+380,4:29,Bronx,151
+381,4:29,Queens,264
+382,4:29,Manhattan,69
+383,4:29,Staten Island,34
+384,4:29,Other,57
+385,4:34,Total,959
+386,4:34,Brooklyn,376
+387,4:34,Bronx,143
+388,4:34,Queens,271
+389,4:34,Manhattan,40
+390,4:34,Staten Island,68
+391,4:34,Other,61
+392,4:40,Total,1143
+393,4:40,Brooklyn,433
+394,4:40,Bronx,138
+395,4:40,Queens,366
+396,4:40,Manhattan,53
+397,4:40,Staten Island,81
+398,4:40,Other,72
+399,4:45,Total,1154
+400,4:45,Brooklyn,430
+401,4:45,Bronx,155
+402,4:45,Queens,392
+403,4:45,Manhattan,25
+404,4:45,Staten Island,83
+405,4:45,Other,69
+406,4:50,Total,1370
+407,4:50,Brooklyn,535
+408,4:50,Bronx,190
+409,4:50,Queens,430
+410,4:50,Manhattan,28
+411,4:50,Staten Island,87
+412,4:50,Other,100
+413,4:54,Total,1383
+414,4:54,Brooklyn,521
+415,4:54,Bronx,168
+416,4:54,Queens,463
+417,4:54,Manhattan,26
+418,4:54,Staten Island,83
+419,4:54,Other,122
+420,5:0,Total,1442
+421,5:0,Brooklyn,541
+422,5:0,Bronx,166
+423,5:0,Queens,446
+424,5:0,Manhattan,31
+425,5:0,Staten Island,109
+426,5:0,Other,149
+427,5:5,Total,1579
+428,5:5,Brooklyn,589
+429,5:5,Bronx,214
+430,5:5,Queens,416
+431,5:5,Manhattan,32
+432,5:5,Staten Island,144
+433,5:5,Other,184
+434,5:10,Total,1820
+435,5:10,Brooklyn,733
+436,5:10,Bronx,225
+437,5:10,Queens,503
+438,5:10,Manhattan,33
+439,5:10,Staten Island,132
+440,5:10,Other,194
+441,5:14,Total,1895
+442,5:14,Brooklyn,767
+443,5:14,Bronx,212
+444,5:14,Queens,496
+445,5:14,Manhattan,37
+446,5:14,Staten Island,168
+447,5:14,Other,215
+448,5:19,Total,2074
+449,5:19,Brooklyn,810
+450,5:19,Bronx,206
+451,5:19,Queens,544
+452,5:19,Manhattan,32
+453,5:19,Staten Island,202
+454,5:19,Other,280
+455,5:25,Total,2288
+456,5:25,Brooklyn,889
+457,5:25,Bronx,239
+458,5:25,Queens,624
+459,5:25,Manhattan,41
+460,5:25,Staten Island,184
+461,5:25,Other,311
+462,5:30,Total,2518
+463,5:30,Brooklyn,946
+464,5:30,Bronx,212
+465,5:30,Queens,692
+466,5:30,Manhattan,40
+467,5:30,Staten Island,211
+468,5:30,Other,417
+469,5:35,Total,2788
+470,5:35,Brooklyn,1051
+471,5:35,Bronx,245
+472,5:35,Queens,734
+473,5:35,Manhattan,52
+474,5:35,Staten Island,220
+475,5:35,Other,486
+476,5:40,Total,3027
+477,5:40,Brooklyn,1084
+478,5:40,Bronx,352
+479,5:40,Queens,874
+480,5:40,Manhattan,59
+481,5:40,Staten Island,189
+482,5:40,Other,469
+483,5:45,Total,3318
+484,5:45,Brooklyn,1131
+485,5:45,Bronx,429
+486,5:45,Queens,904
+487,5:45,Manhattan,53
+488,5:45,Staten Island,273
+489,5:45,Other,528
+490,5:50,Total,3518
+491,5:50,Brooklyn,1282
+492,5:50,Bronx,430
+493,5:50,Queens,989
+494,5:50,Manhattan,55
+495,5:50,Staten Island,225
+496,5:50,Other,537
+497,5:54,Total,3578
+498,5:54,Brooklyn,1301
+499,5:54,Bronx,434
+500,5:54,Queens,1036
+501,5:54,Manhattan,70
+502,5:54,Staten Island,207
+503,5:54,Other,530
+504,5:59,Total,3942
+505,5:59,Brooklyn,1427
+506,5:59,Bronx,448
+507,5:59,Queens,1192
+508,5:59,Manhattan,73
+509,5:59,Staten Island,237
+510,5:59,Other,565
+511,6:4,Total,4232
+512,6:4,Brooklyn,1539
+513,6:4,Bronx,495
+514,6:4,Queens,1236
+515,6:4,Manhattan,96
+516,6:4,Staten Island,264
+517,6:4,Other,602
+518,6:9,Total,4534
+519,6:9,Brooklyn,1552
+520,6:9,Bronx,594
+521,6:9,Queens,1389
+522,6:9,Manhattan,72
+523,6:9,Staten Island,293
+524,6:9,Other,634
+525,6:15,Total,4980
+526,6:15,Brooklyn,1707
+527,6:15,Bronx,648
+528,6:15,Queens,1521
+529,6:15,Manhattan,87
+530,6:15,Staten Island,342
+531,6:15,Other,675
+532,6:19,Total,5230
+533,6:19,Brooklyn,1810
+534,6:19,Bronx,664
+535,6:19,Queens,1566
+536,6:19,Manhattan,107
+537,6:19,Staten Island,364
+538,6:19,Other,719
+539,6:24,Total,5430
+540,6:24,Brooklyn,2050
+541,6:24,Bronx,771
+542,6:24,Queens,1557
+543,6:24,Manhattan,128
+544,6:24,Staten Island,342
+545,6:24,Other,582
+546,6:29,Total,5471
+547,6:29,Brooklyn,2059
+548,6:29,Bronx,764
+549,6:29,Queens,1560
+550,6:29,Manhattan,152
+551,6:29,Staten Island,349
+552,6:29,Other,587
+553,6:35,Total,5745
+554,6:35,Brooklyn,2195
+555,6:35,Bronx,804
+556,6:35,Queens,1529
+557,6:35,Manhattan,126
+558,6:35,Staten Island,473
+559,6:35,Other,618
+560,6:39,Total,5989
+561,6:39,Brooklyn,2164
+562,6:39,Bronx,881
+563,6:39,Queens,1664
+564,6:39,Manhattan,170
+565,6:39,Staten Island,509
+566,6:39,Other,601
+567,6:44,Total,6309
+568,6:44,Brooklyn,2380
+569,6:44,Bronx,969
+570,6:44,Queens,1744
+571,6:44,Manhattan,158
+572,6:44,Staten Island,466
+573,6:44,Other,592
+574,6:50,Total,6489
+575,6:50,Brooklyn,2562
+576,6:50,Bronx,924
+577,6:50,Queens,1782
+578,6:50,Manhattan,167
+579,6:50,Staten Island,535
+580,6:50,Other,519
+581,6:55,Total,6648
+582,6:55,Brooklyn,2667
+583,6:55,Bronx,880
+584,6:55,Queens,1773
+585,6:55,Manhattan,178
+586,6:55,Staten Island,577
+587,6:55,Other,573
+588,7:0,Total,6634
+589,7:0,Brooklyn,2752
+590,7:0,Bronx,822
+591,7:0,Queens,1825
+592,7:0,Manhattan,153
+593,7:0,Staten Island,481
+594,7:0,Other,601
+595,7:4,Total,7126
+596,7:4,Brooklyn,2907
+597,7:4,Bronx,890
+598,7:4,Queens,1953
+599,7:4,Manhattan,170
+600,7:4,Staten Island,607
+601,7:4,Other,599
+602,7:10,Total,7614
+603,7:10,Brooklyn,3213
+604,7:10,Bronx,1023
+605,7:10,Queens,2069
+606,7:10,Manhattan,173
+607,7:10,Staten Island,590
+608,7:10,Other,546
+609,7:15,Total,7812
+610,7:15,Brooklyn,3182
+611,7:15,Bronx,1199
+612,7:15,Queens,2072
+613,7:15,Manhattan,196
+614,7:15,Staten Island,558
+615,7:15,Other,605
+616,7:19,Total,8303
+617,7:19,Brooklyn,3448
+618,7:19,Bronx,1353
+619,7:19,Queens,2135
+620,7:19,Manhattan,198
+621,7:19,Staten Island,553
+622,7:19,Other,616
+623,7:24,Total,8759
+624,7:24,Brooklyn,3666
+625,7:24,Bronx,1488
+626,7:24,Queens,2183
+627,7:24,Manhattan,210
+628,7:24,Staten Island,598
+629,7:24,Other,614
+630,7:30,Total,8774
+631,7:30,Brooklyn,3704
+632,7:30,Bronx,1529
+633,7:30,Queens,2091
+634,7:30,Manhattan,227
+635,7:30,Staten Island,619
+636,7:30,Other,604
+637,7:35,Total,9491
+638,7:35,Brooklyn,3921
+639,7:35,Bronx,1674
+640,7:35,Queens,2405
+641,7:35,Manhattan,261
+642,7:35,Staten Island,633
+643,7:35,Other,597
+644,7:40,Total,9607
+645,7:40,Brooklyn,4020
+646,7:40,Bronx,1600
+647,7:40,Queens,2431
+648,7:40,Manhattan,275
+649,7:40,Staten Island,626
+650,7:40,Other,655
+651,7:44,Total,9552
+652,7:44,Brooklyn,3964
+653,7:44,Bronx,1561
+654,7:44,Queens,2473
+655,7:44,Manhattan,279
+656,7:44,Staten Island,625
+657,7:44,Other,650
+658,7:50,Total,9408
+659,7:50,Brooklyn,4043
+660,7:50,Bronx,1413
+661,7:50,Queens,2495
+662,7:50,Manhattan,243
+663,7:50,Staten Island,633
+664,7:50,Other,581
+665,7:55,Total,9109
+666,7:55,Brooklyn,3938
+667,7:55,Bronx,1347
+668,7:55,Queens,2359
+669,7:55,Manhattan,256
+670,7:55,Staten Island,629
+671,7:55,Other,580
+672,8:0,Total,8523
+673,8:0,Brooklyn,3626
+674,8:0,Bronx,1378
+675,8:0,Queens,2140
+676,8:0,Manhattan,298
+677,8:0,Staten Island,473
+678,8:0,Other,608
+679,8:4,Total,8683
+680,8:4,Brooklyn,3761
+681,8:4,Bronx,1467
+682,8:4,Queens,2104
+683,8:4,Manhattan,257
+684,8:4,Staten Island,474
+685,8:4,Other,620
+686,8:9,Total,8897
+687,8:9,Brooklyn,3820
+688,8:9,Bronx,1647
+689,8:9,Queens,2120
+690,8:9,Manhattan,271
+691,8:9,Staten Island,489
+692,8:9,Other,550
+693,8:15,Total,9587
+694,8:15,Brooklyn,4196
+695,8:15,Bronx,1874
+696,8:15,Queens,2166
+697,8:15,Manhattan,329
+698,8:15,Staten Island,497
+699,8:15,Other,525
+700,8:19,Total,9618
+701,8:19,Brooklyn,4316
+702,8:19,Bronx,1876
+703,8:19,Queens,2071
+704,8:19,Manhattan,325
+705,8:19,Staten Island,504
+706,8:19,Other,526
+707,8:24,Total,9746
+708,8:24,Brooklyn,4430
+709,8:24,Bronx,1972
+710,8:24,Queens,2028
+711,8:24,Manhattan,347
+712,8:24,Staten Island,508
+713,8:24,Other,461
+714,8:30,Total,9670
+715,8:30,Brooklyn,4478
+716,8:30,Bronx,1958
+717,8:30,Queens,1946
+718,8:30,Manhattan,322
+719,8:30,Staten Island,510
+720,8:30,Other,456
+721,8:35,Total,9871
+722,8:35,Brooklyn,4529
+723,8:35,Bronx,1947
+724,8:35,Queens,2040
+725,8:35,Manhattan,366
+726,8:35,Staten Island,500
+727,8:35,Other,489
+728,8:40,Total,9824
+729,8:40,Brooklyn,4572
+730,8:40,Bronx,1957
+731,8:40,Queens,2050
+732,8:40,Manhattan,331
+733,8:40,Staten Island,514
+734,8:40,Other,400
+735,8:45,Total,9338
+736,8:45,Brooklyn,4331
+737,8:45,Bronx,1832
+738,8:45,Queens,2009
+739,8:45,Manhattan,299
+740,8:45,Staten Island,490
+741,8:45,Other,377
+742,8:49,Total,8859
+743,8:49,Brooklyn,4059
+744,8:49,Bronx,1716
+745,8:49,Queens,2037
+746,8:49,Manhattan,301
+747,8:49,Staten Island,416
+748,8:49,Other,330
+749,8:54,Total,8414
+750,8:54,Brooklyn,3784
+751,8:54,Bronx,1580
+752,8:54,Queens,1986
+753,8:54,Manhattan,314
+754,8:54,Staten Island,400
+755,8:54,Other,350
+756,8:59,Total,7913
+757,8:59,Brooklyn,3557
+758,8:59,Bronx,1421
+759,8:59,Queens,1860
+760,8:59,Manhattan,311
+761,8:59,Staten Island,392
+762,8:59,Other,372
+763,9:5,Total,7585
+764,9:5,Brooklyn,3356
+765,9:5,Bronx,1442
+766,9:5,Queens,1824
+767,9:5,Manhattan,257
+768,9:5,Staten Island,406
+769,9:5,Other,300
+770,9:10,Total,7106
+771,9:10,Brooklyn,3171
+772,9:10,Bronx,1403
+773,9:10,Queens,1691
+774,9:10,Manhattan,225
+775,9:10,Staten Island,362
+776,9:10,Other,254
+777,9:14,Total,6869
+778,9:14,Brooklyn,3035
+779,9:14,Bronx,1306
+780,9:14,Queens,1660
+781,9:14,Manhattan,270
+782,9:14,Staten Island,362
+783,9:14,Other,236
+784,9:19,Total,6737
+785,9:19,Brooklyn,3030
+786,9:19,Bronx,1251
+787,9:19,Queens,1660
+788,9:19,Manhattan,272
+789,9:19,Staten Island,328
+790,9:19,Other,196
+791,9:24,Total,6949
+792,9:24,Brooklyn,3143
+793,9:24,Bronx,1297
+794,9:24,Queens,1712
+795,9:24,Manhattan,267
+796,9:24,Staten Island,321
+797,9:24,Other,209
+798,9:29,Total,6848
+799,9:29,Brooklyn,3134
+800,9:29,Bronx,1318
+801,9:29,Queens,1586
+802,9:29,Manhattan,286
+803,9:29,Staten Island,338
+804,9:29,Other,186
+805,9:34,Total,6702
+806,9:34,Brooklyn,3011
+807,9:34,Bronx,1360
+808,9:34,Queens,1522
+809,9:34,Manhattan,271
+810,9:34,Staten Island,337
+811,9:34,Other,201
+812,9:40,Total,6749
+813,9:40,Brooklyn,3010
+814,9:40,Bronx,1381
+815,9:40,Queens,1543
+816,9:40,Manhattan,262
+817,9:40,Staten Island,390
+818,9:40,Other,163
+819,9:44,Total,6555
+820,9:44,Brooklyn,2875
+821,9:44,Bronx,1362
+822,9:44,Queens,1508
+823,9:44,Manhattan,275
+824,9:44,Staten Island,368
+825,9:44,Other,167
+826,9:49,Total,6300
+827,9:49,Brooklyn,2942
+828,9:49,Bronx,1311
+829,9:49,Queens,1316
+830,9:49,Manhattan,214
+831,9:49,Staten Island,365
+832,9:49,Other,152
+833,9:55,Total,5991
+834,9:55,Brooklyn,2803
+835,9:55,Bronx,1187
+836,9:55,Queens,1302
+837,9:55,Manhattan,236
+838,9:55,Staten Island,299
+839,9:55,Other,164
+840,10:0,Total,5921
+841,10:0,Brooklyn,2824
+842,10:0,Bronx,1113
+843,10:0,Queens,1307
+844,10:0,Manhattan,234
+845,10:0,Staten Island,300
+846,10:0,Other,143
+847,10:4,Total,5905
+848,10:4,Brooklyn,2729
+849,10:4,Bronx,1145
+850,10:4,Queens,1344
+851,10:4,Manhattan,222
+852,10:4,Staten Island,317
+853,10:4,Other,148
+854,10:9,Total,5912
+855,10:9,Brooklyn,2822
+856,10:9,Bronx,1116
+857,10:9,Queens,1288
+858,10:9,Manhattan,228
+859,10:9,Staten Island,326
+860,10:9,Other,132
+861,10:14,Total,6087
+862,10:14,Brooklyn,2807
+863,10:14,Bronx,1180
+864,10:14,Queens,1376
+865,10:14,Manhattan,269
+866,10:14,Staten Island,302
+867,10:14,Other,153
+868,10:20,Total,5892
+869,10:20,Brooklyn,2714
+870,10:20,Bronx,1161
+871,10:20,Queens,1335
+872,10:20,Manhattan,234
+873,10:20,Staten Island,318
+874,10:20,Other,130
+875,10:25,Total,6026
+876,10:25,Brooklyn,2698
+877,10:25,Bronx,1248
+878,10:25,Queens,1355
+879,10:25,Manhattan,286
+880,10:25,Staten Island,319
+881,10:25,Other,120
+882,10:30,Total,5939
+883,10:30,Brooklyn,2655
+884,10:30,Bronx,1247
+885,10:30,Queens,1367
+886,10:30,Manhattan,260
+887,10:30,Staten Island,324
+888,10:30,Other,86
+889,10:34,Total,6278
+890,10:34,Brooklyn,2774
+891,10:34,Bronx,1309
+892,10:34,Queens,1523
+893,10:34,Manhattan,226
+894,10:34,Staten Island,359
+895,10:34,Other,87
+896,10:40,Total,6308
+897,10:40,Brooklyn,2814
+898,10:40,Bronx,1309
+899,10:40,Queens,1514
+900,10:40,Manhattan,278
+901,10:40,Staten Island,312
+902,10:40,Other,81
+903,10:45,Total,6380
+904,10:45,Brooklyn,2822
+905,10:45,Bronx,1416
+906,10:45,Queens,1431
+907,10:45,Manhattan,330
+908,10:45,Staten Island,307
+909,10:45,Other,74
+910,10:49,Total,6227
+911,10:49,Brooklyn,2754
+912,10:49,Bronx,1381
+913,10:49,Queens,1405
+914,10:49,Manhattan,311
+915,10:49,Staten Island,304
+916,10:49,Other,72
+917,10:54,Total,6064
+918,10:54,Brooklyn,2702
+919,10:54,Bronx,1327
+920,10:54,Queens,1397
+921,10:54,Manhattan,268
+922,10:54,Staten Island,307
+923,10:54,Other,63
+924,11:0,Total,5989
+925,11:0,Brooklyn,2766
+926,11:0,Bronx,1271
+927,11:0,Queens,1271
+928,11:0,Manhattan,293
+929,11:0,Staten Island,331
+930,11:0,Other,57
+931,11:4,Total,6301
+932,11:4,Brooklyn,2994
+933,11:4,Bronx,1313
+934,11:4,Queens,1280
+935,11:4,Manhattan,307
+936,11:4,Staten Island,349
+937,11:4,Other,58
+938,11:9,Total,6285
+939,11:9,Brooklyn,3001
+940,11:9,Bronx,1327
+941,11:9,Queens,1193
+942,11:9,Manhattan,326
+943,11:9,Staten Island,378
+944,11:9,Other,60
+945,11:14,Total,6205
+946,11:14,Brooklyn,3011
+947,11:14,Bronx,1195
+948,11:14,Queens,1219
+949,11:14,Manhattan,322
+950,11:14,Staten Island,387
+951,11:14,Other,71
+952,11:20,Total,6337
+953,11:20,Brooklyn,2957
+954,11:20,Bronx,1228
+955,11:20,Queens,1362
+956,11:20,Manhattan,302
+957,11:20,Staten Island,406
+958,11:20,Other,82
+959,11:25,Total,6552
+960,11:25,Brooklyn,2936
+961,11:25,Bronx,1321
+962,11:25,Queens,1502
+963,11:25,Manhattan,310
+964,11:25,Staten Island,399
+965,11:25,Other,84
+966,11:29,Total,6699
+967,11:29,Brooklyn,3030
+968,11:29,Bronx,1340
+969,11:29,Queens,1536
+970,11:29,Manhattan,325
+971,11:29,Staten Island,384
+972,11:29,Other,84
+973,11:34,Total,6778
+974,11:34,Brooklyn,3164
+975,11:34,Bronx,1438
+976,11:34,Queens,1427
+977,11:34,Manhattan,289
+978,11:34,Staten Island,379
+979,11:34,Other,81
+980,11:39,Total,6893
+981,11:39,Brooklyn,3186
+982,11:39,Bronx,1393
+983,11:39,Queens,1520
+984,11:39,Manhattan,304
+985,11:39,Staten Island,412
+986,11:39,Other,78
+987,11:44,Total,6776
+988,11:44,Brooklyn,3164
+989,11:44,Bronx,1400
+990,11:44,Queens,1488
+991,11:44,Manhattan,297
+992,11:44,Staten Island,346
+993,11:44,Other,81
+994,11:50,Total,6813
+995,11:50,Brooklyn,3172
+996,11:50,Bronx,1429
+997,11:50,Queens,1518
+998,11:50,Manhattan,271
+999,11:50,Staten Island,323
+1000,11:50,Other,100
+1001,11:55,Total,6707
+1002,11:55,Brooklyn,3140
+1003,11:55,Bronx,1321
+1004,11:55,Queens,1537
+1005,11:55,Manhattan,291
+1006,11:55,Staten Island,337
+1007,11:55,Other,81
+1008,11:59,Total,6656
+1009,11:59,Brooklyn,3133
+1010,11:59,Bronx,1334
+1011,11:59,Queens,1469
+1012,11:59,Manhattan,248
+1013,11:59,Staten Island,371
+1014,11:59,Other,101
+1015,12:5,Total,6877
+1016,12:5,Brooklyn,3260
+1017,12:5,Bronx,1361
+1018,12:5,Queens,1480
+1019,12:5,Manhattan,305
+1020,12:5,Staten Island,359
+1021,12:5,Other,112
+1022,12:9,Total,7093
+1023,12:9,Brooklyn,3325
+1024,12:9,Bronx,1481
+1025,12:9,Queens,1507
+1026,12:9,Manhattan,325
+1027,12:9,Staten Island,361
+1028,12:9,Other,94
+1029,12:15,Total,7445
+1030,12:15,Brooklyn,3440
+1031,12:15,Bronx,1559
+1032,12:15,Queens,1591
+1033,12:15,Manhattan,356
+1034,12:15,Staten Island,373
+1035,12:15,Other,126
+1036,12:20,Total,7329
+1037,12:20,Brooklyn,3351
+1038,12:20,Bronx,1494
+1039,12:20,Queens,1585
+1040,12:20,Manhattan,374
+1041,12:20,Staten Island,413
+1042,12:20,Other,112
+1043,12:25,Total,7558
+1044,12:25,Brooklyn,3464
+1045,12:25,Bronx,1517
+1046,12:25,Queens,1620
+1047,12:25,Manhattan,372
+1048,12:25,Staten Island,426
+1049,12:25,Other,159
+1050,12:29,Total,7461
+1051,12:29,Brooklyn,3466
+1052,12:29,Bronx,1500
+1053,12:29,Queens,1567
+1054,12:29,Manhattan,364
+1055,12:29,Staten Island,411
+1056,12:29,Other,153
+1057,12:34,Total,7561
+1058,12:34,Brooklyn,3434
+1059,12:34,Bronx,1550
+1060,12:34,Queens,1602
+1061,12:34,Manhattan,380
+1062,12:34,Staten Island,449
+1063,12:34,Other,146
+1064,12:39,Total,7436
+1065,12:39,Brooklyn,3410
+1066,12:39,Bronx,1561
+1067,12:39,Queens,1485
+1068,12:39,Manhattan,375
+1069,12:39,Staten Island,453
+1070,12:39,Other,152
+1071,12:45,Total,7619
+1072,12:45,Brooklyn,3458
+1073,12:45,Bronx,1715
+1074,12:45,Queens,1517
+1075,12:45,Manhattan,348
+1076,12:45,Staten Island,427
+1077,12:45,Other,154
+1078,12:50,Total,7793
+1079,12:50,Brooklyn,3574
+1080,12:50,Bronx,1716
+1081,12:50,Queens,1663
+1082,12:50,Manhattan,326
+1083,12:50,Staten Island,382
+1084,12:50,Other,132
+1085,12:55,Total,7864
+1086,12:55,Brooklyn,3580
+1087,12:55,Bronx,1736
+1088,12:55,Queens,1702
+1089,12:55,Manhattan,323
+1090,12:55,Staten Island,365
+1091,12:55,Other,158
+1092,12:59,Total,7754
+1093,12:59,Brooklyn,3491
+1094,12:59,Bronx,1743
+1095,12:59,Queens,1725
+1096,12:59,Manhattan,297
+1097,12:59,Staten Island,361
+1098,12:59,Other,137
+1099,13:5,Total,7871
+1100,13:5,Brooklyn,3614
+1101,13:5,Bronx,1742
+1102,13:5,Queens,1646
+1103,13:5,Manhattan,303
+1104,13:5,Staten Island,404
+1105,13:5,Other,162
+1106,13:10,Total,7880
+1107,13:10,Brooklyn,3604
+1108,13:10,Bronx,1703
+1109,13:10,Queens,1722
+1110,13:10,Manhattan,306
+1111,13:10,Staten Island,385
+1112,13:10,Other,160
+1113,13:14,Total,8162
+1114,13:14,Brooklyn,3747
+1115,13:14,Bronx,1710
+1116,13:14,Queens,1751
+1117,13:14,Manhattan,382
+1118,13:14,Staten Island,406
+1119,13:14,Other,166
+1120,13:20,Total,8547
+1121,13:20,Brooklyn,3917
+1122,13:20,Bronx,1834
+1123,13:20,Queens,1862
+1124,13:20,Manhattan,370
+1125,13:20,Staten Island,410
+1126,13:20,Other,154
+1127,13:25,Total,8775
+1128,13:25,Brooklyn,4079
+1129,13:25,Bronx,1907
+1130,13:25,Queens,1798
+1131,13:25,Manhattan,384
+1132,13:25,Staten Island,420
+1133,13:25,Other,187
+1134,13:29,Total,8743
+1135,13:29,Brooklyn,4118
+1136,13:29,Bronx,1937
+1137,13:29,Queens,1742
+1138,13:29,Manhattan,359
+1139,13:29,Staten Island,385
+1140,13:29,Other,202
+1141,13:35,Total,8785
+1142,13:35,Brooklyn,4076
+1143,13:35,Bronx,1884
+1144,13:35,Queens,1839
+1145,13:35,Manhattan,368
+1146,13:35,Staten Island,427
+1147,13:35,Other,191
+1148,13:40,Total,8801
+1149,13:40,Brooklyn,4113
+1150,13:40,Bronx,1821
+1151,13:40,Queens,1933
+1152,13:40,Manhattan,308
+1153,13:40,Staten Island,441
+1154,13:40,Other,185
+1155,13:45,Total,8869
+1156,13:45,Brooklyn,4051
+1157,13:45,Bronx,1919
+1158,13:45,Queens,1917
+1159,13:45,Manhattan,364
+1160,13:45,Staten Island,453
+1161,13:45,Other,165
+1162,13:50,Total,8702
+1163,13:50,Brooklyn,4005
+1164,13:50,Bronx,1898
+1165,13:50,Queens,1826
+1166,13:50,Manhattan,366
+1167,13:50,Staten Island,421
+1168,13:50,Other,186
+1169,13:54,Total,8709
+1170,13:54,Brooklyn,4047
+1171,13:54,Bronx,1861
+1172,13:54,Queens,1833
+1173,13:54,Manhattan,363
+1174,13:54,Staten Island,406
+1175,13:54,Other,199
+1176,13:59,Total,8666
+1177,13:59,Brooklyn,4085
+1178,13:59,Bronx,1833
+1179,13:59,Queens,1756
+1180,13:59,Manhattan,325
+1181,13:59,Staten Island,445
+1182,13:59,Other,222
+1183,14:4,Total,8951
+1184,14:4,Brooklyn,4274
+1185,14:4,Bronx,1934
+1186,14:4,Queens,1774
+1187,14:4,Manhattan,316
+1188,14:4,Staten Island,446
+1189,14:4,Other,207
+1190,14:9,Total,9147
+1191,14:9,Brooklyn,4251
+1192,14:9,Bronx,2099
+1193,14:9,Queens,1747
+1194,14:9,Manhattan,358
+1195,14:9,Staten Island,465
+1196,14:9,Other,227
+1197,14:15,Total,9448
+1198,14:15,Brooklyn,4259
+1199,14:15,Bronx,2272
+1200,14:15,Queens,1756
+1201,14:15,Manhattan,369
+1202,14:15,Staten Island,533
+1203,14:15,Other,259
+1204,14:20,Total,9572
+1205,14:20,Brooklyn,4302
+1206,14:20,Bronx,2356
+1207,14:20,Queens,1753
+1208,14:20,Manhattan,368
+1209,14:20,Staten Island,560
+1210,14:20,Other,233
+1211,14:25,Total,9724
+1212,14:25,Brooklyn,4445
+1213,14:25,Bronx,2396
+1214,14:25,Queens,1642
+1215,14:25,Manhattan,408
+1216,14:25,Staten Island,570
+1217,14:25,Other,263
+1218,14:29,Total,10059
+1219,14:29,Brooklyn,4616
+1220,14:29,Bronx,2279
+1221,14:29,Queens,1752
+1222,14:29,Manhattan,485
+1223,14:29,Staten Island,635
+1224,14:29,Other,292
+1225,14:35,Total,10441
+1226,14:35,Brooklyn,4699
+1227,14:35,Bronx,2311
+1228,14:35,Queens,1934
+1229,14:35,Manhattan,519
+1230,14:35,Staten Island,669
+1231,14:35,Other,309
+1232,14:39,Total,10580
+1233,14:39,Brooklyn,4905
+1234,14:39,Bronx,2361
+1235,14:39,Queens,1939
+1236,14:39,Manhattan,420
+1237,14:39,Staten Island,634
+1238,14:39,Other,321
+1239,14:45,Total,10389
+1240,14:45,Brooklyn,4896
+1241,14:45,Bronx,2167
+1242,14:45,Queens,1941
+1243,14:45,Manhattan,431
+1244,14:45,Staten Island,625
+1245,14:45,Other,329
+1246,14:50,Total,10042
+1247,14:50,Brooklyn,4662
+1248,14:50,Bronx,2075
+1249,14:50,Queens,1912
+1250,14:50,Manhattan,459
+1251,14:50,Staten Island,619
+1252,14:50,Other,315
+1253,14:54,Total,10051
+1254,14:54,Brooklyn,4597
+1255,14:54,Bronx,2023
+1256,14:54,Queens,2003
+1257,14:54,Manhattan,447
+1258,14:54,Staten Island,651
+1259,14:54,Other,330
+1260,15:0,Total,9994
+1261,15:0,Brooklyn,4721
+1262,15:0,Bronx,2054
+1263,15:0,Queens,1877
+1264,15:0,Manhattan,406
+1265,15:0,Staten Island,587
+1266,15:0,Other,349
+1267,15:5,Total,10184
+1268,15:5,Brooklyn,4638
+1269,15:5,Bronx,2112
+1270,15:5,Queens,1945
+1271,15:5,Manhattan,385
+1272,15:5,Staten Island,673
+1273,15:5,Other,431
+1274,15:10,Total,10783
+1275,15:10,Brooklyn,4833
+1276,15:10,Bronx,2118
+1277,15:10,Queens,2186
+1278,15:10,Manhattan,442
+1279,15:10,Staten Island,675
+1280,15:10,Other,529
+1281,15:15,Total,10918
+1282,15:15,Brooklyn,4936
+1283,15:15,Bronx,2277
+1284,15:15,Queens,2175
+1285,15:15,Manhattan,415
+1286,15:15,Staten Island,621
+1287,15:15,Other,494
+1288,15:19,Total,10954
+1289,15:19,Brooklyn,5026
+1290,15:19,Bronx,2214
+1291,15:19,Queens,2172
+1292,15:19,Manhattan,417
+1293,15:19,Staten Island,657
+1294,15:19,Other,468
+1295,15:24,Total,11235
+1296,15:24,Brooklyn,5011
+1297,15:24,Bronx,2207
+1298,15:24,Queens,2342
+1299,15:24,Manhattan,418
+1300,15:24,Staten Island,683
+1301,15:24,Other,574
+1302,15:30,Total,10840
+1303,15:30,Brooklyn,4866
+1304,15:30,Bronx,2081
+1305,15:30,Queens,2384
+1306,15:30,Manhattan,420
+1307,15:30,Staten Island,589
+1308,15:30,Other,500
+1309,15:35,Total,10699
+1310,15:35,Brooklyn,4854
+1311,15:35,Bronx,1920
+1312,15:35,Queens,2355
+1313,15:35,Manhattan,429
+1314,15:35,Staten Island,648
+1315,15:35,Other,493
+1316,15:39,Total,11140
+1317,15:39,Brooklyn,4973
+1318,15:39,Bronx,2131
+1319,15:39,Queens,2420
+1320,15:39,Manhattan,436
+1321,15:39,Staten Island,652
+1322,15:39,Other,528
+1323,15:45,Total,11283
+1324,15:45,Brooklyn,4957
+1325,15:45,Bronx,2239
+1326,15:45,Queens,2420
+1327,15:45,Manhattan,384
+1328,15:45,Staten Island,671
+1329,15:45,Other,612
+1330,15:49,Total,11337
+1331,15:49,Brooklyn,5099
+1332,15:49,Bronx,2367
+1333,15:49,Queens,2325
+1334,15:49,Manhattan,365
+1335,15:49,Staten Island,626
+1336,15:49,Other,555
+1337,15:54,Total,10887
+1338,15:54,Brooklyn,4920
+1339,15:54,Bronx,2220
+1340,15:54,Queens,2191
+1341,15:54,Manhattan,352
+1342,15:54,Staten Island,632
+1343,15:54,Other,572
+1344,16:0,Total,10872
+1345,16:0,Brooklyn,5102
+1346,16:0,Bronx,2179
+1347,16:0,Queens,2205
+1348,16:0,Manhattan,368
+1349,16:0,Staten Island,529
+1350,16:0,Other,489
+1351,16:5,Total,11419
+1352,16:5,Brooklyn,5163
+1353,16:5,Bronx,2288
+1354,16:5,Queens,2421
+1355,16:5,Manhattan,438
+1356,16:5,Staten Island,567
+1357,16:5,Other,542
+1358,16:10,Total,11519
+1359,16:10,Brooklyn,5318
+1360,16:10,Bronx,2308
+1361,16:10,Queens,2368
+1362,16:10,Manhattan,451
+1363,16:10,Staten Island,573
+1364,16:10,Other,501
+1365,16:15,Total,11587
+1366,16:15,Brooklyn,5368
+1367,16:15,Bronx,2293
+1368,16:15,Queens,2463
+1369,16:15,Manhattan,435
+1370,16:15,Staten Island,582
+1371,16:15,Other,446
+1372,16:19,Total,11431
+1373,16:19,Brooklyn,5287
+1374,16:19,Bronx,2355
+1375,16:19,Queens,2398
+1376,16:19,Manhattan,390
+1377,16:19,Staten Island,519
+1378,16:19,Other,482
+1379,16:25,Total,11395
+1380,16:25,Brooklyn,5159
+1381,16:25,Bronx,2418
+1382,16:25,Queens,2419
+1383,16:25,Manhattan,426
+1384,16:25,Staten Island,514
+1385,16:25,Other,459
+1386,16:30,Total,11261
+1387,16:30,Brooklyn,5277
+1388,16:30,Bronx,2275
+1389,16:30,Queens,2348
+1390,16:30,Manhattan,452
+1391,16:30,Staten Island,479
+1392,16:30,Other,430
+1393,16:35,Total,11491
+1394,16:35,Brooklyn,5244
+1395,16:35,Bronx,2206
+1396,16:35,Queens,2638
+1397,16:35,Manhattan,467
+1398,16:35,Staten Island,529
+1399,16:35,Other,407
+1400,16:40,Total,11882
+1401,16:40,Brooklyn,5227
+1402,16:40,Bronx,2314
+1403,16:40,Queens,2750
+1404,16:40,Manhattan,521
+1405,16:40,Staten Island,631
+1406,16:40,Other,439
+1407,16:45,Total,11623
+1408,16:45,Brooklyn,5105
+1409,16:45,Bronx,2270
+1410,16:45,Queens,2770
+1411,16:45,Manhattan,460
+1412,16:45,Staten Island,566
+1413,16:45,Other,452
+1414,16:50,Total,11308
+1415,16:50,Brooklyn,5121
+1416,16:50,Bronx,2289
+1417,16:50,Queens,2552
+1418,16:50,Manhattan,404
+1419,16:50,Staten Island,546
+1420,16:50,Other,396
+1421,16:55,Total,11487
+1422,16:55,Brooklyn,5123
+1423,16:55,Bronx,2447
+1424,16:55,Queens,2431
+1425,16:55,Manhattan,411
+1426,16:55,Staten Island,597
+1427,16:55,Other,478
+1428,16:59,Total,11438
+1429,16:59,Brooklyn,5101
+1430,16:59,Bronx,2235
+1431,16:59,Queens,2530
+1432,16:59,Manhattan,421
+1433,16:59,Staten Island,660
+1434,16:59,Other,491
+1435,17:4,Total,11341
+1436,17:4,Brooklyn,5075
+1437,17:4,Bronx,2213
+1438,17:4,Queens,2522
+1439,17:4,Manhattan,383
+1440,17:4,Staten Island,677
+1441,17:4,Other,471
+1442,17:9,Total,11543
+1443,17:9,Brooklyn,5265
+1444,17:9,Bronx,2177
+1445,17:9,Queens,2572
+1446,17:9,Manhattan,370
+1447,17:9,Staten Island,637
+1448,17:9,Other,522
+1449,17:14,Total,12002
+1450,17:14,Brooklyn,5426
+1451,17:14,Bronx,2377
+1452,17:14,Queens,2661
+1453,17:14,Manhattan,372
+1454,17:14,Staten Island,666
+1455,17:14,Other,500
+1456,17:19,Total,12158
+1457,17:19,Brooklyn,5358
+1458,17:19,Bronx,2345
+1459,17:19,Queens,2812
+1460,17:19,Manhattan,404
+1461,17:19,Staten Island,736
+1462,17:19,Other,503
+1463,17:25,Total,11977
+1464,17:25,Brooklyn,5329
+1465,17:25,Bronx,2204
+1466,17:25,Queens,2822
+1467,17:25,Manhattan,419
+1468,17:25,Staten Island,730
+1469,17:25,Other,473
+1470,17:30,Total,11717
+1471,17:30,Brooklyn,5141
+1472,17:30,Bronx,2185
+1473,17:30,Queens,2800
+1474,17:30,Manhattan,409
+1475,17:30,Staten Island,683
+1476,17:30,Other,499
+1477,17:35,Total,11664
+1478,17:35,Brooklyn,5134
+1479,17:35,Bronx,2227
+1480,17:35,Queens,2819
+1481,17:35,Manhattan,403
+1482,17:35,Staten Island,637
+1483,17:35,Other,444
+1484,17:39,Total,11636
+1485,17:39,Brooklyn,4942
+1486,17:39,Bronx,2266
+1487,17:39,Queens,2817
+1488,17:39,Manhattan,431
+1489,17:39,Staten Island,694
+1490,17:39,Other,486
+1491,17:44,Total,10999
+1492,17:44,Brooklyn,4832
+1493,17:44,Bronx,2073
+1494,17:44,Queens,2632
+1495,17:44,Manhattan,415
+1496,17:44,Staten Island,567
+1497,17:44,Other,480
+1498,17:50,Total,10680
+1499,17:50,Brooklyn,4734
+1500,17:50,Bronx,2138
+1501,17:50,Queens,2431
+1502,17:50,Manhattan,329
+1503,17:50,Staten Island,550
+1504,17:50,Other,498
+1505,17:54,Total,10246
+1506,17:54,Brooklyn,4426
+1507,17:54,Bronx,2039
+1508,17:54,Queens,2482
+1509,17:54,Manhattan,304
+1510,17:54,Staten Island,560
+1511,17:54,Other,435
+1512,18:0,Total,9819
+1513,18:0,Brooklyn,4233
+1514,18:0,Bronx,1890
+1515,18:0,Queens,2464
+1516,18:0,Manhattan,300
+1517,18:0,Staten Island,507
+1518,18:0,Other,425
+1519,18:5,Total,9563
+1520,18:5,Brooklyn,4027
+1521,18:5,Bronx,1845
+1522,18:5,Queens,2477
+1523,18:5,Manhattan,302
+1524,18:5,Staten Island,553
+1525,18:5,Other,359
+1526,18:9,Total,9297
+1527,18:9,Brooklyn,3910
+1528,18:9,Bronx,1853
+1529,18:9,Queens,2362
+1530,18:9,Manhattan,312
+1531,18:9,Staten Island,509
+1532,18:9,Other,351
+1533,18:14,Total,9044
+1534,18:14,Brooklyn,3779
+1535,18:14,Bronx,1754
+1536,18:14,Queens,2289
+1537,18:14,Manhattan,343
+1538,18:14,Staten Island,487
+1539,18:14,Other,392
+1540,18:19,Total,8916
+1541,18:19,Brooklyn,3860
+1542,18:19,Bronx,1594
+1543,18:19,Queens,2216
+1544,18:19,Manhattan,381
+1545,18:19,Staten Island,469
+1546,18:19,Other,396
+1547,18:23,Total,8930
+1548,18:23,Brooklyn,3717
+1549,18:23,Bronx,1736
+1550,18:23,Queens,2337
+1551,18:23,Manhattan,327
+1552,18:23,Staten Island,461
+1553,18:23,Other,352
+1554,18:30,Total,8603
+1555,18:30,Brooklyn,3706
+1556,18:30,Bronx,1552
+1557,18:30,Queens,2226
+1558,18:30,Manhattan,304
+1559,18:30,Staten Island,434
+1560,18:30,Other,381
+1561,18:34,Total,8349
+1562,18:34,Brooklyn,3599
+1563,18:34,Bronx,1495
+1564,18:34,Queens,2169
+1565,18:34,Manhattan,299
+1566,18:34,Staten Island,410
+1567,18:34,Other,377
+1568,18:40,Total,7841
+1569,18:40,Brooklyn,3402
+1570,18:40,Bronx,1502
+1571,18:40,Queens,1972
+1572,18:40,Manhattan,272
+1573,18:40,Staten Island,374
+1574,18:40,Other,319
+1575,18:45,Total,7835
+1576,18:45,Brooklyn,3483
+1577,18:45,Bronx,1476
+1578,18:45,Queens,1947
+1579,18:45,Manhattan,265
+1580,18:45,Staten Island,356
+1581,18:45,Other,308
+1582,18:50,Total,7725
+1583,18:50,Brooklyn,3384
+1584,18:50,Bronx,1380
+1585,18:50,Queens,1930
+1586,18:50,Manhattan,298
+1587,18:50,Staten Island,395
+1588,18:50,Other,338
+1589,18:55,Total,7538
+1590,18:55,Brooklyn,3299
+1591,18:55,Bronx,1440
+1592,18:55,Queens,1910
+1593,18:55,Manhattan,237
+1594,18:55,Staten Island,357
+1595,18:55,Other,295
+1596,18:59,Total,7122
+1597,18:59,Brooklyn,3133
+1598,18:59,Bronx,1383
+1599,18:59,Queens,1788
+1600,18:59,Manhattan,235
+1601,18:59,Staten Island,339
+1602,18:59,Other,244
+1603,19:4,Total,6838
+1604,19:4,Brooklyn,3069
+1605,19:4,Bronx,1249
+1606,19:4,Queens,1694
+1607,19:4,Manhattan,230
+1608,19:4,Staten Island,364
+1609,19:4,Other,232
+1610,19:10,Total,7081
+1611,19:10,Brooklyn,3082
+1612,19:10,Bronx,1394
+1613,19:10,Queens,1729
+1614,19:10,Manhattan,266
+1615,19:10,Staten Island,401
+1616,19:10,Other,209
+1617,19:14,Total,6869
+1618,19:14,Brooklyn,3043
+1619,19:14,Bronx,1401
+1620,19:14,Queens,1568
+1621,19:14,Manhattan,239
+1622,19:14,Staten Island,389
+1623,19:14,Other,229
+1624,19:20,Total,6554
+1625,19:20,Brooklyn,2880
+1626,19:20,Bronx,1354
+1627,19:20,Queens,1492
+1628,19:20,Manhattan,208
+1629,19:20,Staten Island,383
+1630,19:20,Other,237
+1631,19:25,Total,6722
+1632,19:25,Brooklyn,2911
+1633,19:25,Bronx,1455
+1634,19:25,Queens,1522
+1635,19:25,Manhattan,215
+1636,19:25,Staten Island,357
+1637,19:25,Other,262
+1638,19:30,Total,6289
+1639,19:30,Brooklyn,2713
+1640,19:30,Bronx,1299
+1641,19:30,Queens,1500
+1642,19:30,Manhattan,205
+1643,19:30,Staten Island,343
+1644,19:30,Other,229
+1645,19:35,Total,6070
+1646,19:35,Brooklyn,2643
+1647,19:35,Bronx,1242
+1648,19:35,Queens,1459
+1649,19:35,Manhattan,198
+1650,19:35,Staten Island,331
+1651,19:35,Other,197
+1652,19:39,Total,5774
+1653,19:39,Brooklyn,2409
+1654,19:39,Bronx,1210
+1655,19:39,Queens,1494
+1656,19:39,Manhattan,156
+1657,19:39,Staten Island,308
+1658,19:39,Other,197
+1659,19:45,Total,5367
+1660,19:45,Brooklyn,2226
+1661,19:45,Bronx,1172
+1662,19:45,Queens,1368
+1663,19:45,Manhattan,153
+1664,19:45,Staten Island,242
+1665,19:45,Other,206
+1666,19:48,Total,5197
+1667,19:48,Brooklyn,2152
+1668,19:48,Bronx,1136
+1669,19:48,Queens,1294
+1670,19:48,Manhattan,157
+1671,19:48,Staten Island,260
+1672,19:48,Other,198
+1673,19:54,Total,5093
+1674,19:54,Brooklyn,2084
+1675,19:54,Bronx,1153
+1676,19:54,Queens,1209
+1677,19:54,Manhattan,185
+1678,19:54,Staten Island,274
+1679,19:54,Other,188
+1680,20:0,Total,4951
+1681,20:0,Brooklyn,2105
+1682,20:0,Bronx,1205
+1683,20:0,Queens,1104
+1684,20:0,Manhattan,172
+1685,20:0,Staten Island,222
+1686,20:0,Other,143
+1687,20:5,Total,4958
+1688,20:5,Brooklyn,2078
+1689,20:5,Bronx,1159
+1690,20:5,Queens,1148
+1691,20:5,Manhattan,170
+1692,20:5,Staten Island,275
+1693,20:5,Other,128
+1694,20:10,Total,5002
+1695,20:10,Brooklyn,2142
+1696,20:10,Bronx,1202
+1697,20:10,Queens,1132
+1698,20:10,Manhattan,181
+1699,20:10,Staten Island,224
+1700,20:10,Other,121
+1701,20:14,Total,4936
+1702,20:14,Brooklyn,2192
+1703,20:14,Bronx,1126
+1704,20:14,Queens,1072
+1705,20:14,Manhattan,165
+1706,20:14,Staten Island,281
+1707,20:14,Other,100
+1708,20:19,Total,5062
+1709,20:19,Brooklyn,2245
+1710,20:19,Bronx,1052
+1711,20:19,Queens,1165
+1712,20:19,Manhattan,234
+1713,20:19,Staten Island,258
+1714,20:19,Other,108
+1715,20:24,Total,4826
+1716,20:24,Brooklyn,2182
+1717,20:24,Bronx,975
+1718,20:24,Queens,1141
+1719,20:24,Manhattan,209
+1720,20:24,Staten Island,209
+1721,20:24,Other,110
+1722,20:30,Total,4597
+1723,20:30,Brooklyn,2073
+1724,20:30,Bronx,914
+1725,20:30,Queens,1126
+1726,20:30,Manhattan,178
+1727,20:30,Staten Island,198
+1728,20:30,Other,108
+1729,20:35,Total,4390
+1730,20:35,Brooklyn,1980
+1731,20:35,Bronx,793
+1732,20:35,Queens,1074
+1733,20:35,Manhattan,158
+1734,20:35,Staten Island,278
+1735,20:35,Other,107
+1736,20:39,Total,4140
+1737,20:39,Brooklyn,1756
+1738,20:39,Bronx,798
+1739,20:39,Queens,1057
+1740,20:39,Manhattan,159
+1741,20:39,Staten Island,248
+1742,20:39,Other,122
+1743,20:45,Total,3683
+1744,20:45,Brooklyn,1532
+1745,20:45,Bronx,720
+1746,20:45,Queens,955
+1747,20:45,Manhattan,153
+1748,20:45,Staten Island,196
+1749,20:45,Other,127
+1750,20:50,Total,3431
+1751,20:50,Brooklyn,1482
+1752,20:50,Bronx,651
+1753,20:50,Queens,870
+1754,20:50,Manhattan,160
+1755,20:50,Staten Island,155
+1756,20:50,Other,113
+1757,20:55,Total,3272
+1758,20:55,Brooklyn,1365
+1759,20:55,Bronx,720
+1760,20:55,Queens,804
+1761,20:55,Manhattan,138
+1762,20:55,Staten Island,143
+1763,20:55,Other,102
+1764,20:59,Total,3146
+1765,20:59,Brooklyn,1281
+1766,20:59,Bronx,704
+1767,20:59,Queens,802
+1768,20:59,Manhattan,118
+1769,20:59,Staten Island,144
+1770,20:59,Other,97
+1771,21:4,Total,2986
+1772,21:4,Brooklyn,1220
+1773,21:4,Bronx,608
+1774,21:4,Queens,806
+1775,21:4,Manhattan,85
+1776,21:4,Staten Island,193
+1777,21:4,Other,74
+1778,21:10,Total,3007
+1779,21:10,Brooklyn,1257
+1780,21:10,Bronx,595
+1781,21:10,Queens,829
+1782,21:10,Manhattan,100
+1783,21:10,Staten Island,156
+1784,21:10,Other,70
+1785,21:14,Total,3105
+1786,21:14,Brooklyn,1301
+1787,21:14,Bronx,628
+1788,21:14,Queens,845
+1789,21:14,Manhattan,111
+1790,21:14,Staten Island,142
+1791,21:14,Other,78
+1792,21:19,Total,3123
+1793,21:19,Brooklyn,1298
+1794,21:19,Bronx,586
+1795,21:19,Queens,931
+1796,21:19,Manhattan,82
+1797,21:19,Staten Island,145
+1798,21:19,Other,81
+1799,21:25,Total,2909
+1800,21:25,Brooklyn,1275
+1801,21:25,Bronx,575
+1802,21:25,Queens,788
+1803,21:25,Manhattan,76
+1804,21:25,Staten Island,122
+1805,21:25,Other,73
+1806,21:29,Total,2803
+1807,21:29,Brooklyn,1219
+1808,21:29,Bronx,566
+1809,21:29,Queens,756
+1810,21:29,Manhattan,63
+1811,21:29,Staten Island,123
+1812,21:29,Other,76
+1813,21:35,Total,2747
+1814,21:35,Brooklyn,1151
+1815,21:35,Bronx,586
+1816,21:35,Queens,651
+1817,21:35,Manhattan,62
+1818,21:35,Staten Island,216
+1819,21:35,Other,81
+1820,21:39,Total,2584
+1821,21:39,Brooklyn,1081
+1822,21:39,Bronx,569
+1823,21:39,Queens,631
+1824,21:39,Manhattan,60
+1825,21:39,Staten Island,175
+1826,21:39,Other,68
+1827,21:44,Total,2550
+1828,21:44,Brooklyn,1035
+1829,21:44,Bronx,516
+1830,21:44,Queens,689
+1831,21:44,Manhattan,59
+1832,21:44,Staten Island,170
+1833,21:44,Other,81
+1834,21:50,Total,2455
+1835,21:50,Brooklyn,1056
+1836,21:50,Bronx,443
+1837,21:50,Queens,656
+1838,21:50,Manhattan,77
+1839,21:50,Staten Island,147
+1840,21:50,Other,76
+1841,21:55,Total,2174
+1842,21:55,Brooklyn,982
+1843,21:55,Bronx,378
+1844,21:55,Queens,554
+1845,21:55,Manhattan,56
+1846,21:55,Staten Island,142
+1847,21:55,Other,62
+1848,22:0,Total,2017
+1849,22:0,Brooklyn,949
+1850,22:0,Bronx,358
+1851,22:0,Queens,465
+1852,22:0,Manhattan,41
+1853,22:0,Staten Island,135
+1854,22:0,Other,69
+1855,22:4,Total,2165
+1856,22:4,Brooklyn,973
+1857,22:4,Bronx,378
+1858,22:4,Queens,532
+1859,22:4,Manhattan,50
+1860,22:4,Staten Island,169
+1861,22:4,Other,63
+1862,22:9,Total,2278
+1863,22:9,Brooklyn,985
+1864,22:9,Bronx,399
+1865,22:9,Queens,618
+1866,22:9,Manhattan,53
+1867,22:9,Staten Island,154
+1868,22:9,Other,69
+1869,22:15,Total,2332
+1870,22:15,Brooklyn,958
+1871,22:15,Bronx,471
+1872,22:15,Queens,678
+1873,22:15,Manhattan,40
+1874,22:15,Staten Island,123
+1875,22:15,Other,62
+1876,22:19,Total,2314
+1877,22:19,Brooklyn,908
+1878,22:19,Bronx,478
+1879,22:19,Queens,686
+1880,22:19,Manhattan,51
+1881,22:19,Staten Island,127
+1882,22:19,Other,64
+1883,22:24,Total,2188
+1884,22:24,Brooklyn,865
+1885,22:24,Bronx,469
+1886,22:24,Queens,621
+1887,22:24,Manhattan,63
+1888,22:24,Staten Island,110
+1889,22:24,Other,60
+1890,22:29,Total,2205
+1891,22:29,Brooklyn,850
+1892,22:29,Bronx,461
+1893,22:29,Queens,611
+1894,22:29,Manhattan,72
+1895,22:29,Staten Island,152
+1896,22:29,Other,59
+1897,22:34,Total,2028
+1898,22:34,Brooklyn,784
+1899,22:34,Bronx,411
+1900,22:34,Queens,541
+1901,22:34,Manhattan,78
+1902,22:34,Staten Island,162
+1903,22:34,Other,52
+1904,22:39,Total,1983
+1905,22:39,Brooklyn,830
+1906,22:39,Bronx,313
+1907,22:39,Queens,556
+1908,22:39,Manhattan,87
+1909,22:39,Staten Island,148
+1910,22:39,Other,49
+1911,22:45,Total,1926
+1912,22:45,Brooklyn,823
+1913,22:45,Bronx,261
+1914,22:45,Queens,528
+1915,22:45,Manhattan,88
+1916,22:45,Staten Island,163
+1917,22:45,Other,63
+1918,22:49,Total,1912
+1919,22:49,Brooklyn,836
+1920,22:49,Bronx,291
+1921,22:49,Queens,502
+1922,22:49,Manhattan,75
+1923,22:49,Staten Island,137
+1924,22:49,Other,71
+1925,22:54,Total,1732
+1926,22:54,Brooklyn,788
+1927,22:54,Bronx,277
+1928,22:54,Queens,417
+1929,22:54,Manhattan,62
+1930,22:54,Staten Island,129
+1931,22:54,Other,59
+1932,22:59,Total,1660
+1933,22:59,Brooklyn,759
+1934,22:59,Bronx,265
+1935,22:59,Queens,385
+1936,22:59,Manhattan,66
+1937,22:59,Staten Island,118
+1938,22:59,Other,67
+1939,23:5,Total,1751
+1940,23:5,Brooklyn,716
+1941,23:5,Bronx,281
+1942,23:5,Queens,435
+1943,23:5,Manhattan,79
+1944,23:5,Staten Island,164
+1945,23:5,Other,76
+1946,23:9,Total,1800
+1947,23:9,Brooklyn,764
+1948,23:9,Bronx,322
+1949,23:9,Queens,388
+1950,23:9,Manhattan,80
+1951,23:9,Staten Island,165
+1952,23:9,Other,81
+1953,23:15,Total,1786
+1954,23:15,Brooklyn,735
+1955,23:15,Bronx,335
+1956,23:15,Queens,391
+1957,23:15,Manhattan,73
+1958,23:15,Staten Island,172
+1959,23:15,Other,80
+1960,23:20,Total,1767
+1961,23:20,Brooklyn,715
+1962,23:20,Bronx,339
+1963,23:20,Queens,417
+1964,23:20,Manhattan,62
+1965,23:20,Staten Island,150
+1966,23:20,Other,84
+1967,23:25,Total,1683
+1968,23:25,Brooklyn,709
+1969,23:25,Bronx,304
+1970,23:25,Queens,388
+1971,23:25,Manhattan,58
+1972,23:25,Staten Island,124
+1973,23:25,Other,100
+1974,23:30,Total,1512
+1975,23:30,Brooklyn,639
+1976,23:30,Bronx,251
+1977,23:30,Queens,328
+1978,23:30,Manhattan,54
+1979,23:30,Staten Island,142
+1980,23:30,Other,98
+1981,23:35,Total,1380
+1982,23:35,Brooklyn,594
+1983,23:35,Bronx,195
+1984,23:35,Queens,287
+1985,23:35,Manhattan,64
+1986,23:35,Staten Island,130
+1987,23:35,Other,110
+1988,23:40,Total,1410
+1989,23:40,Brooklyn,585
+1990,23:40,Bronx,223
+1991,23:40,Queens,284
+1992,23:40,Manhattan,84
+1993,23:40,Staten Island,103
+1994,23:40,Other,131
+1995,23:45,Total,1315
+1996,23:45,Brooklyn,542
+1997,23:45,Bronx,196
+1998,23:45,Queens,282
+1999,23:45,Manhattan,66
+2000,23:45,Staten Island,89
+2001,23:45,Other,140
+2002,23:49,Total,1396
+2003,23:49,Brooklyn,536
+2004,23:49,Bronx,193
+2005,23:49,Queens,385
+2006,23:49,Manhattan,77
+2007,23:49,Staten Island,84
+2008,23:49,Other,121
+2009,23:54,Total,1118
+2010,23:54,Brooklyn,454
+2011,23:54,Bronx,192
+2012,23:54,Queens,289
+2013,23:54,Manhattan,33
+2014,23:54,Staten Island,54
+2015,23:54,Other,96

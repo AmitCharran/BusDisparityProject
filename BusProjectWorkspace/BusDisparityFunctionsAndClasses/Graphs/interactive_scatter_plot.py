@@ -170,6 +170,11 @@ class scatter_plot:
         # val = val.sort_values(by='Hour', ascending=)
         # index_name = val[val['Average'] == 0].index
         # val = val.drop(index_name)
+
+        index_name = val[val['Average'] == 48].index
+        val = val.drop(index_name)
+
+
         # val = val.rename(columns={'published_line_ref': 'Bus Name', '1_hour': 'Average at 1 AM'})
         graph = px.scatter(data_frame=val.reset_index(), y='Average', x='Bus Name',
                            color='Area', animation_frame='Hour', range_y=[0, 40], title=title)
@@ -198,8 +203,11 @@ class scatter_plot:
             updatemenus=[dict(
                 type="buttons",
                 pad={"t": 120}
-            )]
+            )],
+            title_font_family="Fantasy",
+
         )
+        graph.write_html('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/Average_Value_Scatter_plot.html')
 
         graph.show()
 
@@ -238,10 +246,15 @@ class scatter_plot:
             sliders=sliders,
             updatemenus=[dict(
                 type="buttons",
-                pad={"t": 120}
-            )]
+                pad={"t": 120},
+                active=100
+            )],
+            title_font_family="Fantasy",
         )
 
+
+        graph.write_html(
+            '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Graphs/HTML_file_links/Highest_Value_Scatter_plot.html')
         graph.show()
 
     def give_color_to_bus_name(self, bus_name):
@@ -326,14 +339,14 @@ class scatter_plot:
 
 
 
-# test = scatter_plot()
-#
-# recorded_dates = 'Recorded at time:\nOctober 5th - October 10th\nand\nOctober 18th - October 28th'
-# test.interactive_scatter_plot_graph_slider('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/bus_average_table1-21-21.csv',
-#                                            'Average Bus Ridership, ' + recorded_dates)
-#
-# test.interactive_scatter_plot_graph_slider_highest('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/bus_highest_table1-21-21.csv',
-#                                                    'Highest Recorded Ridership, ' + recorded_dates)
+test = scatter_plot()
+
+recorded_dates = 'Recorded at time:\nOctober 5th - October 10th\nand\nOctober 18th - October 28th'
+test.interactive_scatter_plot_graph_slider('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/All_Data_From_Thankgiving_Period_2020/bus_average_table1-21-21.csv',
+                                           'Average Bus Ridership, ' + recorded_dates)
+
+test.interactive_scatter_plot_graph_slider_highest('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/All_Data_From_Thankgiving_Period_2020/bus_highest_table1-21-21.csv',
+                                                   'Highest Recorded Ridership, ' + recorded_dates)
 # df = px.data.gapminder()
 # print(type(df.columns))
 # a= list(df.columns)
