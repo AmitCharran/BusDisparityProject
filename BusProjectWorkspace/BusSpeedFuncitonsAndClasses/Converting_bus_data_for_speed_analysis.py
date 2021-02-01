@@ -64,12 +64,9 @@ class bus_data_to_matrix:
 
                 line = fp.readline()
 
-        print(len(answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']]['Latitude']))
+
         print(answer_dictionary.items())
         print(len(answer_dictionary.keys()))
-
-
-
 
         f = open(output_path, 'a')
         f.write(str(answer_dictionary))
@@ -80,7 +77,7 @@ class bus_data_to_matrix:
 
 
 
-test = bus_data_to_matrix(input_path='Data/test.txt', output_path='Data/output.txt')
+test = bus_data_to_matrix(input_path='/Users/amitc/Desktop/1_27.txt', output_path='Data/output.txt')
 
 test.get_and_convert_data_by_line_ref('Q23')
 
