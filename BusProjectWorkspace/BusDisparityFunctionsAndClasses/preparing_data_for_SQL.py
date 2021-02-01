@@ -422,13 +422,11 @@ class format_data:
 # test = format_data()
 
 # test.sort_data_for_pie_charts('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt',
-#                               '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
+#                               '/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt')
+#
+#
+# lines = test.get_info_from_file('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22.txt')
 
-
-# lines = test.get_info_from_file('/Users/amitc/Desktop/BusDisparityProject/BusProjectWorkspace/BusDisparityFunctionsAndClasses/Data/January_22_data/1_22_pie_chart.txt')
-#
-#
-#
 # for line in lines:
 #     d = ast.literal_eval(line)
 #     counter = 0
