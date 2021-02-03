@@ -73,11 +73,74 @@ class bus_data_to_matrix:
         f.write('\n')
         f.close()
 
+    def get_and_convert_data_by_line_ref_jpr(self, published_line_ref, input_path='None', output_path='None'):
+        if input_path == 'None':
+            input_path = self.input_path
+        if output_path == 'None':
+            output_path = self.output_path
+
+        answer_dictionary = {}
+        counter = 0
+        destin = []
+        ref = []
+        with open(input_path) as fp:
+            line = fp.readline()
+
+            while line:
+                dictionary = ast.literal_eval(line)
+                if dictionary['Published Line Ref'] == published_line_ref:
+
+                    if dictionary['Vehicle Ref'] not in answer_dictionary.keys():
+                        answer_dictionary[dictionary['Vehicle Ref']] = {}
+
+                    if dictionary['Destination Name'] not in answer_dictionary[dictionary['Vehicle Ref']].keys():
+                        answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']] = {}
+
+                    if dictionary['Journey Pattern Ref'] not in answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']].keys():
+                        answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']] = {}
+
+                    # if dictionary['Destination Name'] not in destin:
+                    #     destin.append(dictionary['Destination Name'])
+                    #
+                    # if dictionary['Vehicle Ref'] not in ref:
+                    #     ref.append(dictionary['Vehicle Ref'])
+
+
+                    if 'Latitude' not in answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']].keys():
+                        answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']][
+                            'Latitude'] = []
+
+
+                    if 'Longitude' not in answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']].keys():
+                        answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']][
+                            'Longitude'] = []
+
+                    if 'Response Time' not in answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']].keys():
+                        answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']][
+                            'Response Time'] = []
+
+                    answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']]['Latitude'].append(dictionary['Latitude'])
+                    answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']][
+                        'Longitude'].append(dictionary['Longitude'])
+                    answer_dictionary[dictionary['Vehicle Ref']][dictionary['Destination Name']][dictionary['Journey Pattern Ref']][
+                        'Response Time'].append(dictionary['Response Time'])
+
+
+                line = fp.readline()
+
+
+        print(answer_dictionary.items())
+        print(len(answer_dictionary.keys()))
+
+        f = open(output_path, 'a')
+        f.write(str(answer_dictionary))
+        f.write('\n')
+        f.close()
 
 
 
 
-test = bus_data_to_matrix(input_path='/Users/amitc/Desktop/1_27.txt', output_path='Data/output.txt')
+test = bus_data_to_matrix(input_path='/Users/amitc/Desktop/1_27.txt', output_path='Data/output2.txt')
 
-test.get_and_convert_data_by_line_ref('Q23')
+test.get_and_convert_data_by_line_ref_jpr('Q23')
 
