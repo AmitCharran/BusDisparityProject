@@ -48,6 +48,7 @@ class format_data:
         files = []
         f = self.get_list_of_directories()
 
+        # file_names Foldername/Filename
         for x in f:
             file_names = []
             for (dirpath, dirnames, filenames) in walk(self.input_folder +'/'+ x ):  # getting directory

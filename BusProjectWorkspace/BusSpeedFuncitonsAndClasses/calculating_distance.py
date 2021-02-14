@@ -1,5 +1,7 @@
 import ast
 from datetime import datetime
+import pandas as pd
+from os import walk
 
 # Use 2 different longitude and latitude to calculate distance
 # preferably distance in meters
@@ -257,10 +259,146 @@ class calculating_speed:
 
             print(p + " : " + str(current_max * 2.2369362920544))
 
+    def calculate_average_from_file(self, input_file, output_file = "file.csv"):
+        file = open(input_file, 'r')
+        line = file.readline()
+        file.close()
+        dictionary = ast.literal_eval(line)
+
+        df = pd.DataFrame()
+
+        pub_line_ref = []
+        averages = []
+
+        for key in dictionary.keys():
+            p = key
+            arrays = []
+            for key2 in dictionary[p].keys():
+                v = key2
+                for key3 in dictionary[p][v].keys():
+                    d = key3
+                    for key4 in dictionary[p][v][d].keys():
+                        j = key4
+                        arrays.append(dictionary[p][v][d][j])
+            average = self.average_from_arrays_remove_0s(arrays)
+            pub_line_ref.append(p)
+            averages.append(average)
+
+        df['Published Line Ref'] = pub_line_ref
+        df['Averages'] = averages
+
+        df.to_csv(output_file)
+        ## print to file
+
+    def calculate_average_from_folder(self, folder_path):
+        f = []
+        for (dirpath, dirnames, filenames) in walk(folder_path):
+            f.extend(filenames)
+            break
+
+        answer_dictionary = {}
+
+        for filename in f:
+            if filename != '.DS_Store':
+                file_path = folder_path + '/' + filename
+                dictionary = self.calculate_average_from_file_return_dictionary(file_path)
+
+                answer_dictionary = self.average_dictionary_together(answer_dictionary, dictionary)
+
+    def average_dictionary_together(self, answer_dictionary, dictionary):
+        pass
+
+
+    def calculate_average_from_file_return_dictionary(self, input_file):
+        file = open(input_file, 'r')
+        line = file.readline()
+        file.close()
+        dictionary = ast.literal_eval(line)
+
+        answer_dictionary = {}
+
+        pub_line_ref = []
+        averages = []
+
+        for key in dictionary.keys():
+            p = key
+            arrays = []
+            for key2 in dictionary[p].keys():
+                v = key2
+                for key3 in dictionary[p][v].keys():
+                    d = key3
+                    for key4 in dictionary[p][v][d].keys():
+                        j = key4
+                        arrays.append(dictionary[p][v][d][j])
+            average = self.average_from_arrays_remove_0s(arrays)
+            pub_line_ref.append(p)
+            averages.append(average)
+
+            answer_dictionary[p] = average
+
+        return answer_dictionary
+
+
+
+
+
+    def average_from_arrays(self, arrays):
+        average = 0
+        count = 0
+        for array in arrays:
+            for val in array:
+                count = count + 1
+                average = average + val
+
+        if count == 0:
+            return 0
+        else:
+            return average/count
+
+    def average_from_arrays_remove_0s(self, arrays):
+        average = 0
+        count = 0
+        for array in arrays:
+            for val in array:
+                if val >= 0.01:
+                    count = count + 1
+                    average = average + val
+
+        if count == 0:
+            return 0
+        else:
+            return average / count
+
+    def average_from_arrays_remove_0s_return_count_and_average(self, arrays):
+        answer_dictionary = {}
+        average = 0
+        count = 0
+        for array in arrays:
+            for val in array:
+                if val >= 0.01:
+                    count = count + 1
+                    average = average + val
+
+        if count == 0:
+            answer_dictionary['Average Count'] = 0
+            answer_dictionary['Count'] = 0
+            return answer_dictionary
+        else:
+            answer_dictionary['Average Count'] = average
+            answer_dictionary['Count'] = count
+            return answer_dictionary
+
+
+
+
+
+
 
 test = calculating_speed()
-test.show_values_from_of_a_line_ref('QM21', 'Data/output3.txt')
+# test.show_values_from_of_a_line_ref('QM21', 'Data/output3.txt')
 # test.print_highest_per_line_ref('Data/converted_speed_data_2.txt')
 #
 # test.show_values_from_of_a_line_ref('M101', 'Data/output3.txt')
 # 65mph --> 29.0567
+
+test.calculate_average_from_folder('Data')
