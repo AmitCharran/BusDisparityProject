@@ -42,9 +42,7 @@ class pie_chart:
         index_name = df[df['Borough'] == 'Total'].index
         df = df.drop(index_name)
 
-
-
-        graph = px.bar(df, x='Borough', y='Passenger Count',
+        graph = px.scatter(df, x='Borough', y='Passenger Count',
                        animation_frame='Time', color='Borough',
                        title=title_name, range_y=[0, 6000])
         graph.update_xaxes(showgrid=False)
