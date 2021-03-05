@@ -339,9 +339,6 @@ class calculating_speed:
         return answer_dictionary
 
 
-
-
-
     def average_from_arrays(self, arrays):
         average = 0
         count = 0

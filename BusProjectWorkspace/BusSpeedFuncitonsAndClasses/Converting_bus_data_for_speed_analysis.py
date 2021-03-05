@@ -29,13 +29,13 @@ class bus_data_to_matrix:
                 v = dictionary['Vehicle Ref']
                 d = dictionary['Destination Name']
                 j = dictionary['Journey Pattern Ref']
-
+                # {}
                 if p not in answer_dictionary.keys():
                     answer_dictionary[p] = {}
-
+                # {'M4':{}}
                 if v not in answer_dictionary[p].keys():
                     answer_dictionary[p][v] = {}
-
+                #{'M4':{'MTA...':{}}}
                 if d not in answer_dictionary[p][v].keys():
                     answer_dictionary[p][v][d] = {}
 
@@ -59,6 +59,14 @@ class bus_data_to_matrix:
 
         print(answer_dictionary.keys())
         print(len(answer_dictionary.keys()))
+
+        for p in answer_dictionary.keys():
+            print(p)
+            for v in answer_dictionary[p].keys():
+                for d in answer_dictionary[p][v].keys():
+                    for j in answer_dictionary[p][v][d].keys():
+                        print(answer_dictionary[p][v][d][j])
+
 
         f = open(output_path, 'a')
         f.write(str(answer_dictionary))
