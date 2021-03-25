@@ -236,7 +236,7 @@ class calculating_speed:
         print(total_counts)
 
     def print_highest_per_line_ref(self, input_file):
-        file = open(input_file, 'r')
+        file = open(input_file, 'r') #converted_speed_data
         line = file.readline()
         file.close()
         dictionary = ast.literal_eval(line)
@@ -290,6 +290,9 @@ class calculating_speed:
         df.to_csv(output_file)
         ## print to file
 
+
+#####################################
+    ### Seems to be most important functions *Also three functions above
     def calculate_average_from_folder(self, folder_path):
         f = []
         for (dirpath, dirnames, filenames) in walk(folder_path):
@@ -392,10 +395,10 @@ class calculating_speed:
 
 
 test = calculating_speed()
-# test.show_values_from_of_a_line_ref('QM21', 'Data/output3.txt')
-# test.print_highest_per_line_ref('Data/converted_speed_data_2.txt')
+test.show_values_from_of_a_line_ref('QM21', input_file='Data/output3.txt')
+test.print_highest_per_line_ref('Data/converted_speed_data_2.txt')
 #
 # test.show_values_from_of_a_line_ref('M101', 'Data/output3.txt')
 # 65mph --> 29.0567
 
-test.calculate_average_from_folder('Data')
+# test.calculate_average_from_folder('Data')
