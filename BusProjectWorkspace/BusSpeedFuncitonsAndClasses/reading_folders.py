@@ -1,3 +1,17 @@
+import os
+
+basepath = './BusProjectWorkspace/BusSpeedFuncitonsAndClasses'
+entries = os.listdir(basepath)
+def printfile(basepath):
+    entries = os.listdir(basepath)
+    for entry in entries:
+        if os.path.isfile(os.path.join(basepath,entry)):
+            print (entry + "\n")
+        else :
+            next = os.path.join(basepath,entry)
+            printfile(next)
+
+printfile(basepath)
 def calculate_average_from_folder(self, folder_path):
     f = []
     for (dirpath, dirnames, filenames) in walk(folder_path):
