@@ -394,9 +394,9 @@ class calculating_speed:
 
 
 
-test = calculating_speed()
-test.show_values_from_of_a_line_ref('QM21', input_file='Data/output3.txt')
-test.print_highest_per_line_ref('Data/converted_speed_data_2.txt')
+# test = calculating_speed()
+# test.show_values_from_of_a_line_ref('QM21', input_file='Data/output3.txt')
+# test.print_highest_per_line_ref('Data/converted_speed_data_2.txt')
 #
 # test.show_values_from_of_a_line_ref('M101', 'Data/output3.txt')
 # 65mph --> 29.0567

@@ -143,7 +143,7 @@ class bus_data_to_matrix:
 
 
 
-test = bus_data_to_matrix(input_path='/Users/amitc/Desktop/1_27.txt', output_path='Data/output3.txt')
-
-
-test.get_and_convert_data(input_path='Data/test.txt', output_path='Data/output4.txt')
+# test = bus_data_to_matrix(input_path='/Users/amitc/Desktop/1_27.txt', output_path='Data/output3.txt')
+#
+#
+# test.get_and_convert_data(input_path='Data/test.txt', output_path='Data/output4.txt')
